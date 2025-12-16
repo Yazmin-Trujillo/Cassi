@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
+import "../primereact-theme/themes/mytheme/theme.scss";
+import "primeicons/primeicons.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <PrimeReactProvider
+          value={{
+            pt: {
+              button: {
+                root: {
+                  className: "cursor-pointer p-3 rounded-xl  flex gap-2",
+                },
+              },
+            },
+          }}
+        >
+          {children}
+        </PrimeReactProvider>
       </body>
     </html>
   );
