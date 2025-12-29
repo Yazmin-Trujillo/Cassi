@@ -3,7 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #2d5016;
+  --compostaje-color: #8fbc3f;
+  --captación-de-agua: #60a5fa;
+  --energía-solar: #fbbf24;
+  --huertos-urbanos: #fb7185;
 }
 
 @theme inline {
@@ -11,6 +14,24 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    --color-primary: #2d5016;
+    /* Definir variable CSS */
+    /*--color-secondary: #f97316;*/
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  /* Define otras utilidades si es necesario */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +45,52 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #2d5016;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: calc(2.5 / 2.25);
+    font-weight: 700;
+    color: #2d5016;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1.25);
+    color: #2d5016;
+  }
+
+  p {
+    color: #4b5563;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .p-card .p-card-body {
+    padding: 2rem;
+  }
+
+  .my-header .p-card-header {
+    padding: 2rem;
+  }
+
+  .p-card .p-card-title {
+    color: #2d5016;
+    font-size: 1.25rem;
+  }
+
+  .myCardTitle .p-card-title {
+    font-size: 2.5rem;
+  }
+
+  .myBoxShadow {
+    box-shadow: 0 20px 25px -5px rgba(45, 80, 22, 0.2),
+      0 8px 10px -6 rgba(45, 80, 22, 0.14);
+  }
 }
