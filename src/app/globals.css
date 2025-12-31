@@ -19,6 +19,7 @@
 @layer base {
   :root {
     --color-primary: #2d5016;
+    --color-accent: #8fbc3f;
     /* Definir variable CSS */
     /*--color-secondary: #f97316;*/
   }
@@ -31,6 +32,19 @@
   .text-primary {
     color: var(--color-primary);
   }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  .bg-accen {
+    background-color: var(--color-accent);
+  }
+
   /* Define otras utilidades si es necesario */
 }
 

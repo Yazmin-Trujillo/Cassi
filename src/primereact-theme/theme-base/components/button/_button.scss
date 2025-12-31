@@ -7,6 +7,8 @@
   transition: $formElementTransition;
   border-radius: $borderRadius;
   font-weight: 600;
+  justify-content: center;
+  //  width: 100%;
 
   &:not(:disabled):hover {
     background: $buttonHoverBg;
