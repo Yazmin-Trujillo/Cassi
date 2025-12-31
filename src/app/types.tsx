@@ -1,3 +1,10 @@
+export enum TiposDeProyectos {
+  Compostaje = "Compostaje",
+  Agua = "Agua",
+  Energias = "Energias",
+  Huertos = "Huertos",
+}
+
 export type ProyectosDestacadosType = {
   titulo: string;
   descripcion: string;
@@ -6,10 +13,7 @@ export type ProyectosDestacadosType = {
       src: string;
       alt: string;
     };
-    etiqueta: {
-      color: string;
-      tipo: string;
-    };
+    tipoDeProyecto: TiposDeProyectos;
     tiempoDeConstruccion: string;
   };
   footer: {
@@ -21,4 +25,11 @@ export type ProyectosDestacadosType = {
     };
     creador: string;
   };
+};
+
+export type EncabezadoProyectosDestacados = {
+  srcImg: string;
+  altImg: string;
+  tipoDeproyecto: TiposDeProyectos;
+  horasDeConstruccion: string;
 };

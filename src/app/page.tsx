@@ -8,6 +8,7 @@ import {
   carrotHeader,
   dropletFooter,
   dropletHeader,
+  encabezadoProyectosDestacados,
   proyectoCard1Footer,
   proyectoCard1Header,
   recycleFooter,
@@ -15,6 +16,7 @@ import {
   solarPanelFooter,
   solarPanelHeader,
 } from "./headersAndFootersCard";
+import { ProyectosDestacados } from "./data";
 
 export default function Home() {
   const items = [
@@ -206,6 +208,31 @@ export default function Home() {
               <Button label="Ver Todos los Proyectos" outlined />
             </div>
             <div className="grid grid-cols-3 gap-8">
+              {ProyectosDestacados.map((proyecto, index) => {
+                const srcImg = proyecto.header.imagen.src;
+                const altImg = proyecto.header.imagen.alt;
+                const tipoDeproyecto = proyecto.header.tipoDeProyecto;
+                const horasDeConstruccion =
+                  proyecto.header.tiempoDeConstruccion;
+
+                return (
+                  <Card
+                    key={proyecto.titulo + index}
+                    className="overflow-hidden shadow-lg! hover:shadow-2xl! group"
+                    title={proyecto.titulo}
+                    header={encabezadoProyectosDestacados({
+                      srcImg,
+                      altImg,
+                      tipoDeproyecto,
+                      horasDeConstruccion,
+                    })}
+                    footer={proyectoCard1Footer}
+                  >
+                    <p className="text-xl">{proyecto.descripcion}</p>
+                  </Card>
+                );
+              })}
+
               <Card
                 className="overflow-hidden shadow-lg! hover:shadow-2xl! group"
                 title="Compostera de Pallets DIY"
@@ -217,261 +244,6 @@ export default function Home() {
                   Guía completa con 8 pasos detallados.
                 </p>
               </Card>
-              <div
-                id="proyecto-card-2"
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group"
-              >
-                <div className="h-64 overflow-hidden relative">
-                  <img
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ada6b4c393-d460d2499c8385da5171.png"
-                    alt="rainwater harvesting system with barrels and gutters on house roof, DIY installation tutorial, sustainable water collection, pipes and filters, eco home improvement"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Agua
-                  </div>
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
-                    <i className="text-xs" data-fa-i2svg="">
-                      <svg
-                        className="svg-inline--fa fa-clock"
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="clock"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        data-fa-i2svg=""
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-                        ></path>
-                      </svg>
-                    </i>
-                    <span>4-5 horas</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">
-                    Sistema de Captación Pluvial
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Instala un sistema completo para captar y almacenar agua de
-                    lluvia. Ahorra hasta 40% en tu consumo.
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <i className="text-red-500" data-fa-i2svg="">
-                          <svg
-                            className="svg-inline--fa fa-heart"
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="heart"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            data-fa-i2svg=""
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
-                            ></path>
-                          </svg>
-                        </i>
-                        <span>489</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <i data-fa-i2svg="">
-                          <svg
-                            className="svg-inline--fa fa-comment"
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="comment"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            data-fa-i2svg=""
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"
-                            ></path>
-                          </svg>
-                        </i>
-                        <span>45</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <img
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg"
-                        alt="Avatar"
-                        className="w-8 h-8 rounded-full"
-                      />
-                      <span className="text-sm font-medium text-gray-700">
-                        Carlos Ruiz
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <button className="flex-1 mr-2 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-secondary transition">
-                      Ver Guía
-                    </button>
-                    <button className="px-4 py-2.5 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition">
-                      <i data-fa-i2svg="">
-                        <svg
-                          className="svg-inline--fa fa-cart-shopping"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="cart-shopping"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 576 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                          ></path>
-                        </svg>
-                      </i>{" "}
-                      Materiales
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                id="proyecto-card-3"
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group"
-              >
-                <div className="h-64 overflow-hidden relative">
-                  <Image
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/68b5883b56-700ba9f8c57721fb3d5e.png"
-                    alt="vertical garden on apartment balcony with recycled bottles and containers, urban gardening, fresh herbs and vegetables growing, DIY hydroponic system, sustainable living"
-                  />
-                  <div className="absolute top-4 left-4 bg-rose-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Huerto
-                  </div>
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
-                    <i className="text-xs" data-fa-i2svg="">
-                      <svg
-                        className="svg-inline--fa fa-clock"
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="clock"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        data-fa-i2svg=""
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-                        ></path>
-                      </svg>
-                    </i>
-                    <span>3 horas</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">
-                    Huerto Vertical en Balcón
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Crea un jardín vertical usando materiales reciclados.
-                    Perfecto para espacios pequeños.
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <i className="text-red-500" data-fa-i2svg="">
-                          <svg
-                            className="svg-inline--fa fa-heart"
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="heart"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            data-fa-i2svg=""
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
-                            ></path>
-                          </svg>
-                        </i>
-                        <span>567</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <i data-fa-i2svg="">
-                          <svg
-                            className="svg-inline--fa fa-comment"
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="comment"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            data-fa-i2svg=""
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"
-                            ></path>
-                          </svg>
-                        </i>
-                        <span>62</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Image
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg"
-                        alt="Avatar"
-                        className="w-8 h-8 rounded-full"
-                      />
-                      <span className="text-sm font-medium text-gray-700">
-                        Ana Torres
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <button className="flex-1 mr-2 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-secondary transition">
-                      Ver Guía
-                    </button>
-                    <button className="px-4 py-2.5 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition">
-                      <i data-fa-i2svg="">
-                        <svg
-                          className="svg-inline--fa fa-cart-shopping"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="cart-shopping"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 576 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                          ></path>
-                        </svg>
-                      </i>{" "}
-                      Materiales
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
