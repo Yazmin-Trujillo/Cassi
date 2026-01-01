@@ -3,20 +3,8 @@ import { Menubar } from "primereact/menubar";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import { Divider } from "primereact/divider";
-import {
-  carrotFooter,
-  carrotHeader,
-  dropletFooter,
-  dropletHeader,
-  encabezadoProyectosDestacados,
-  proyectoCard1Footer,
-  proyectoCard1Header,
-  recycleFooter,
-  recycleHeader,
-  solarPanelFooter,
-  solarPanelHeader,
-} from "./headersAndFootersCard";
-import { ProyectosDestacados } from "./data";
+import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
+import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
 
 export default function Home() {
   const items = [
@@ -78,8 +66,6 @@ export default function Home() {
       </div>
       <span className="text-2xl font-bold text-lime-900">EcoCreadores</span>
     </div>
-
-    // <i className="pi pi-check" style={{ fontSize: "2rem", color: "green" }}></i>
   );
 
   const end = (
@@ -92,7 +78,7 @@ export default function Home() {
   const footer = (
     <div className="flex flex-col gap-8">
       <div>
-        <Button className="myBoxShadow" label="Explorar proyectos" />
+        <Button label="Explorar proyectos" className="myBoxShadow" />
         <Button label="Ver tutorial" outlined style={{ marginLeft: "0.5em" }} />
       </div>
       <div className="flex ">
@@ -145,108 +131,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-col p-8 w-full items-center gap-4">
-          <h2>Categorías de Proyectos</h2>
-          <p>
-            Explora diferentes áreas de sustentabilidad y encuentra el proyecto
-            perfecto para ti
-          </p>
-          <div className="flex gap-4">
-            <Card
-              className="group my-header bg-gradient-to-br! from-green-50! to-emerald-50! hover:border-[var(--compostaje-color)] hover:shadow-xl transition cursor-pointer border-2 border-transparent"
-              title="Compostaje"
-              header={recycleHeader}
-              footer={recycleFooter}
-            >
-              <p className="m-0 text-xl">
-                Transforma residuos orgánicos en abono natural
-              </p>
-            </Card>
-            <Card
-              className="group my-header bg-gradient-to-br! from-blue-50! to-cyan-50! hover:border-blue-400 hover:shadow-xl transition cursor-pointer border-2 border-transparent"
-              title="Captación de Agua"
-              header={dropletHeader}
-              footer={dropletFooter}
-            >
-              <p className="m-0 text-xl">
-                Sistemas para recolectar y reutilizar agua de lluvia
-              </p>
-            </Card>
-            <Card
-              className="group my-header bg-gradient-to-br! from-amber-50! to-yellow-50! hover:border-amber-400 hover:shadow-xl transition cursor-pointer border-2 border-transparent"
-              title="Energía Solar"
-              header={solarPanelHeader}
-              footer={solarPanelFooter}
-            >
-              <p className="m-0 text-xl">
-                Aprovecha la energía del sol para tu hogar
-              </p>
-            </Card>
-            <Card
-              className="group my-header bg-linear-to-br! from-rose-50 to-pink-50 hover:border-rose-400 hover:shadow-xl transition cursor-pointer border-2 border-transparent"
-              title="Huertos Urbanos"
-              header={carrotHeader}
-              footer={carrotFooter}
-            >
-              <p className="m-0 text-xl">
-                Cultiva tus propios alimentos en espacios pequeños
-              </p>
-            </Card>
-          </div>
-        </div>
-        <section id="proyectos-destacados" className="py-20 px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-between mb-12">
-              <div>
-                <h2 className="text-4xl font-display font-bold text-primary mb-3">
-                  Proyectos Destacados
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Aprende paso a paso con nuestras guías completas
-                </p>
-              </div>
-              <Button label="Ver Todos los Proyectos" outlined />
-            </div>
-            <div className="grid grid-cols-3 gap-8">
-              {ProyectosDestacados.map((proyecto, index) => {
-                const srcImg = proyecto.header.imagen.src;
-                const altImg = proyecto.header.imagen.alt;
-                const tipoDeproyecto = proyecto.header.tipoDeProyecto;
-                const horasDeConstruccion =
-                  proyecto.header.tiempoDeConstruccion;
-
-                return (
-                  <Card
-                    key={proyecto.titulo + index}
-                    className="overflow-hidden shadow-lg! hover:shadow-2xl! group"
-                    title={proyecto.titulo}
-                    header={encabezadoProyectosDestacados({
-                      srcImg,
-                      altImg,
-                      tipoDeproyecto,
-                      horasDeConstruccion,
-                    })}
-                    footer={proyectoCard1Footer}
-                  >
-                    <p className="text-xl">{proyecto.descripcion}</p>
-                  </Card>
-                );
-              })}
-
-              <Card
-                className="overflow-hidden shadow-lg! hover:shadow-2xl! group"
-                title="Compostera de Pallets DIY"
-                header={proyectoCard1Header}
-                footer={proyectoCard1Footer}
-              >
-                <p className="text-xl">
-                  Construye tu propia compostera usando materiales reciclados.
-                  Guía completa con 8 pasos detallados.
-                </p>
-              </Card>
-            </div>
-          </div>
-        </section>
+        {SeccionCategoriasDeProyectos}
+        {SeccionProyectosDestacados}
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a

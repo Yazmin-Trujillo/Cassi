@@ -5,6 +5,22 @@ export enum TiposDeProyectos {
   Huertos = "Huertos",
 }
 
+export type CategoriasDeProyectosType = {
+  titulo: string;
+  descripcion: string;
+  header: {
+    imagen: {
+      src: string;
+      alt: string;
+    };
+    tipoDeProyecto: TiposDeProyectos;
+  };
+  footer: {
+    numeroDeProyectos: number;
+    tipoDeProyecto: TiposDeProyectos;
+  };
+};
+
 export type ProyectosDestacadosType = {
   titulo: string;
   descripcion: string;
@@ -19,12 +35,23 @@ export type ProyectosDestacadosType = {
   footer: {
     likes: number;
     comentarios: number;
-    imagenCreador: {
+    imagenDelAutor: {
       src: string;
       alt: string;
     };
-    creador: string;
+    autor: string;
   };
+};
+
+export type EncabezadoCategoriasDeProyectos = {
+  tipoDeproyecto: TiposDeProyectos;
+  srcImg: string;
+  altImg: string;
+};
+
+export type FooterCategoriasDeProyectos = {
+  numeroDeProyectos: number;
+  tipoDeProyectoF: TiposDeProyectos;
 };
 
 export type EncabezadoProyectosDestacados = {
@@ -32,4 +59,12 @@ export type EncabezadoProyectosDestacados = {
   altImg: string;
   tipoDeproyecto: TiposDeProyectos;
   horasDeConstruccion: string;
+};
+
+export type FooterProyectosDestacados = {
+  likes: number;
+  comentarios: number;
+  autor: string;
+  imgSrcAutor: string;
+  imgAltAutor: string;
 };

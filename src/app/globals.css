@@ -94,6 +94,10 @@ body {
     padding: 2rem;
   }
 
+  .my-header .p-card-body {
+    padding: 0 2rem 2rem 2rem;
+  }
+
   .p-card .p-card-title {
     color: #2d5016;
     font-size: 1.25rem;

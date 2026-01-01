@@ -1,4 +1,71 @@
-import { ProyectosDestacadosType, TiposDeProyectos } from "./types";
+import {
+  CategoriasDeProyectosType,
+  ProyectosDestacadosType,
+  TiposDeProyectos,
+} from "./types";
+
+export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
+  {
+    titulo: "Compostaje",
+    descripcion: "Transforma residuos orgánicos en abono natural",
+    header: {
+      imagen: {
+        src: "/recycle.svg",
+        alt: "recycle",
+      },
+      tipoDeProyecto: TiposDeProyectos.Compostaje,
+    },
+    footer: {
+      numeroDeProyectos: 124,
+      tipoDeProyecto: TiposDeProyectos.Compostaje,
+    },
+  },
+  {
+    titulo: "Captación de Agua",
+    descripcion: "Sistemas para recolectar y reutilizar agua de lluvia",
+    header: {
+      imagen: {
+        src: "/droplet.svg",
+        alt: "droplet",
+      },
+      tipoDeProyecto: TiposDeProyectos.Agua,
+    },
+    footer: {
+      numeroDeProyectos: 87,
+      tipoDeProyecto: TiposDeProyectos.Agua,
+    },
+  },
+  {
+    titulo: "Energía Solar",
+    descripcion: "Aprovecha la energía del sol para tu hogar",
+    header: {
+      imagen: {
+        src: "/solarPanel.svg",
+        alt: "solarPanel",
+      },
+      tipoDeProyecto: TiposDeProyectos.Energias,
+    },
+    footer: {
+      numeroDeProyectos: 156,
+      tipoDeProyecto: TiposDeProyectos.Energias,
+    },
+  },
+  {
+    titulo: "Huertos Urbanos",
+    descripcion: "Cultiva tus propios alimentos en espacios pequeños",
+    header: {
+      imagen: {
+        src: "/carrot.svg",
+        alt: "carrot",
+      },
+      tipoDeProyecto: TiposDeProyectos.Huertos,
+    },
+    footer: {
+      numeroDeProyectos: 203,
+      tipoDeProyecto: TiposDeProyectos.Huertos,
+    },
+  },
+];
 
 export const ProyectosDestacados: ProyectosDestacadosType[] = [
   {
@@ -16,11 +83,11 @@ export const ProyectosDestacados: ProyectosDestacadosType[] = [
     footer: {
       likes: 342,
       comentarios: 28,
-      imagenCreador: {
+      imagenDelAutor: {
         src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
         alt: "Avatar",
       },
-      creador: "María López",
+      autor: "María López",
     },
   },
   {
@@ -38,11 +105,11 @@ export const ProyectosDestacados: ProyectosDestacadosType[] = [
     footer: {
       likes: 489,
       comentarios: 45,
-      imagenCreador: {
+      imagenDelAutor: {
         src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
         alt: "Avatar",
       },
-      creador: "Carlos Ruiz",
+      autor: "Carlos Ruiz",
     },
   },
   {
@@ -60,11 +127,11 @@ export const ProyectosDestacados: ProyectosDestacadosType[] = [
     footer: {
       likes: 467,
       comentarios: 62,
-      imagenCreador: {
+      imagenDelAutor: {
         src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
         alt: "Avatar",
       },
-      creador: "Ana Torres",
+      autor: "Ana Torres",
     },
   },
 ];
