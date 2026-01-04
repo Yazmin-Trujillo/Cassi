@@ -1,138 +1,80 @@
-import { Image } from "primereact/image";
 import { Menubar } from "primereact/menubar";
+import { SeccionHero } from "./components/organisms/heroSeccion";
+import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
+import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
+import { menuEnd, menuItems, menuStart, ProyectosDeLaComunidad } from "./data";
+import { SeccionComoFunciona } from "./components/organisms/comoFunciona";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
-import { Divider } from "primereact/divider";
-import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
-import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
+import {
+  contenidoProyectosDeLaComunidad,
+  encabezadoProyectosDeLaComunidad,
+} from "./headersAndFootersCard";
 
 export default function Home() {
-  const items = [
-    {
-      label: "Inicio",
-    },
-    {
-      label: "Proyectos",
-    },
-    {
-      label: "Comunidad",
-    },
-    {
-      label: "Materiales",
-      icon: "pi pi-search",
-      items: [
-        {
-          label: "Components",
-          icon: "pi pi-bolt",
-        },
-        {
-          label: "Blocks",
-          icon: "pi pi-server",
-        },
-        {
-          label: "UI Kit",
-          icon: "pi pi-pencil",
-        },
-        {
-          label: "Templates",
-          icon: "pi pi-palette",
-          items: [
-            {
-              label: "Apollo",
-              icon: "pi pi-palette",
-            },
-            {
-              label: "Ultima",
-              icon: "pi pi-palette",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Blog",
-    },
-  ];
-
-  const start = (
-    <div className="flex items-center justify-center gap-2">
-      <div className="rounded-xl bg-linear-to-br from-lime-900 to-lime-700 w-[3rem] h-[3rem] flex items-center justify-center">
-        <img
-          alt="logo"
-          src="/hoja.svg"
-          height="80"
-          className="w-[1.5rem]"
-        ></img>
-      </div>
-      <span className="text-2xl font-bold text-lime-900">EcoCreadores</span>
-    </div>
-  );
-
-  const end = (
-    <div className="flex gap-2">
-      <Button label="Iniciar Sesión" text />
-      <Button label="Compartir proyecto" />
-    </div>
-  );
-
-  const footer = (
-    <div className="flex flex-col gap-8">
-      <div>
-        <Button label="Explorar proyectos" className="myBoxShadow" />
-        <Button label="Ver tutorial" outlined style={{ marginLeft: "0.5em" }} />
-      </div>
-      <div className="flex ">
-        <div>
-          <div className="text-2xl font-bold text-primary">1,240+</div>
-          <div>Proyectos Compartidos</div>
-        </div>
-        <Divider layout="vertical" />
-        <div>
-          <div className="text-2xl font-bold text-primary">8,500+</div>
-          <div>Miembros Activos</div>
-        </div>
-        <Divider layout="vertical" />
-        <div>
-          <div className="text-2xl font-bold text-primary">95%</div>
-          <div>Satisfacción</div>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
-    <div className="flex bg-yellow-50 min-h-screen items-center justify-center font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-[1500px] flex-col items-center justify-between py-4 px-8 bg-white dark:bg-black sm:items-start">
-        <div className=" w-full">
-          <Menubar model={items} start={start} end={end} />
-        </div>
-
-        <div className="flex p-8 gap-2">
-          <div className="w-1/2">
-            <Card
-              footer={footer}
-              style={{ border: 0, boxShadow: "none" }}
-              className="myCardTitle"
-              title="Aprende, Crea y Comparte Proyectos Ecológicos"
-            >
-              <p className="m-0 text-xl">
-                Descubre guías paso a paso para proyectos de sustentabilidad,
-                agroecología y medio ambiente. Comparte tu experiencia y
-                adquiere los materiales necesarios en un solo lugar.
-              </p>
-            </Card>
-          </div>
-          <div className="w-1/2">
-            <Image
-              imageClassName="rounded-xl"
-              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0df34b17c3-821eaa01d60a5725810a.png"
-              alt="Image"
-              width="100%"
-            />
-          </div>
-        </div>
+    <div className="flex flex-col min-h-screen items-center justify-center font-sans dark:bg-black">
+      <header
+        id="header"
+        className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50"
+      >
+        <Menubar model={menuItems} start={menuStart} end={menuEnd} />
+      </header>
+      <main className="flex py-4 min-h-screen w-full flex-col items-center justify-between dark:bg-black sm:items-start">
+        {SeccionHero}
         {SeccionCategoriasDeProyectos}
         {SeccionProyectosDestacados}
+        {SeccionComoFunciona}
+
+        <section id="comunidad-section" className="py-20 px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-display font-bold text-primary mb-4">
+                Proyectos de la Comunidad
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Descubre lo que otros miembros están creando y comparte tus
+                propias experiencias
+              </p>
+            </div>
+            <div className="grid grid-cols-4 gap-6">
+              {ProyectosDeLaComunidad.map((proyecto, index) => {
+                const srcImg = proyecto.header.imagen.src;
+                const altImg = proyecto.header.imagen.alt;
+                const titulo = proyecto.titulo;
+                const imgSrcAutor = proyecto.imagenDelAutor.src;
+                const imgAltAutor = proyecto.imagenDelAutor.alt;
+                const autor = proyecto.autor;
+                const likes = proyecto.likes;
+                const comentarios = proyecto.comentarios;
+                return (
+                  <Card
+                    key={proyecto.titulo + index}
+                    style={{
+                      border: 0,
+                      boxShadow: "none",
+                      backgroundColor: "transparent",
+                    }}
+                    className="group especial overflow-hidden cursor-pointer"
+                    header={encabezadoProyectosDeLaComunidad({
+                      srcImg,
+                      altImg,
+                    })}
+                  >
+                    {contenidoProyectosDeLaComunidad({
+                      titulo,
+                      imgSrcAutor,
+                      imgAltAutor,
+                      autor,
+                      likes,
+                      comentarios,
+                    })}
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a

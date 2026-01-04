@@ -7,8 +7,11 @@ import { TiposDeProyectos } from "@/app/types";
 import { Card } from "primereact/card";
 
 export const SeccionCategoriasDeProyectos = (
-  <section id="categorias-section" className="py-20 px-8 bg-white">
-    <div className="max-w-7xl mx-auto flex flex-col p-8 w-full items-center gap-4">
+  <section
+    id="categorias-section"
+    className="py-20 px-8 bg-white max-w-[1500px]"
+  >
+    <div className="max-w-7xl mx-auto flex flex-col w-full items-center gap-4">
       <h2>Categorías de Proyectos</h2>
       <p>
         Explora diferentes áreas de sustentabilidad y encuentra el proyecto
@@ -27,7 +30,7 @@ export const SeccionCategoriasDeProyectos = (
               className={`group my-header bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
                             tipoDeproyecto === TiposDeProyectos.Compostaje
-                              ? "from-green-50! to-emerald-50! hover:border-[var(--compostaje-color)]"
+                              ? "from-green-50! to-emerald-50! hover:border-accent"
                               : tipoDeproyecto === TiposDeProyectos.Agua
                               ? "from-blue-50! to-cyan-50! hover:border-blue-400"
                               : tipoDeproyecto === TiposDeProyectos.Energias

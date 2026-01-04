@@ -1,6 +1,7 @@
 import { Button } from "primereact/button";
 import { Divider } from "primereact/divider";
 import {
+  ContenidoProyectosDeLaComunidad,
   EncabezadoCategoriasDeProyectos,
   EncabezadoProyectosDestacados,
   FooterCategoriasDeProyectos,
@@ -39,7 +40,7 @@ export const footerCategoriasDeProyectos = ({
   <div
     className={`flex items-center text-sm font-semibold ${
       tipoDeProyectoF === TiposDeProyectos.Compostaje
-        ? "text-[var(--compostaje-color)]"
+        ? "text-accent"
         : tipoDeProyectoF === TiposDeProyectos.Agua
         ? "text-blue-600 "
         : tipoDeProyectoF === TiposDeProyectos.Energias
@@ -161,4 +162,56 @@ export const footerProyectosDestacados = ({
       </Button>
     </div>
   </>
+);
+
+export const encabezadoProyectosDeLaComunidad = ({
+  srcImg,
+  altImg,
+}: {
+  srcImg: string;
+  altImg: string;
+}) => (
+  <div className="h-72 rounded-xl overflow-hidden relative">
+    <img
+      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+      src={srcImg}
+      alt={altImg}
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+      <Button className="bg-white! text-primary! w-full">Ver Detalles</Button>
+    </div>
+  </div>
+);
+
+export const contenidoProyectosDeLaComunidad = ({
+  titulo,
+  imgSrcAutor,
+  imgAltAutor,
+  autor,
+  likes,
+  comentarios,
+}: ContenidoProyectosDeLaComunidad) => (
+  <div className="text-xl">
+    <div className="flex items-center space-x-3 mb-2">
+      <img
+        src={imgSrcAutor}
+        alt={imgAltAutor}
+        className="w-10 h-10 rounded-full"
+      />
+      <div>
+        <p className="font-semibold text-gray-900!">{titulo}</p>
+        <div className="text-sm text-gray-500">Por {autor}</div>
+      </div>
+    </div>
+    <div className="flex items-center space-x-3 text-sm text-gray-500">
+      <div className="flex items-center space-x-1">
+        <i className="pi pi-heart-fill text-red-500"></i>
+        <span>{likes}</span>
+      </div>
+      <div className="flex items-center space-x-1">
+        <i className="pi pi-comment"></i>
+        <span>{comentarios}</span>
+      </div>
+    </div>
+  </div>
 );

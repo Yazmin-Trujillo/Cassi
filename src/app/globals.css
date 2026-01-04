@@ -1,51 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --primary: #2d5016;
+  --secondary: #6b8e23;
+  --accent: #8fbc3f;
   --foreground: #171717;
-  --compostaje-color: #8fbc3f;
   --captación-de-agua: #60a5fa;
   --energía-solar: #fbbf24;
   --huertos-urbanos: #fb7185;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@layer base {
-  :root {
-    --color-primary: #2d5016;
-    --color-accent: #8fbc3f;
-    /* Definir variable CSS */
-    /*--color-secondary: #f97316;*/
-  }
-}
-
-@layer utilities {
-  .bg-primary {
-    background-color: var(--color-primary);
-  }
-  .text-primary {
-    color: var(--color-primary);
-  }
-
-  .text-accent {
-    color: var(--color-accent);
-  }
-
-  .border-accent {
-    border-color: var(--color-accent);
-  }
-
-  .bg-accen {
-    background-color: var(--color-accent);
-  }
-
-  /* Define otras utilidades si es necesario */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,7 +28,6 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 
@@ -64,20 +35,20 @@ body {
     font-size: 2.25rem;
     line-height: 1.25;
     font-weight: 700;
-    color: #2d5016;
+    color: var(--primary);
   }
 
   h2 {
     font-size: 2.25rem;
     line-height: calc(2.5 / 2.25);
     font-weight: 700;
-    color: #2d5016;
+    color: var(--primary);
   }
 
   h3 {
     font-size: 1.25rem;
     line-height: calc(1.75 / 1.25);
-    color: #2d5016;
+    color: var(--primary);
   }
 
   p {
@@ -98,8 +69,12 @@ body {
     padding: 0 2rem 2rem 2rem;
   }
 
+  .especial .p-card-body {
+    padding: 0;
+  }
+
   .p-card .p-card-title {
-    color: #2d5016;
+    color: var(--primary);
     font-size: 1.25rem;
   }
 

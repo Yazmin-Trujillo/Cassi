@@ -21,6 +21,17 @@ export type CategoriasDeProyectosType = {
   };
 };
 
+export type EncabezadoCategoriasDeProyectos = {
+  tipoDeproyecto: TiposDeProyectos;
+  srcImg: string;
+  altImg: string;
+};
+
+export type FooterCategoriasDeProyectos = {
+  numeroDeProyectos: number;
+  tipoDeProyectoF: TiposDeProyectos;
+};
+
 export type ProyectosDestacadosType = {
   titulo: string;
   descripcion: string;
@@ -43,17 +54,6 @@ export type ProyectosDestacadosType = {
   };
 };
 
-export type EncabezadoCategoriasDeProyectos = {
-  tipoDeproyecto: TiposDeProyectos;
-  srcImg: string;
-  altImg: string;
-};
-
-export type FooterCategoriasDeProyectos = {
-  numeroDeProyectos: number;
-  tipoDeProyectoF: TiposDeProyectos;
-};
-
 export type EncabezadoProyectosDestacados = {
   srcImg: string;
   altImg: string;
@@ -62,6 +62,32 @@ export type EncabezadoProyectosDestacados = {
 };
 
 export type FooterProyectosDestacados = {
+  likes: number;
+  comentarios: number;
+  autor: string;
+  imgSrcAutor: string;
+  imgAltAutor: string;
+};
+
+export type ProyectosDeLaComunidadType = {
+  titulo: string;
+  likes: number;
+  comentarios: number;
+  autor: string;
+  imagenDelAutor: {
+    src: string;
+    alt: string;
+  };
+  header: {
+    imagen: {
+      src: string;
+      alt: string;
+    };
+  };
+};
+
+export type ContenidoProyectosDeLaComunidad = {
+  titulo: string;
   likes: number;
   comentarios: number;
   autor: string;
