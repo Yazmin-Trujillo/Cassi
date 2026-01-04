@@ -1,11 +1,10 @@
 import { Menubar } from "primereact/menubar";
+import { Card } from "primereact/card";
+import { menuEnd, menuItems, menuStart, ProyectosDeLaComunidad } from "./data";
 import { SeccionHero } from "./components/organisms/heroSeccion";
 import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
 import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
-import { menuEnd, menuItems, menuStart, ProyectosDeLaComunidad } from "./data";
 import { SeccionComoFunciona } from "./components/organisms/comoFunciona";
-import { Card } from "primereact/card";
-import { Button } from "primereact/button";
 import {
   contenidoProyectosDeLaComunidad,
   encabezadoProyectosDeLaComunidad,
