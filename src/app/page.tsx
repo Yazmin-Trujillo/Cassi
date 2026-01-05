@@ -1,14 +1,10 @@
 import { Menubar } from "primereact/menubar";
-import { Card } from "primereact/card";
-import { menuEnd, menuItems, menuStart, ProyectosDeLaComunidad } from "./data";
+import { menuEnd, menuItems, menuStart } from "./data";
 import { SeccionHero } from "./components/organisms/heroSeccion";
 import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
 import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
 import { SeccionComoFunciona } from "./components/organisms/comoFunciona";
-import {
-  contenidoProyectosDeLaComunidad,
-  encabezadoProyectosDeLaComunidad,
-} from "./headersAndFootersCard";
+import { SeccionProyectosDeLaComunidad } from "./components/organisms/proyectosDeLaComunidad";
 
 export default function Home() {
   return (
@@ -19,62 +15,14 @@ export default function Home() {
       >
         <Menubar model={menuItems} start={menuStart} end={menuEnd} />
       </header>
-      <main className="flex py-4 min-h-screen w-full flex-col items-center justify-between dark:bg-black sm:items-start">
+      <main className="flex overflow-hidden py-4 min-h-screen w-full flex-col items-center justify-between sm:items-start">
         {SeccionHero}
-        {SeccionCategoriasDeProyectos}
+        {/*  {SeccionCategoriasDeProyectos}
         {SeccionProyectosDestacados}
         {SeccionComoFunciona}
+        {SeccionProyectosDeLaComunidad}*/}
 
-        <section id="comunidad-section" className="py-20 px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-display font-bold text-primary mb-4">
-                Proyectos de la Comunidad
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Descubre lo que otros miembros están creando y comparte tus
-                propias experiencias
-              </p>
-            </div>
-            <div className="grid grid-cols-4 gap-6">
-              {ProyectosDeLaComunidad.map((proyecto, index) => {
-                const srcImg = proyecto.header.imagen.src;
-                const altImg = proyecto.header.imagen.alt;
-                const titulo = proyecto.titulo;
-                const imgSrcAutor = proyecto.imagenDelAutor.src;
-                const imgAltAutor = proyecto.imagenDelAutor.alt;
-                const autor = proyecto.autor;
-                const likes = proyecto.likes;
-                const comentarios = proyecto.comentarios;
-                return (
-                  <Card
-                    key={proyecto.titulo + index}
-                    style={{
-                      border: 0,
-                      boxShadow: "none",
-                      backgroundColor: "transparent",
-                    }}
-                    className="group especial overflow-hidden cursor-pointer"
-                    header={encabezadoProyectosDeLaComunidad({
-                      srcImg,
-                      altImg,
-                    })}
-                  >
-                    {contenidoProyectosDeLaComunidad({
-                      titulo,
-                      imgSrcAutor,
-                      imgAltAutor,
-                      autor,
-                      likes,
-                      comentarios,
-                    })}
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
+        {/* <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -92,7 +40,7 @@ export default function Home() {
           >
             Documentation
           </a>
-        </div>
+        </div>*/}
       </main>
     </div>
   );

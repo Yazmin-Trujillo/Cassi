@@ -118,11 +118,16 @@ export const encabezadoHero = (
 );
 export const footerHero = (
   <div className="flex flex-col gap-8">
-    <div>
+    <div className="flex">
       <Button label="Explorar proyectos" className="myBoxShadow" />
-      <Button label="Ver tutorial" outlined style={{ marginLeft: "0.5em" }} />
+      <Button
+        label="Ver tutorial"
+        outlined
+        style={{ marginLeft: "0.5em" }}
+        className="bg-white/20! backdrop-blur-sm md:backdrop-blur-none text-white! md:text-primary! md:bg-transparent!"
+      />
     </div>
-    <div className="flex ">
+    <div className="hidden md:flex">
       <div>
         <div className="text-2xl font-bold text-primary">1,240+</div>
         <div>Proyectos Compartidos</div>
