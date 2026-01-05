@@ -15,7 +15,7 @@ export default function Home() {
       >
         <Menubar model={menuItems} start={menuStart} end={menuEnd} />
       </header>
-      <main className="flex overflow-hidden py-4 min-h-screen w-full flex-col items-center justify-between sm:items-start">
+      <main className="flex overflow-hidden min-h-screen w-full flex-col items-center justify-between sm:items-start">
         {SeccionHero}
         {/*  {SeccionCategoriasDeProyectos}
         {SeccionProyectosDestacados}
