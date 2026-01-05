@@ -6,6 +6,7 @@ export enum TiposDeProyectos {
 }
 
 export type CategoriasDeProyectosType = {
+  tituloMB: string;
   titulo: string;
   descripcion: string;
   header: {

@@ -39,8 +39,8 @@ export const SeccionHero = (
         </Card>
       </div>
       <div className="relative w-full h-full md:w-1/2">
-        {/* <div className="absolute -top-8 -left-8 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-8 -right-8 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>*/}
+        <div className="absolute -top-8 -left-8 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-8 -right-8 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
         <div className="relative h-full md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
           <img
             className="w-full h-full object-cover md:hidden"

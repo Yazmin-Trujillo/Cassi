@@ -148,6 +148,7 @@ export const footerHero = (
 
 export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
   {
+    tituloMB: "Compost",
     titulo: "Compostaje",
     descripcion: "Transforma residuos orgánicos en abono natural",
     header: {
@@ -163,6 +164,7 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
     },
   },
   {
+    tituloMB: "Agua",
     titulo: "Captación de Agua",
     descripcion: "Sistemas para recolectar y reutilizar agua de lluvia",
     header: {
@@ -178,6 +180,7 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
     },
   },
   {
+    tituloMB: "Energía",
     titulo: "Energía Solar",
     descripcion: "Aprovecha la energía del sol para tu hogar",
     header: {
@@ -193,6 +196,7 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
     },
   },
   {
+    tituloMB: "Huertos",
     titulo: "Huertos Urbanos",
     descripcion: "Cultiva tus propios alimentos en espacios pequeños",
     header: {

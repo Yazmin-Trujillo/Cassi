@@ -12,12 +12,12 @@ export const SeccionCategoriasDeProyectos = (
     className="py-20 px-8 bg-white max-w-[1500px]"
   >
     <div className="max-w-7xl mx-auto flex flex-col w-full items-center gap-4">
-      <h2>Categorías de Proyectos</h2>
-      <p>
+      <h2 className="text-center">Categorías de Proyectos</h2>
+      <p className="text-center">
         Explora diferentes áreas de sustentabilidad y encuentra el proyecto
         perfecto para ti
       </p>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
         {CategoriasDeProyectos.map((categoria, index) => {
           const tipoDeproyecto = categoria.header.tipoDeProyecto;
           const srcImg = categoria.header.imagen.src;
@@ -26,8 +26,8 @@ export const SeccionCategoriasDeProyectos = (
           const tipoDeProyectoF = categoria.footer.tipoDeProyecto;
           return (
             <Card
-              key={categoria.titulo + index}
-              className={`group my-header bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
+              key={categoria.titulo || categoria.tituloMB + index}
+              className={`group my-header max-w-xs bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
                             tipoDeproyecto === TiposDeProyectos.Compostaje
                               ? "from-green-50! to-emerald-50! hover:border-accent"
@@ -38,7 +38,14 @@ export const SeccionCategoriasDeProyectos = (
                               : "from-rose-50 to-pink-50 hover:border-rose-400"
                           }
                           `}
-              title={categoria.titulo}
+              title={
+                <>
+                  <div className="md:hidden text-center">
+                    {categoria.tituloMB}
+                  </div>
+                  <div className="hidden md:flex">{categoria.titulo}</div>
+                </>
+              }
               header={encabezadoCategoriasDeProyectos({
                 tipoDeproyecto,
                 srcImg,

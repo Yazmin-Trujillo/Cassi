@@ -39,10 +39,14 @@ body {
   }
 
   h2 {
-    font-size: 2.25rem;
-    line-height: calc(2.5 / 2.25);
-    font-weight: 700;
     color: var(--primary);
+    font-size: 1.875rem;
+    line-height: calc(2.5 / 1.875);
+    font-weight: 700;
+    @media screen and (min-width: 768px) {
+      font-size: 2.25rem;
+      line-height: calc(2.5 / 2.25);
+    }
   }
 
   h3 {
@@ -62,11 +66,31 @@ body {
   }
 
   .my-header .p-card-header {
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem 0 2rem;
+    @media screen and (min-width: 768px) {
+      padding: 2rem;
+      justify-content: initial;
+    }
   }
 
   .my-header .p-card-body {
     padding: 0 2rem 2rem 2rem;
+  }
+
+  .my-header .p-card-content {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  .my-header .p-card-footer {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   .p-card .p-card-title {

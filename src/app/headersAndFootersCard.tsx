@@ -38,7 +38,7 @@ export const footerCategoriasDeProyectos = ({
   tipoDeProyectoF,
 }: FooterCategoriasDeProyectos) => (
   <div
-    className={`flex items-center text-sm font-semibold ${
+    className={`hidden md:flex items-center text-sm font-semibold ${
       tipoDeProyectoF === TiposDeProyectos.Compostaje
         ? "text-accent"
         : tipoDeProyectoF === TiposDeProyectos.Agua

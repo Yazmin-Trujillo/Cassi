@@ -17,8 +17,8 @@ export default function Home() {
       </header>
       <main className="flex overflow-hidden min-h-screen w-full flex-col items-center justify-between sm:items-start">
         {SeccionHero}
-        {/*  {SeccionCategoriasDeProyectos}
-        {SeccionProyectosDestacados}
+        {SeccionCategoriasDeProyectos}
+        {/*  {SeccionProyectosDestacados}
         {SeccionComoFunciona}
         {SeccionProyectosDeLaComunidad}*/}
 
