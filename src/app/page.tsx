@@ -19,8 +19,8 @@ export default function Home() {
         {SeccionHero}
         {SeccionCategoriasDeProyectos}
         {SeccionProyectosDestacados}
-        {/*  {SeccionComoFunciona}
-        {SeccionProyectosDeLaComunidad}*/}
+        {SeccionComoFunciona}
+        {/*{SeccionProyectosDeLaComunidad}*/}
 
         {/* <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
