@@ -1,30 +1,41 @@
 .p-card {
-    background: $panelContentBg;
-    color: $panelContentTextColor;
-    box-shadow: $cardShadow;
-    border-radius: $borderRadius;
+  background: $panelContentBg;
+  color: $panelContentTextColor;
+  box-shadow: $cardShadow;
+  border-radius: $borderRadius;
 
-    .p-card-body {
-        padding: $cardBodyPadding;
+  .p-card-body {
+    padding: $cardBodyPaddingMb;
+    @media screen and (min-width: 768px) {
+      padding: $cardBodyPadding;
     }
+  }
 
-    .p-card-title {
-        font-size: $cardTitleFontSize;
-        font-weight: $cardTitleFontWeight;
-        margin-bottom: $inlineSpacing;
+  .p-card-title {
+    font-size: $cardTitleFontSize;
+    font-weight: $cardTitleFontWeight;
+    margin-bottom: 0;
+    color: var(--primary);
+    font-size: 1.25rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: $inlineSpacing;
     }
+  }
 
-    .p-card-subtitle {
-        font-weight: $cardSubTitleFontWeight;
-        margin-bottom: $inlineSpacing;
-        color: $cardSubTitleColor;
-    }
+  .p-card-subtitle {
+    font-weight: $cardSubTitleFontWeight;
+    margin-bottom: $inlineSpacing;
+    color: $cardSubTitleColor;
+  }
 
-    .p-card-content {
-        padding: $cardContentPadding;
+  .p-card-content {
+    padding: $cardContentPaddingMb;
+    @media screen and (min-width: 768px) {
+      padding: $cardContentPadding;
     }
+  }
 
-    .p-card-footer {
-        padding: $cardFooterPadding;
-    }
+  .p-card-footer {
+    padding: $cardFooterPadding;
+  }
 }

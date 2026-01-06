@@ -18,8 +18,8 @@ export default function Home() {
       <main className="flex overflow-hidden min-h-screen w-full flex-col items-center justify-between sm:items-start">
         {SeccionHero}
         {SeccionCategoriasDeProyectos}
-        {/*  {SeccionProyectosDestacados}
-        {SeccionComoFunciona}
+        {SeccionProyectosDestacados}
+        {/*  {SeccionComoFunciona}
         {SeccionProyectosDeLaComunidad}*/}
 
         {/* <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
