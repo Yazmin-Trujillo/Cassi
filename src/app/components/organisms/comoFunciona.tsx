@@ -1,54 +1,59 @@
+import { ComoFunciona } from "@/app/data";
+import { twMerge } from "tailwind-merge";
+
 export const SeccionComoFunciona = (
   <section
     id="como-funciona"
-    className="py-20 px-0 w-screen bg-gradient-to-br from-primary to-secondary text-white"
+    className="flex py-10 px-0 w-screen md:bg-gradient-to-br from-primary to-secondary text-white"
   >
     <div className="max-w-7xl mx-auto px-12">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl! font-display! font-bold mb-4 text-white!">
+      <div className="text-center mb-8 md:mb-16">
+        <h2 className="text-4xl! font-display! font-bold md:mb-4 md:text-white!">
           ¿Cómo Funciona?
         </h2>
-        <p className="text-lg! text-green-100! max-w-2xl mx-auto">
-          Tres simples pasos para comenzar tu proyecto sustentable
+        <p className="hidden md:flex justify-center text-lg! text-green-100! max-w-2xl mx-auto">
+          Unos simples pasos para comenzar tu proyecto sustentable
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-12">
-        <div id="paso-1" className="text-center">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl font-bold">1</span>
-          </div>
-          <h3 className="text-2xl! text-white! font-bold mb-4">
-            Elige tu Proyecto
-          </h3>
-          <p className="text-green-100! leading-relaxed!">
-            Explora nuestra biblioteca de proyectos y selecciona el que más te
-            inspire. Cada uno incluye guías paso a paso detalladas.
-          </p>
-        </div>
-        <div id="paso-2" className="text-center">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl font-bold">2</span>
-          </div>
-          <h3 className="text-2xl! text-white! font-bold mb-4">
-            Obtén Materiales
-          </h3>
-          <p className="text-green-100! leading-relaxed!">
-            Compra los materiales necesarios directamente desde la plataforma.
-            Todo lo que necesitas en un solo lugar.
-          </p>
-        </div>
-        <div id="paso-3" className="text-center">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl font-bold">3</span>
-          </div>
-          <h3 className="text-2xl! text-white! font-bold mb-4">
-            Construye y Comparte
-          </h3>
-          <p className="text-green-100! leading-relaxed!">
-            Sigue la guía paso a paso y comparte tu experiencia con la
-            comunidad. Inspira a otros con tu proyecto.
-          </p>
-        </div>
+      <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-12">
+        {ComoFunciona.map((paso, index) => {
+          return (
+            <div
+              key={paso.titulo + index}
+              id={`paso-${index + 1}`}
+              className="md:text-center flex flex-row gap-4 md:flex-col max-w-md place-items-center"
+            >
+              <div>
+                <div
+                  className={twMerge(
+                    "w-16 h-16 rounded-full md:border-transparent flex items-center justify-center mx-auto",
+                    index === 1
+                      ? "bg-primary border-2 border-accent"
+                      : index === 2
+                      ? "bg-secondary"
+                      : index === 3
+                      ? "bg-secondary border-2 border-primary "
+                      : "bg-primary",
+                    "md:bg-white/20 md:backdrop-blur md:mb-6 md:w-20 md:h-20 md:border-transparent"
+                  )}
+                >
+                  <span className="text-4xl font-bold">{index + 1}</span>
+                </div>
+              </div>
+              <div className="w-auto flex flex-col md:gap-4">
+                <h3 className="md:text-2xl! md:text-white! font-bold ">
+                  {paso.titulo}
+                </h3>
+                <p className="text-base! md:hidden leading-relaxed!">
+                  {paso.descripcion}
+                </p>
+                <p className="hidden md:flex text-base! text-green-100! leading-relaxed!">
+                  {paso.descripcionLarge}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>

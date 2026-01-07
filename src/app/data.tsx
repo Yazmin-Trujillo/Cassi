@@ -1,6 +1,7 @@
 import { Button } from "primereact/button";
 import {
   CategoriasDeProyectosType,
+  ComoFuncionaType,
   ProyectosDeLaComunidadType,
   ProyectosDestacadosType,
   TiposDeProyectos,
@@ -330,5 +331,32 @@ export const ProyectosDeLaComunidad: ProyectosDeLaComunidadType[] = [
         alt: "small DIY solar panel installation on garden shed roof, renewable energy project, sustainable power, eco-friendly electricity, photovoltaic cells",
       },
     },
+  },
+];
+
+export const ComoFunciona: ComoFuncionaType[] = [
+  {
+    titulo: "Elige tu Proyecto",
+    descripcion: "Explora nuestra biblioteca de proyectos sustentables",
+    descripcionLarge:
+      "Explora nuestra biblioteca de proyectos con todas las categorias y selecciona el que más te inspire.",
+  },
+  {
+    titulo: "Compra Materiales",
+    descripcion: "Adquiere los materiales necesarios en nuestra tienda",
+    descripcionLarge:
+      "Compra los materiales necesarios directamente desde la plataforma. Todo lo que necesitas en un solo lugar.",
+  },
+  {
+    titulo: "Construye Paso a Paso",
+    descripcion: "Sigue nuestra guía detallada con fotos y videos",
+    descripcionLarge:
+      "Sigue nuestra guía detallada con fotos y videos para que todo sea mas claro y preciso",
+  },
+  {
+    titulo: "Comparte tu Experiencia",
+    descripcion: "Publica fotos y consejos de tu proyecto terminado",
+    descripcionLarge:
+      "Comparte tu experiencia con la comunidad. Inspira a otros con tu proyecto.",
   },
 ];

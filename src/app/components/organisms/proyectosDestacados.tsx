@@ -9,7 +9,7 @@ import { Card } from "primereact/card";
 export const SeccionProyectosDestacados = (
   <section
     id="proyectos-destacados"
-    className="pt-0 pb-20 px-8 w-full max-w-[1500px]"
+    className="py-10 px-8 w-full max-w-[1500px]"
   >
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-12">

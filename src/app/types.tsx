@@ -95,3 +95,9 @@ export type ContenidoProyectosDeLaComunidad = {
   imgSrcAutor: string;
   imgAltAutor: string;
 };
+
+export type ComoFuncionaType = {
+  titulo: string;
+  descripcion: string;
+  descripcionLarge: string;
+};
