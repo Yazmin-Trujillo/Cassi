@@ -9,7 +9,7 @@ import { Card } from "primereact/card";
 export const SeccionCategoriasDeProyectos = (
   <section
     id="categorias-section"
-    className="pt-20 pb-10 px-8 bg-white w-full max-w-[1500px]"
+    className="pt-10 pb-10 px-8 bg-white w-full max-w-[1500px]"
   >
     <div className="max-w-7xl mx-auto flex flex-col w-full items-center gap-4">
       <h2 className="text-center">Categorías de Proyectos</h2>
