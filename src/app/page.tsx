@@ -1,13 +1,13 @@
 import { Menubar } from "primereact/menubar";
 import { menuEnd, menuItems, menuStart } from "./data";
-import { SeccionHero } from "./components/organisms/heroSeccion";
-import { SeccionCategoriasDeProyectos } from "./components/organisms/categoriasDeProyectos";
-import { SeccionProyectosDestacados } from "./components/organisms/proyectosDestacados";
-import { SeccionComoFunciona } from "./components/organisms/comoFunciona";
-import { SeccionProyectosDeLaComunidad } from "./components/organisms/proyectosDeLaComunidad";
+import { SeccionHero } from "./components/organismos/heroSeccion";
+import { SeccionCategoriasDeProyectos } from "./components/organismos/categoriasDeProyectos";
+import { SeccionProyectosDestacados } from "./components/organismos/proyectosDestacados";
+import { SeccionComoFunciona } from "./components/organismos/comoFunciona";
+import { SeccionProyectosDeLaComunidad } from "./components/organismos/proyectosDeLaComunidad";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
-import { SeccionMaterialesPopulares } from "./components/organisms/materialesPopulares";
+import { SeccionMaterialesPopulares } from "./components/organismos/materialesPopulares";
 
 export default function Home() {
   return (
@@ -24,32 +24,21 @@ export default function Home() {
         {SeccionProyectosDestacados}
         {SeccionComoFunciona}
         {SeccionMaterialesPopulares}
-        <section id="community-section" className="px-4 py-6">
+
+        <section
+          id="community-section"
+          className="py-10 px-8 w-screen max-w-[1500px]"
+        >
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold text-gray-800">
               Experiencias Compartidas
             </h2>
-            <button className="bg-eco-green text-white px-4 py-2 rounded-full text-sm font-medium">
-              <i className="mr-1" data-fa-i2svg="">
-                <svg
-                  className="svg-inline--fa fa-plus"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="plus"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  data-fa-i2svg=""
-                >
-                  <path
-                    fill="currentColor"
-                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-                  ></path>
-                </svg>
-              </i>{" "}
-              Compartir
-            </button>
+            <Button
+              icon="pi pi-plus"
+              aria-label="Plus"
+              label="Compartir"
+              className="flex-col gap-0"
+            />
           </div>
 
           <div
