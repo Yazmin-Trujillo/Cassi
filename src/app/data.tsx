@@ -360,3 +360,66 @@ export const ComoFunciona: ComoFuncionaType[] = [
       "Comparte tu experiencia con la comunidad. Inspira a otros con tu proyecto.",
   },
 ];
+
+export const MaterialesPopulares = [
+  {
+    title: "Pallet de Madera",
+    descripcion: "Reciclado certificado",
+    header: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
+      altImg: "wooden pallet on white background, clean product shot",
+    },
+    footer: {
+      precio: "$25",
+    },
+  },
+  {
+    title: "Tierra Orgánica",
+    descripcion: "20 kg premium",
+    header: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/9333cbbe84-051939e814b32f123a90.png",
+      altImg: "bag of organic soil and compost on white background",
+    },
+    footer: {
+      precio: "$18",
+    },
+  },
+  {
+    title: "Kit de Semillas",
+    descripcion: "15 variedades",
+    header: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/b9d3070768-b02eb999347357dada92.png",
+      altImg: "seed starter kit with small pots on white background",
+    },
+    footer: {
+      precio: "$12",
+    },
+  },
+  {
+    title: "Kit Herramientas",
+    descripcion: "5 piezas básicas",
+    header: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/69a72c9293-ce54d7be3457afa04591.png",
+      altImg: "gardening tools set on white background, shovel and rake",
+    },
+    footer: {
+      precio: "$35",
+    },
+  },
+  {
+    title: "Pallet de Madera",
+    descripcion: "Reciclado certificado",
+    header: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
+      altImg: "wooden pallet on white background, clean product shot",
+    },
+    footer: {
+      precio: "$25",
+    },
+  },
+];

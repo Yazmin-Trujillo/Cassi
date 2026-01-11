@@ -107,12 +107,22 @@ body {
     }
   }
 
-  .card-materiales .p-card-content {
-    padding: 0;
+  /* .card-materiales .p-card-title {
+    height: 3.8rem;
     @media screen and (min-width: 768px) {
-      padding: 1rem 0;
+      height: auto;
     }
   }
+
+  .card-materiales .p-card-content {
+    padding: 0;
+    height: 3.5rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 1rem 0;
+      height: auto;
+    }
+  }*/
 
   .myBoxShadow {
     box-shadow: 0 20px 25px -5px rgba(45, 80, 22, 0.2),

@@ -15,7 +15,7 @@ export const SeccionCategoriasDeProyectos = (
       <h2 className="text-center">Categorías de Proyectos</h2>
       <p className="text-center">
         Explora diferentes áreas de sustentabilidad y encuentra el proyecto
-        perfecto para ti
+        perfecto para ti.
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
         {CategoriasDeProyectos.map((categoria, index) => {

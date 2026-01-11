@@ -15,6 +15,7 @@ export const SeccionHero = (
             border: 0,
             boxShadow: "none",
             backgroundColor: "transparent",
+            paddingBottom: "2rem",
           }}
           className="myCardTitle"
           title={

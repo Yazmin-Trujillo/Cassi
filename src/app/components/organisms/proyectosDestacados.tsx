@@ -18,7 +18,7 @@ export const SeccionProyectosDestacados = (
             Proyectos Destacados
           </h2>
           <p className="hidden md:flex text-lg text-gray-600">
-            Aprende paso a paso con nuestras guías completas
+            Aprende paso a paso con nuestras guías completas.
           </p>
         </div>
         <Button className="whitespace-nowrap" label="Ver más" text />

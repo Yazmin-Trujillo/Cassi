@@ -12,7 +12,7 @@ export const SeccionComoFunciona = (
           ¿Cómo Funciona?
         </h2>
         <p className="hidden md:flex justify-center text-lg! text-green-100! max-w-2xl mx-auto">
-          Unos simples pasos para comenzar tu proyecto sustentable
+          Unos simples pasos para comenzar tu proyecto sustentable.
         </p>
       </div>
       <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-12">
