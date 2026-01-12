@@ -101,3 +101,24 @@ export type ComoFuncionaType = {
   descripcion: string;
   descripcionLarge: string;
 };
+
+export type ExperienciasCompartidasType = {
+  descripcion: string;
+  header: {
+    autor: string;
+    imagenDelAutor: {
+      src: string;
+      alt: string;
+    };
+    tiempoDePublicacion: string;
+  };
+  footer: {
+    likes: number;
+    comentarios: number;
+    reenvios: number;
+    imagen: {
+      srcImg: string;
+      altImg: string;
+    };
+  };
+};

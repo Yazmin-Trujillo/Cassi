@@ -17,13 +17,13 @@ export const SeccionProyectosDestacados = (
           <h2 className="text-4xl font-display font-bold text-primary md:mb-3">
             Proyectos Destacados
           </h2>
-          <p className="hidden md:flex text-lg text-gray-600">
+          <p className="hidden md:flex">
             Aprende paso a paso con nuestras guías completas.
           </p>
         </div>
         <Button className="whitespace-nowrap" label="Ver más" text />
       </div>
-      <div className="flex flex-wrap justify-center md:grid md:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+      <div className="flex flex-wrap justify-center md:justify-start gap-8">
         {ProyectosDestacados.map((proyecto, index) => {
           const srcImg = proyecto.header.imagen.src;
           const altImg = proyecto.header.imagen.alt;

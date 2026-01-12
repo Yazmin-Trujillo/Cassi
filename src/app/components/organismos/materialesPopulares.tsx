@@ -10,9 +10,7 @@ export const SeccionMaterialesPopulares = (
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-8 md:mb-12">
         <div>
-          <h2 className="text-4xl font-display font-bold text-primary md:mb-3">
-            Materiales Populares
-          </h2>
+          <h2 className="md:mb-3">Materiales Populares</h2>
           <p className="hidden md:flex text-lg text-gray-600">
             Conoce todos los productos disponibles en nuestra tienda.
           </p>

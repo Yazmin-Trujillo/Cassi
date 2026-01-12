@@ -2,6 +2,7 @@ import { Button } from "primereact/button";
 import {
   CategoriasDeProyectosType,
   ComoFuncionaType,
+  ExperienciasCompartidasType,
   ProyectosDeLaComunidadType,
   ProyectosDestacadosType,
   TiposDeProyectos,
@@ -420,6 +421,81 @@ export const MaterialesPopulares = [
     },
     footer: {
       precio: "$25",
+    },
+  },
+];
+
+export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
+  {
+    descripcion:
+      "¡Mi primer huerto vertical terminado! Gracias por la guía tan detallada. Ya tengo tomates cherry creciendo 🍅",
+    header: {
+      autor: "Ana Martínez",
+      imagenDelAutor: {
+        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+        alt: "Avatar",
+      },
+      tiempoDePublicacion: "Hace 2 días",
+    },
+
+    footer: {
+      likes: 203,
+      comentarios: 18,
+      reenvios: 8,
+      imagen: {
+        srcImg:
+          "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
+        altImg:
+          "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
+      },
+    },
+  },
+  {
+    descripcion:
+      "Mi sistema de captación de agua lluvia funcionando perfectamente. Ahorro 40% en agua para riego 💧",
+    header: {
+      autor: "Pedro Sánchez",
+      imagenDelAutor: {
+        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg",
+        alt: "Avatar",
+      },
+      tiempoDePublicacion: "Hace 5 días",
+    },
+
+    footer: {
+      likes: 89,
+      comentarios: 12,
+      reenvios: 5,
+      imagen: {
+        srcImg:
+          "https://storage.googleapis.com/uxpilot-auth.appspot.com/7774e76c41-94ae04c5bc06b6adf5a2.png",
+        altImg:
+          "rainwater collection system with barrels and pipes, DIY setup in backyard",
+      },
+    },
+  },
+  {
+    descripcion:
+      "¡Mi primer huerto vertical terminado! Gracias por la guía tan detallada. Ya tengo tomates cherry creciendo 🍅",
+    header: {
+      autor: "Ana Martínez",
+      imagenDelAutor: {
+        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+        alt: "Avatar",
+      },
+      tiempoDePublicacion: "Hace 2 días",
+    },
+
+    footer: {
+      likes: 203,
+      comentarios: 18,
+      reenvios: 8,
+      imagen: {
+        srcImg:
+          "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
+        altImg:
+          "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
+      },
     },
   },
 ];
