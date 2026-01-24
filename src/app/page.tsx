@@ -1,35 +1,25 @@
-import { Menubar } from "primereact/menubar";
-import { menuEnd, menuItems, menuStart } from "./data";
 import { SeccionHero } from "./components/organismos/heroSeccion";
 import { SeccionCategoriasDeProyectos } from "./components/organismos/categoriasDeProyectos";
 import { SeccionProyectosDestacados } from "./components/organismos/proyectosDestacados";
 import { SeccionComoFunciona } from "./components/organismos/comoFunciona";
 import { SeccionMaterialesPopulares } from "./components/organismos/materialesPopulares";
 import { SeccionExperienciasCompartidas } from "./components/organismos/experienciasCompartidas";
-import { Button } from "primereact/button";
 import { BannerSingIn } from "./components/organismos/bannerSingIn";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center font-sans dark:bg-black">
-      <header
-        id="header"
-        className="bg-white/95 backdrop-blur-md shadow-sm max-w-[1500px] w-full"
-      >
-        <Menubar model={menuItems} start={menuStart} end={menuEnd} />
-      </header>
-      <main className="flex overflow-hidden min-h-screen w-full flex-col items-center justify-between ">
-        {SeccionHero}
-        {SeccionCategoriasDeProyectos}
-        {SeccionProyectosDestacados}
-        {SeccionComoFunciona}
-        {SeccionMaterialesPopulares}
-        {SeccionExperienciasCompartidas}
-        {BannerSingIn}
+    <main className="flex overflow-hidden min-h-screen w-full flex-col font-sans items-center justify-between ">
+      {SeccionHero}
+      {SeccionCategoriasDeProyectos}
+      {SeccionProyectosDestacados}
+      {SeccionComoFunciona}
+      {SeccionMaterialesPopulares}
+      {SeccionExperienciasCompartidas}
+      {BannerSingIn}
 
-        {/*{SeccionProyectosDeLaComunidad}*/}
+      {/*{SeccionProyectosDeLaComunidad}*/}
 
-        {/* <div classNameName="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
+      {/* <div classNameName="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"></div>
         <div classNameName="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             classNameName="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -48,7 +38,6 @@ export default function Home() {
             Documentation
           </a>
         </div>*/}
-      </main>
-    </div>
+    </main>
   );
 }

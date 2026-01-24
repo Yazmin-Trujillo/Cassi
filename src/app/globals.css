@@ -18,6 +18,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --breakpoint-ls: 60rem;
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -59,6 +60,10 @@ body {
     color: #4b5563;
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .p-menubar-start {
+    flex: 1;
   }
 
   .p-button-icon-only .p-button-label {
