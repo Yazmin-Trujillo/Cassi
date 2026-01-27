@@ -18,6 +18,9 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-agua: var(--captación-de-agua);
+  --color-energia: var(--energía-solar);
+  --color-huerto: var(--huertos-urbanos);
   --breakpoint-ls: 60rem;
 }
 

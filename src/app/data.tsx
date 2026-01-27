@@ -2,9 +2,10 @@ import { Button } from "primereact/button";
 import {
   CategoriasDeProyectosType,
   ComoFuncionaType,
+  DificultadDeProyecto,
   ExperienciasCompartidasType,
   ProyectosDeLaComunidadType,
-  ProyectosDestacadosType,
+  ProyectosType,
   TiposDeProyectos,
 } from "./types";
 import { Divider } from "primereact/divider";
@@ -128,75 +129,6 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
     footer: {
       numeroDeProyectos: 203,
       tipoDeProyecto: TiposDeProyectos.Huertos,
-    },
-  },
-];
-
-export const ProyectosDestacados: ProyectosDestacadosType[] = [
-  {
-    titulo: "Compostera de Pallets DIY",
-    descripcion:
-      "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
-    header: {
-      imagen: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
-        alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
-      },
-      tipoDeProyecto: TiposDeProyectos.Compostaje,
-      tiempoDeConstruccion: "2-3 horas",
-    },
-    footer: {
-      likes: 342,
-      comentarios: 28,
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
-        alt: "Avatar",
-      },
-      autor: "María López",
-    },
-  },
-  {
-    titulo: "Sistema de Captación Pluvial",
-    descripcion:
-      "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
-    header: {
-      imagen: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ada6b4c393-d460d2499c8385da5171.png",
-        alt: "rainwater harvesting system with barrels and gutters on house roof, DIY installation tutorial, sustainable water collection, pipes and filters, eco home improvement",
-      },
-      tipoDeProyecto: TiposDeProyectos.Agua,
-      tiempoDeConstruccion: "4-5 horas",
-    },
-    footer: {
-      likes: 489,
-      comentarios: 45,
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
-        alt: "Avatar",
-      },
-      autor: "Carlos Ruiz",
-    },
-  },
-  {
-    titulo: "Huerto Vertical en Balcón",
-    descripcion:
-      "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños.",
-    header: {
-      imagen: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/68b5883b56-700ba9f8c57721fb3d5e.png",
-        alt: "vertical garden on apartment balcony with recycled bottles and containers, urban gardening, fresh herbs and vegetables growing, DIY hydroponic system, sustainable living",
-      },
-      tipoDeProyecto: TiposDeProyectos.Huertos,
-      tiempoDeConstruccion: "3 horas",
-    },
-    footer: {
-      likes: 467,
-      comentarios: 62,
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
-        alt: "Avatar",
-      },
-      autor: "Ana Torres",
     },
   },
 ];
@@ -414,5 +346,153 @@ export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
           "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
       },
     },
+  },
+];
+
+export const ProyectosDestacados: ProyectosType[] = [
+  {
+    id: 5,
+    titulo: "Compostera de Pallets DIY",
+    descripcion:
+      "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
+      alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
+    },
+    categoria: TiposDeProyectos.Compostaje,
+    tiempoDeConstruccion: "2-3 horas",
+    likes: 568,
+    comentarios: 28,
+    autor: {
+      nombre: "María López",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
+  },
+  {
+    id: 6,
+    titulo: "Sistema de Captación Pluvial",
+    descripcion:
+      "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
+
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ada6b4c393-d460d2499c8385da5171.png",
+      alt: "rainwater harvesting system with barrels and gutters on house roof, DIY installation tutorial, sustainable water collection, pipes and filters, eco home improvement",
+    },
+    categoria: TiposDeProyectos.Agua,
+    tiempoDeConstruccion: "4-5 horas",
+    likes: 569,
+    comentarios: 45,
+    autor: {
+      nombre: "Carlos Ruiz",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
+  },
+
+  {
+    id: 7,
+    titulo: "Huerto Vertical en Balcón",
+    descripcion:
+      "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/68b5883b56-700ba9f8c57721fb3d5e.png",
+      alt: "vertical garden on apartment balcony with recycled bottles and containers, urban gardening, fresh herbs and vegetables growing, DIY hydroponic system, sustainable living",
+    },
+    categoria: TiposDeProyectos.Huertos,
+    tiempoDeConstruccion: "3 horas",
+    likes: 570,
+    comentarios: 62,
+    autor: {
+      nombre: "Ana Torres",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    titulo: "Compostera de Pallets DIY",
+    categoria: TiposDeProyectos.Compostaje,
+    tiempoDeConstruccion: "2-3 horas",
+    description:
+      "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
+    image: {
+      src: "https://images.unsplash.com/photo-1621460245084-2633830c0429?auto=format&fit=crop&q=80&w=800",
+      alt: "",
+    },
+    likes: 342,
+    comentarios: 28,
+    autor: {
+      nombre: "María López",
+      avatar: "https://i.pravatar.cc/150?u=maria",
+    },
+    precio: "$250.00 MXN",
+    dificultad: DificultadDeProyecto.FACIL,
+  },
+  {
+    id: 2,
+    titulo: "Sistema de Captación Pluvial",
+    categoria: TiposDeProyectos.Agua,
+    tiempoDeConstruccion: "4-5 horas",
+    description:
+      "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
+    image: {
+      src: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800",
+      alt: "",
+    },
+    likes: 489,
+    comentarios: 45,
+    autor: {
+      nombre: "Carlos Ruiz",
+      avatar: "https://i.pravatar.cc/150?u=carlos",
+    },
+    precio: "$1,200.00 MXN",
+    dififultad: DificultadDeProyecto.MEDIO,
+  },
+  {
+    id: 3,
+    titulo: "Huerto Vertical en Balcón",
+    categoria: TiposDeProyectos.Huertos,
+    tiempoDeConstruccion: "3 horas",
+    description:
+      "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños y departamentos.",
+    image: {
+      src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800",
+      alt: "",
+    },
+    likes: 567,
+    comentarios: 62,
+    autor: { nombre: "Ana Torres", avatar: "https://i.pravatar.cc/150?u=ana" },
+    precio: "$450.00 MXN",
+    dificultad: DificultadDeProyecto.FACIL,
+  },
+  {
+    id: 4,
+    titulo: "Horno Solar de Cartón",
+    categoria: TiposDeProyectos.Energias,
+    tiempoDeConstruccion: "1.5 horas",
+    description:
+      "Experimento educativo y funcional para cocinar con el sol usando materiales simples del hogar.",
+    image: {
+      src: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?auto=format&fit=crop&q=80&w=800",
+      alt: "",
+    },
+    likes: 215,
+    comentarios: 12,
+    autor: {
+      nombre: "José Méndez",
+      avatar: "https://i.pravatar.cc/150?u=jose",
+    },
+    precio: "$80.00 MXN",
+    dificultad: DificultadDeProyecto.FACIL,
   },
 ];

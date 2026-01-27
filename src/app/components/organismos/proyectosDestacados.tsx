@@ -25,15 +25,15 @@ export const SeccionProyectosDestacados = (
       </div>
       <div className="flex flex-wrap justify-center md:justify-start gap-8">
         {ProyectosDestacados.map((proyecto, index) => {
-          const srcImg = proyecto.header.imagen.src;
-          const altImg = proyecto.header.imagen.alt;
-          const tipoDeproyecto = proyecto.header.tipoDeProyecto;
-          const horasDeConstruccion = proyecto.header.tiempoDeConstruccion;
-          const likes = proyecto.footer.likes;
-          const comentarios = proyecto.footer.comentarios;
-          const autor = proyecto.footer.autor;
-          const imgSrcAutor = proyecto.footer.imagenDelAutor.src;
-          const imgAltAutor = proyecto.footer.imagenDelAutor.alt;
+          const srcImg = proyecto.imagen.src;
+          const altImg = proyecto.imagen.alt;
+          const tipoDeproyecto = proyecto.categoria;
+          const horasDeConstruccion = proyecto.tiempoDeConstruccion;
+          const likes = proyecto.likes;
+          const comentarios = proyecto.comentarios;
+          const autor = proyecto.autor.nombre;
+          const imgSrcAutor = proyecto.autor.avatar;
+          const imgAltAutor = proyecto.autor.nombre;
 
           return (
             <Card
