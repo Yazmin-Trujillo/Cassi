@@ -137,7 +137,8 @@ body {
   }*/
 
   .myBoxShadow {
-    box-shadow: 0 20px 25px -5px rgba(45, 80, 22, 0.2),
+    box-shadow:
+      0 20px 25px -5px rgba(45, 80, 22, 0.2),
       0 8px 10px -6 rgba(45, 80, 22, 0.14);
   }
 }

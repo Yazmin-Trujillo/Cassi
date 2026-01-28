@@ -48,8 +48,10 @@ $buttonActiveBorderColor: $primaryDarkerColor;
 
 /// Shadow of a raised button
 /// @group button
-$raisedButtonShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-  0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+$raisedButtonShadow:
+  0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 
 /// Border radius of a rounded button
 /// @group button
@@ -434,3 +436,27 @@ $speedDialActionTextColor: #fff;
 /// Color of any action button on speed dial in hover state
 /// @group button
 $speedDialActionTextHoverColor: #fff;
+
+/// Background of a agua button
+/// @group button
+$aguaButtonBg: #60a5fa;
+
+/// Text color of a agua button
+/// @group button
+$aguaButtonTextColor: #ffffff;
+
+/// Background of a energia button
+/// @group button
+$energiaButtonBg: #fbbf24;
+
+/// Text color of a energia button
+/// @group button
+$energiaButtonTextColor: #ffffff;
+
+/// Background of a huerto button
+/// @group button
+$huertoButtonBg: #fb7185;
+
+/// Text color of a huerto button
+/// @group button
+$huertoButtonTextColor: #ffffff;

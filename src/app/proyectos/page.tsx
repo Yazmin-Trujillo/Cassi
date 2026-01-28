@@ -3,6 +3,7 @@ import React, { useState, useMemo } from "react";
 import { Button } from "primereact/button";
 import { TiposDeProyectos } from "../types";
 import { projects } from "../data";
+import { EtiquetaDeCategorias } from "../utils";
 
 export default function Proyectos() {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -109,21 +110,10 @@ export default function Proyectos() {
                   alt={project.titulo}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 flex gap-2">
-                  <span
-                    className={`px-3 py-1 rounded-lg text-xs font-bold text-white uppercase tracking-wider ${
-                      project.categoria === "Compostaje"
-                        ? "bg-amber-700"
-                        : project.categoria === "Agua"
-                          ? "bg-blue-600"
-                          : project.categoria === "Huertos"
-                            ? "bg-pink-600"
-                            : "bg-green-600"
-                    }`}
-                  >
-                    {project.categoria}
-                  </span>
-                </div>
+                {EtiquetaDeCategorias(
+                  project.categoria,
+                  "absolute top-4 left-4",
+                )}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1.5 text-xs font-bold text-stone-800">
                   <i className="pi pi-clock"></i>
                   {project.tiempoDeConstruccion}

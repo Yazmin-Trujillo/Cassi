@@ -8,6 +8,7 @@ import {
   FooterProyectosDestacados,
   TiposDeProyectos,
 } from "./types";
+import { EtiquetaDeCategorias } from "./utils";
 
 export const encabezadoCategoriasDeProyectos = ({
   tipoDeproyecto,
@@ -19,10 +20,10 @@ export const encabezadoCategoriasDeProyectos = ({
       tipoDeproyecto === TiposDeProyectos.Compostaje
         ? "bg-primary"
         : tipoDeproyecto === TiposDeProyectos.Agua
-        ? "bg-blue-600 "
-        : tipoDeproyecto === TiposDeProyectos.Energias
-        ? "bg-amber-600 "
-        : "bg-rose-600"
+          ? "bg-blue-600 "
+          : tipoDeproyecto === TiposDeProyectos.Energias
+            ? "bg-amber-600 "
+            : "bg-rose-600"
     }`}
   >
     <img
@@ -42,10 +43,10 @@ export const footerCategoriasDeProyectos = ({
       tipoDeProyectoF === TiposDeProyectos.Compostaje
         ? "text-accent"
         : tipoDeProyectoF === TiposDeProyectos.Agua
-        ? "text-blue-600 "
-        : tipoDeProyectoF === TiposDeProyectos.Energias
-        ? "text-amber-600 "
-        : "text-rose-600"
+          ? "text-blue-600 "
+          : tipoDeProyectoF === TiposDeProyectos.Energias
+            ? "text-amber-600 "
+            : "text-rose-600"
     }`}
   >
     <span>{numeroDeProyectos} proyectos</span>
@@ -83,19 +84,7 @@ export const encabezadoProyectosDestacados = ({
       src={srcImg}
       alt={altImg}
     />
-    <div
-      className={`absolute top-4 left-4 text-white px-3 py-1 rounded-full text-sm font-semibold ${
-        tipoDeproyecto === TiposDeProyectos.Compostaje
-          ? "bg-primary"
-          : tipoDeproyecto === TiposDeProyectos.Agua
-          ? "bg-[var(--captación-de-agua)]"
-          : tipoDeproyecto === TiposDeProyectos.Energias
-          ? "bg-[var(--energía-solar)]"
-          : "bg-[var(--huertos-urbanos)]"
-      }`}
-    >
-      {tipoDeproyecto}
-    </div>
+    {EtiquetaDeCategorias(tipoDeproyecto, "absolute top-4 left-4")}
     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
       <i className="pi pi-clock"></i>
       <span>{horasDeConstruccion}</span>
