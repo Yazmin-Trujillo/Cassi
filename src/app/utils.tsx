@@ -9,13 +9,13 @@ export const EtiquetaDeCategorias = (
   <Tag
     rounded
     className={twMerge(
-      tipoDeProyecto === TiposDeProyectos.Compostaje
+      tipoDeProyecto === TiposDeProyectos.COMPOSTAJE
         ? ""
-        : tipoDeProyecto === TiposDeProyectos.Agua
+        : tipoDeProyecto === TiposDeProyectos.AGUA
           ? "p-tag-agua"
-          : tipoDeProyecto === TiposDeProyectos.Energias
+          : tipoDeProyecto === TiposDeProyectos.ENERGIAS
             ? "p-tag-energia"
-            : tipoDeProyecto === TiposDeProyectos.Huertos
+            : tipoDeProyecto === TiposDeProyectos.HUERTOS
               ? "p-tag-huerto"
               : "bg-green-600",
       className,

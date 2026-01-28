@@ -17,11 +17,11 @@ export const encabezadoCategoriasDeProyectos = ({
 }: EncabezadoCategoriasDeProyectos) => (
   <div
     className={`size-[4rem] rounded-xl flex items-center justify-center group-hover:scale-110 transition ${
-      tipoDeproyecto === TiposDeProyectos.Compostaje
+      tipoDeproyecto === TiposDeProyectos.COMPOSTAJE
         ? "bg-primary"
-        : tipoDeproyecto === TiposDeProyectos.Agua
+        : tipoDeproyecto === TiposDeProyectos.AGUA
           ? "bg-blue-600 "
-          : tipoDeproyecto === TiposDeProyectos.Energias
+          : tipoDeproyecto === TiposDeProyectos.ENERGIAS
             ? "bg-amber-600 "
             : "bg-rose-600"
     }`}

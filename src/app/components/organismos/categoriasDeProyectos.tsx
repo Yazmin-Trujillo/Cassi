@@ -29,13 +29,13 @@ export const SeccionCategoriasDeProyectos = (
               key={categoria.titulo || categoria.tituloMB + index}
               className={`group my-header max-w-xs bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
-                            tipoDeproyecto === TiposDeProyectos.Compostaje
+                            tipoDeproyecto === TiposDeProyectos.COMPOSTAJE
                               ? "from-green-50! to-emerald-50! hover:border-accent"
-                              : tipoDeproyecto === TiposDeProyectos.Agua
-                              ? "from-blue-50! to-cyan-50! hover:border-blue-400"
-                              : tipoDeproyecto === TiposDeProyectos.Energias
-                              ? "from-amber-50! to-yellow-50! hover:border-amber-400"
-                              : "from-rose-50 to-pink-50 hover:border-rose-400"
+                              : tipoDeproyecto === TiposDeProyectos.AGUA
+                                ? "from-blue-50! to-cyan-50! hover:border-blue-400"
+                                : tipoDeproyecto === TiposDeProyectos.ENERGIAS
+                                  ? "from-amber-50! to-yellow-50! hover:border-amber-400"
+                                  : "from-rose-50 to-pink-50 hover:border-rose-400"
                           }
                           `}
               title={

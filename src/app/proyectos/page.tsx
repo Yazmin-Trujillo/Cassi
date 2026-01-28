@@ -14,7 +14,7 @@ export default function Proyectos() {
     "Compostaje",
     "Agua",
     "Huertos",
-    "Energias",
+    "Energías",
     // "Bioconstrucción",
   ];
 
@@ -60,16 +60,16 @@ export default function Proyectos() {
                   onClick={() => setActiveCategory(cat)}
                   className={`whitespace-nowrap! text-white w-auto! border-2! ${
                     activeCategory === cat &&
-                    activeCategory === TiposDeProyectos.Compostaje
+                    activeCategory === TiposDeProyectos.COMPOSTAJE
                       ? "bg-emerald-50! text-accent! border-accent!"
                       : activeCategory === cat &&
-                          activeCategory === TiposDeProyectos.Agua
+                          activeCategory === TiposDeProyectos.AGUA
                         ? "bg-cyan-50! text-blue-600! border-blue-400!"
                         : activeCategory === cat &&
-                            activeCategory === TiposDeProyectos.Energias
+                            activeCategory === TiposDeProyectos.ENERGIAS
                           ? "bg-yellow-50! text-amber-600! border-amber-400!"
                           : activeCategory === cat &&
-                              activeCategory === TiposDeProyectos.Huertos
+                              activeCategory === TiposDeProyectos.HUERTOS
                             ? "bg-pink-50! text-rose-600! border-rose-400!"
                             : activeCategory === cat &&
                                 activeCategory === "Todos"

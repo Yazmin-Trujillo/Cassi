@@ -1,8 +1,8 @@
 export enum TiposDeProyectos {
-  Compostaje = "Compostaje",
-  Agua = "Agua",
-  Energias = "Energias",
-  Huertos = "Huertos",
+  COMPOSTAJE = "Compostaje",
+  AGUA = "Agua",
+  ENERGIAS = "Energías",
+  HUERTOS = "Huertos",
 }
 
 export enum DificultadDeProyecto {

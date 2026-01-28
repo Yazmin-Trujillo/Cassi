@@ -76,11 +76,11 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
         src: "/recycle.svg",
         alt: "recycle",
       },
-      tipoDeProyecto: TiposDeProyectos.Compostaje,
+      tipoDeProyecto: TiposDeProyectos.COMPOSTAJE,
     },
     footer: {
       numeroDeProyectos: 124,
-      tipoDeProyecto: TiposDeProyectos.Compostaje,
+      tipoDeProyecto: TiposDeProyectos.COMPOSTAJE,
     },
   },
   {
@@ -92,11 +92,11 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
         src: "/droplet.svg",
         alt: "droplet",
       },
-      tipoDeProyecto: TiposDeProyectos.Agua,
+      tipoDeProyecto: TiposDeProyectos.AGUA,
     },
     footer: {
       numeroDeProyectos: 87,
-      tipoDeProyecto: TiposDeProyectos.Agua,
+      tipoDeProyecto: TiposDeProyectos.AGUA,
     },
   },
   {
@@ -108,11 +108,11 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
         src: "/solarPanel.svg",
         alt: "solarPanel",
       },
-      tipoDeProyecto: TiposDeProyectos.Energias,
+      tipoDeProyecto: TiposDeProyectos.ENERGIAS,
     },
     footer: {
       numeroDeProyectos: 156,
-      tipoDeProyecto: TiposDeProyectos.Energias,
+      tipoDeProyecto: TiposDeProyectos.ENERGIAS,
     },
   },
   {
@@ -124,11 +124,11 @@ export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
         src: "/carrot.svg",
         alt: "carrot",
       },
-      tipoDeProyecto: TiposDeProyectos.Huertos,
+      tipoDeProyecto: TiposDeProyectos.HUERTOS,
     },
     footer: {
       numeroDeProyectos: 203,
-      tipoDeProyecto: TiposDeProyectos.Huertos,
+      tipoDeProyecto: TiposDeProyectos.HUERTOS,
     },
   },
 ];
@@ -359,7 +359,7 @@ export const ProyectosDestacados: ProyectosType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
       alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
     },
-    categoria: TiposDeProyectos.Compostaje,
+    categoria: TiposDeProyectos.COMPOSTAJE,
     tiempoDeConstruccion: "2-3 horas",
     likes: 568,
     comentarios: 28,
@@ -381,7 +381,7 @@ export const ProyectosDestacados: ProyectosType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ada6b4c393-d460d2499c8385da5171.png",
       alt: "rainwater harvesting system with barrels and gutters on house roof, DIY installation tutorial, sustainable water collection, pipes and filters, eco home improvement",
     },
-    categoria: TiposDeProyectos.Agua,
+    categoria: TiposDeProyectos.AGUA,
     tiempoDeConstruccion: "4-5 horas",
     likes: 569,
     comentarios: 45,
@@ -403,7 +403,7 @@ export const ProyectosDestacados: ProyectosType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/68b5883b56-700ba9f8c57721fb3d5e.png",
       alt: "vertical garden on apartment balcony with recycled bottles and containers, urban gardening, fresh herbs and vegetables growing, DIY hydroponic system, sustainable living",
     },
-    categoria: TiposDeProyectos.Huertos,
+    categoria: TiposDeProyectos.HUERTOS,
     tiempoDeConstruccion: "3 horas",
     likes: 570,
     comentarios: 62,
@@ -421,7 +421,7 @@ export const projects = [
   {
     id: 1,
     titulo: "Compostera de Pallets DIY",
-    categoria: TiposDeProyectos.Compostaje,
+    categoria: TiposDeProyectos.COMPOSTAJE,
     tiempoDeConstruccion: "2-3 horas",
     description:
       "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
@@ -441,7 +441,7 @@ export const projects = [
   {
     id: 2,
     titulo: "Sistema de Captación Pluvial",
-    categoria: TiposDeProyectos.Agua,
+    categoria: TiposDeProyectos.AGUA,
     tiempoDeConstruccion: "4-5 horas",
     description:
       "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
@@ -461,7 +461,7 @@ export const projects = [
   {
     id: 3,
     titulo: "Huerto Vertical en Balcón",
-    categoria: TiposDeProyectos.Huertos,
+    categoria: TiposDeProyectos.HUERTOS,
     tiempoDeConstruccion: "3 horas",
     description:
       "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños y departamentos.",
@@ -478,7 +478,7 @@ export const projects = [
   {
     id: 4,
     titulo: "Horno Solar de Cartón",
-    categoria: TiposDeProyectos.Energias,
+    categoria: TiposDeProyectos.ENERGIAS,
     tiempoDeConstruccion: "1.5 horas",
     description:
       "Experimento educativo y funcional para cocinar con el sol usando materiales simples del hogar.",
