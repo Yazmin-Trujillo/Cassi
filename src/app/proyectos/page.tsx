@@ -4,6 +4,11 @@ import { Button } from "primereact/button";
 import { TiposDeProyectos } from "../types";
 import { projects } from "../data";
 import { EtiquetaDeCategorias } from "../utils";
+import { Card } from "primereact/card";
+import {
+  encabezadoProyectosDestacados,
+  footerProyectosDestacados,
+} from "../headersAndFootersCard";
 
 export default function Proyectos() {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -98,96 +103,40 @@ export default function Proyectos() {
       {/* Grid de Proyectos */}
       <main className="max-w-7xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col group"
-            >
-              {/* Imagen y Badges */}
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={project.image.src}
-                  alt={project.titulo}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {EtiquetaDeCategorias(
-                  project.categoria,
-                  "absolute top-4 left-4",
-                )}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1.5 text-xs font-bold text-stone-800">
-                  <i className="pi pi-clock"></i>
-                  {project.tiempoDeConstruccion}
-                </div>
-              </div>
+          {filteredProjects.map((proyecto) => {
+            const srcImg = proyecto.imagen.src;
+            const altImg = proyecto.imagen.alt;
+            const tipoDeproyecto = proyecto.categoria;
+            const horasDeConstruccion = proyecto.tiempoDeConstruccion;
+            const likes = proyecto.likes;
+            const comentarios = proyecto.comentarios;
+            const autor = proyecto.autor.nombre;
+            const imgSrcAutor = proyecto.autor.avatar;
+            const imgAltAutor = proyecto.autor.nombre;
 
-              {/* Contenido */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-stone-900 mb-2 leading-tight">
-                  {project.titulo}
-                </h3>
-                <p className="text-stone-600 text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-
-                {/* Stats y Autor */}
-                <div className="flex items-center justify-between mb-6 border-b border-stone-50 pb-4">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-1 text-stone-400">
-                      <i className="pi pi-heart-fill text-red-500"></i>
-                      <span className="text-xs font-semibold">
-                        {project.likes}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1 text-stone-400">
-                      <i className="pi pi-comment"></i>
-                      <span className="text-xs font-semibold">
-                        {project.comentarios}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={project.autor.avatar}
-                      alt=""
-                      className="w-6 h-6 rounded-full ring-1 ring-stone-200"
-                    />
-                    <span className="text-xs font-medium text-stone-500">
-                      {project.autor.nombre}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Botones de Acción */}
-                <div className="mt-auto grid grid-cols-2 gap-3">
-                  <button className="flex items-center justify-center gap-2 bg-[#2d4a1e] hover:bg-[#1e3314] text-white py-3 rounded-xl font-bold text-sm transition-colors">
-                    Ver Guía
-                  </button>
-                  <button className="flex items-center justify-center gap-2 bg-white border-2 border-[#a3c585] text-[#2d4a1e] hover:bg-stone-50 py-3 rounded-xl font-bold text-sm transition-colors group/btn">
-                    <i data-fa-i2svg="">
-                      <svg
-                        className="svg-inline--fa fa-cart-shopping"
-                        width="1rem"
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="cart-shopping"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                        data-fa-i2svg=""
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                        ></path>
-                      </svg>
-                    </i>{" "}
-                    Materiales
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+            return (
+              <Card
+                key={proyecto.id}
+                className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
+                title={proyecto.titulo}
+                header={encabezadoProyectosDestacados({
+                  srcImg,
+                  altImg,
+                  tipoDeproyecto,
+                  horasDeConstruccion,
+                })}
+                footer={footerProyectosDestacados({
+                  likes,
+                  comentarios,
+                  autor,
+                  imgSrcAutor,
+                  imgAltAutor,
+                })}
+              >
+                <p className="text-xl line-clamp-3">{proyecto.description}</p>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Sección de Comunidad */}

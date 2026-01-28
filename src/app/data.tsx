@@ -425,8 +425,8 @@ export const projects = [
     tiempoDeConstruccion: "2-3 horas",
     description:
       "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
-    image: {
-      src: "https://images.unsplash.com/photo-1621460245084-2633830c0429?auto=format&fit=crop&q=80&w=800",
+    imagen: {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNtK-cM4DoHqkWYad2Mov6aVr8fKXL6TtYUQ&s",
       alt: "",
     },
     likes: 342,
@@ -445,8 +445,8 @@ export const projects = [
     tiempoDeConstruccion: "4-5 horas",
     description:
       "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
-    image: {
-      src: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800",
+    imagen: {
+      src: "https://www.ultralam.mx/wp-content/uploads/2023/05/SCALL-1600_2_2000x-1024x652-1.webp",
       alt: "",
     },
     likes: 489,
@@ -465,7 +465,7 @@ export const projects = [
     tiempoDeConstruccion: "3 horas",
     description:
       "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños y departamentos.",
-    image: {
+    imagen: {
       src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800",
       alt: "",
     },
@@ -482,8 +482,8 @@ export const projects = [
     tiempoDeConstruccion: "1.5 horas",
     description:
       "Experimento educativo y funcional para cocinar con el sol usando materiales simples del hogar.",
-    image: {
-      src: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?auto=format&fit=crop&q=80&w=800",
+    imagen: {
+      src: "https://mamiexperimentos.com/wp-content/uploads/horno-solar-casero-preparado.jpg",
       alt: "",
     },
     likes: 215,
@@ -496,3 +496,5 @@ export const projects = [
     dificultad: DificultadDeProyecto.FACIL,
   },
 ];
+
+//   src: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800",

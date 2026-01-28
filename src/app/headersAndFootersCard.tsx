@@ -79,11 +79,20 @@ export const encabezadoProyectosDestacados = ({
   horasDeConstruccion,
 }: EncabezadoProyectosDestacados) => (
   <div className="h-64 overflow-hidden relative">
-    <img
-      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-      src={srcImg}
-      alt={altImg}
-    />
+    {srcImg ? (
+      <img
+        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        src={srcImg}
+        alt={altImg}
+      />
+    ) : (
+      <img
+        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        src="https://img.freepik.com/vector-gratis/fondo-estilo-comic_23-2148809728.jpg"
+        alt="Fondo determinado"
+      />
+    )}
+
     {EtiquetaDeCategorias(tipoDeproyecto, "absolute top-4 left-4")}
     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
       <i className="pi pi-clock"></i>

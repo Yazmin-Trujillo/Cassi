@@ -23,7 +23,7 @@ export const SeccionProyectosDestacados = (
         </div>
         <Button className="whitespace-nowrap" label="Ver más" text />
       </div>
-      <div className="flex flex-wrap justify-center md:justify-start gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ProyectosDestacados.map((proyecto, index) => {
           const srcImg = proyecto.imagen.src;
           const altImg = proyecto.imagen.alt;
@@ -38,7 +38,7 @@ export const SeccionProyectosDestacados = (
           return (
             <Card
               key={proyecto.titulo + index}
-              className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs max-w-sm group"
+              className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
               title={proyecto.titulo}
               header={encabezadoProyectosDestacados({
                 srcImg,
@@ -54,7 +54,7 @@ export const SeccionProyectosDestacados = (
                 imgAltAutor,
               })}
             >
-              <p className="text-xl">{proyecto.descripcion}</p>
+              <p className="text-xl line-clamp-3">{proyecto.descripcion}</p>
             </Card>
           );
         })}

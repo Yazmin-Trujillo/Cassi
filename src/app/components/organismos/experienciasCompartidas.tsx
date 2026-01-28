@@ -17,12 +17,12 @@ export const SeccionExperienciasCompartidas = (
           className="flex-col gap-0"
         />
       </div>
-      <div className="flex flex-wrap justify-center md:justify-start gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ExperienciasCompartidas.map((experiencia, index) => {
           return (
             <Card
               key={experiencia.header.autor + index}
-              className="experiencias-compartidas overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs max-w-sm group"
+              className="experiencias-compartidas overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
               header={
                 <div className="flex justify-between gap-3 items-center px-4">
                   <div className="flex flex-1 gap-4">
