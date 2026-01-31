@@ -2,13 +2,12 @@
 import React, { useState, useMemo } from "react";
 import { Button } from "primereact/button";
 import { TiposDeProyectos } from "../types";
-import { projects } from "../data";
-import { EtiquetaDeCategorias } from "../utils";
 import { Card } from "primereact/card";
 import {
   encabezadoProyectosDestacados,
   footerProyectosDestacados,
 } from "../headersAndFootersCard";
+import { TodosLosProyectos } from "../data";
 
 export default function Proyectos() {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -24,7 +23,7 @@ export default function Proyectos() {
   ];
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    return TodosLosProyectos.filter((project) => {
       const matchesCat =
         activeCategory === "Todos" || project.categoria === activeCategory;
       const matchesSearch = project.titulo
@@ -50,9 +49,9 @@ export default function Proyectos() {
               </p>
             </div>
             <Button
-              icon="pi pi-plus-circle"
+              icon="pi pi-plus-circle icon transition duration-500"
               label="Subir mi Proyecto"
-              className="text-start!"
+              className="text-start! hover-group"
             />
           </div>
 
@@ -93,8 +92,9 @@ export default function Proyectos() {
                 placeholder="Buscar guías..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-2.5 bg-stone-100 border-none rounded-xl focus:ring-2 focus:ring-green-600 transition-all outline-none"
+                className="w-full relative pl-12 pr-4 py-2.5 bg-stone-100 border-none rounded-xl focus:ring-2 focus:ring-green-600 transition-all outline-none"
               />
+              <i className="pi pi-search absolute top-0 bottom-0 left-0 flex! items-center ml-4"></i>
             </div>
           </div>
         </div>
@@ -103,7 +103,8 @@ export default function Proyectos() {
       {/* Grid de Proyectos */}
       <main className="max-w-7xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((proyecto) => {
+          {filteredProjects.map((proyecto, index) => {
+            const id = proyecto.id;
             const srcImg = proyecto.imagen.src;
             const altImg = proyecto.imagen.alt;
             const tipoDeproyecto = proyecto.categoria;
@@ -116,7 +117,7 @@ export default function Proyectos() {
 
             return (
               <Card
-                key={proyecto.id}
+                key={proyecto.id + index}
                 className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
                 title={proyecto.titulo}
                 header={encabezadoProyectosDestacados({
@@ -126,6 +127,7 @@ export default function Proyectos() {
                   horasDeConstruccion,
                 })}
                 footer={footerProyectosDestacados({
+                  id,
                   likes,
                   comentarios,
                   autor,
@@ -133,24 +135,28 @@ export default function Proyectos() {
                   imgAltAutor,
                 })}
               >
-                <p className="text-xl line-clamp-3">{proyecto.description}</p>
+                <p className="text-xl line-clamp-3">{proyecto.descripcion}</p>
               </Card>
             );
           })}
         </div>
 
         {/* Sección de Comunidad */}
-        <section className="mt-20 bg-green-900 rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
-          <div className="relative z-10 max-w-2xl">
+        <section className="p-4 flex justify-center mt-20 bg-green-900 rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
+          <div className="relative z-10 max-w-2xl text-center w-full">
             <h2 className="text-white! text-3xl md:text-4xl font-bold mb-6">
-              ¿Realizaste este proyecto?
+              ¿Realizaste algún proyecto?
             </h2>
             <p className="text-green-100! text-lg mb-8">
               Comparte fotos de tu resultado, consejos para otros miembros y
               ayuda a crecer la comunidad de agroecología urbana.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-white text-green-900 px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-green-50 transition-colors">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button
+                rounded
+                severity="secondary"
+                className="group w-[20rem] py-4! border border-green-700 transition-colors"
+              >
                 Publicar mi Experiencia
                 <i
                   className="ml-2 group-hover:translate-x-1 transition"
@@ -174,10 +180,12 @@ export default function Proyectos() {
                     ></path>
                   </svg>
                 </i>
-              </button>
-              <button className="bg-green-800 text-white border border-green-700 px-8 py-4 rounded-full font-bold hover:bg-green-700 transition-colors">
-                Ver Galería Comunitaria
-              </button>
+              </Button>
+              <Button
+                label="Ver Galería Comunitaria"
+                rounded
+                className="w-[20rem] py-4! bg-green-800! border border-green-700 hover:bg-green-700! transition-colors"
+              />
             </div>
           </div>
           {/* Decoración visual */}
@@ -187,7 +195,7 @@ export default function Proyectos() {
           >
             <svg
               className="svg-inline--fa fa-leaf"
-              width={"300px"}
+              width="300px"
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"

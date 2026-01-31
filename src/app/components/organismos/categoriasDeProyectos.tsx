@@ -1,3 +1,4 @@
+"use client";
 import { CategoriasDeProyectos } from "@/app/data";
 import {
   encabezadoCategoriasDeProyectos,

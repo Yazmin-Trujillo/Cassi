@@ -68,6 +68,7 @@ export type EncabezadoProyectosDestacados = {
 };
 
 export type FooterProyectosDestacados = {
+  id: number;
   likes: number;
   comentarios: number;
   autor: string;

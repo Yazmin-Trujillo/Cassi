@@ -1,3 +1,4 @@
+"use client";
 import { ProyectosDestacados } from "@/app/data";
 import {
   encabezadoProyectosDestacados,
@@ -25,6 +26,7 @@ export const SeccionProyectosDestacados = (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ProyectosDestacados.map((proyecto, index) => {
+          const id = proyecto.id;
           const srcImg = proyecto.imagen.src;
           const altImg = proyecto.imagen.alt;
           const tipoDeproyecto = proyecto.categoria;
@@ -47,6 +49,7 @@ export const SeccionProyectosDestacados = (
                 horasDeConstruccion,
               })}
               footer={footerProyectosDestacados({
+                id,
                 likes,
                 comentarios,
                 autor,

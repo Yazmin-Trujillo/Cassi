@@ -417,13 +417,13 @@ export const ProyectosDestacados: ProyectosType[] = [
   },
 ];
 
-export const projects = [
+export const TodosLosProyectos: ProyectosType[] = [
   {
     id: 1,
     titulo: "Compostera de Pallets DIY",
     categoria: TiposDeProyectos.COMPOSTAJE,
     tiempoDeConstruccion: "2-3 horas",
-    description:
+    descripcion:
       "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
     imagen: {
       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNtK-cM4DoHqkWYad2Mov6aVr8fKXL6TtYUQ&s",
@@ -443,7 +443,7 @@ export const projects = [
     titulo: "Sistema de Captación Pluvial",
     categoria: TiposDeProyectos.AGUA,
     tiempoDeConstruccion: "4-5 horas",
-    description:
+    descripcion:
       "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
     imagen: {
       src: "https://www.ultralam.mx/wp-content/uploads/2023/05/SCALL-1600_2_2000x-1024x652-1.webp",
@@ -456,14 +456,14 @@ export const projects = [
       avatar: "https://i.pravatar.cc/150?u=carlos",
     },
     precio: "$1,200.00 MXN",
-    dififultad: DificultadDeProyecto.MEDIO,
+    dificultad: DificultadDeProyecto.MEDIO,
   },
   {
     id: 3,
     titulo: "Huerto Vertical en Balcón",
     categoria: TiposDeProyectos.HUERTOS,
     tiempoDeConstruccion: "3 horas",
-    description:
+    descripcion:
       "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños y departamentos.",
     imagen: {
       src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800",
@@ -480,7 +480,7 @@ export const projects = [
     titulo: "Horno Solar de Cartón",
     categoria: TiposDeProyectos.ENERGIAS,
     tiempoDeConstruccion: "1.5 horas",
-    description:
+    descripcion:
       "Experimento educativo y funcional para cocinar con el sol usando materiales simples del hogar.",
     imagen: {
       src: "https://mamiexperimentos.com/wp-content/uploads/horno-solar-casero-preparado.jpg",
@@ -494,6 +494,70 @@ export const projects = [
     },
     precio: "$80.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
+  },
+  {
+    id: 5,
+    titulo: "Compostera de Pallets DIY",
+    descripcion:
+      "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
+      alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
+    },
+    categoria: TiposDeProyectos.COMPOSTAJE,
+    tiempoDeConstruccion: "2-3 horas",
+    likes: 568,
+    comentarios: 28,
+    autor: {
+      nombre: "María López",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
+  },
+  {
+    id: 6,
+    titulo: "Sistema de Captación Pluvial",
+    descripcion:
+      "Instala un sistema completo para captar y almacenar agua de lluvia. Ahorra hasta 40% en tu consumo.",
+
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ada6b4c393-d460d2499c8385da5171.png",
+      alt: "rainwater harvesting system with barrels and gutters on house roof, DIY installation tutorial, sustainable water collection, pipes and filters, eco home improvement",
+    },
+    categoria: TiposDeProyectos.AGUA,
+    tiempoDeConstruccion: "4-5 horas",
+    likes: 569,
+    comentarios: 45,
+    autor: {
+      nombre: "Carlos Ruiz",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
+  },
+  {
+    id: 7,
+    titulo: "Huerto Vertical en Balcón",
+    descripcion:
+      "Crea un jardín vertical usando materiales reciclados. Perfecto para espacios pequeños.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/68b5883b56-700ba9f8c57721fb3d5e.png",
+      alt: "vertical garden on apartment balcony with recycled bottles and containers, urban gardening, fresh herbs and vegetables growing, DIY hydroponic system, sustainable living",
+    },
+    categoria: TiposDeProyectos.HUERTOS,
+    tiempoDeConstruccion: "3 horas",
+    likes: 570,
+    comentarios: 62,
+    autor: {
+      nombre: "Ana Torres",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
+    },
+    precio: "0",
+    dificultad: DificultadDeProyecto.MEDIO,
   },
 ];
 
