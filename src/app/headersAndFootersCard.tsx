@@ -1,4 +1,5 @@
 import { Button } from "primereact/button";
+import Link from "next/link";
 import {
   ContenidoProyectosDeLaComunidad,
   EncabezadoCategoriasDeProyectos,
@@ -9,7 +10,6 @@ import {
 } from "./types";
 import { EtiquetaDeCategorias } from "./utils";
 import { Divider } from "primereact/divider";
-import { useRouter } from "next/navigation";
 
 export const encabezadoCategoriasDeProyectos = ({
   tipoDeproyecto,
@@ -110,7 +110,6 @@ export const footerProyectosDestacados = ({
   imgSrcAutor,
   imgAltAutor,
 }: FooterProyectosDestacados) => {
-  const router = useRouter();
   return (
     <>
       <div className="flex items-center justify-between mb-4">
@@ -135,11 +134,8 @@ export const footerProyectosDestacados = ({
       </div>
       <Divider />
       <div className="flex items-center justify-between gap-4 w-full">
-        <Button
-          onClick={() => router.push(`/proyectos/${id}`)}
-          className="w-1/2"
-        >
-          Ver Guía
+        <Button className="w-1/2">
+          <Link href={`/proyectos/${id}`}> Ver Guía</Link>
         </Button>
         <Button
           style={{ borderColor: "#8fbc3f", color: "#8fbc3f" }}

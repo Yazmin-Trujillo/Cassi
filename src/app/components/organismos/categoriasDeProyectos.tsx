@@ -27,7 +27,7 @@ export const SeccionCategoriasDeProyectos = (
           const tipoDeProyectoF = categoria.footer.tipoDeProyecto;
           return (
             <Card
-              key={categoria.titulo || categoria.tituloMB + index}
+              key={categoria.titulo + index || categoria.tituloMB + index}
               className={`group my-header max-w-xs bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
                             tipoDeproyecto === TiposDeProyectos.COMPOSTAJE

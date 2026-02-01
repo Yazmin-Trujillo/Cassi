@@ -17,12 +17,12 @@ export const SeccionMaterialesPopulares = (
         </div>
         <Button className="whitespace-nowrap" label="Ver tienda" text />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 place-items-center">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 place-items-center">
         {MaterialesPopulares.map((producto, index) => {
           return (
             <Card
               key={producto.title + index}
-              className="card-materiales overflow-hidden group h-full"
+              className="card-materiales overflow-hidden group shadow-xl h-full flex flex-col justify-between"
               style={{
                 border: 0,
                 boxShadow: "none",
