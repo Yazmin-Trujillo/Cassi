@@ -6,10 +6,10 @@ export enum TiposDeProyectos {
 }
 
 export enum DificultadDeProyecto {
-  FACIL,
-  MEDIO,
-  DIFICIL,
-  EXPERTO,
+  FACIL = "Fácil",
+  MEDIO = "Medio",
+  DIFICIL = "Difícil",
+  EXPERTO = "Experto",
 }
 
 export type CategoriasDeProyectosType = {
@@ -56,8 +56,9 @@ export type ProyectosType = {
     nombre: string;
     avatar: string;
   };
-  precio: string;
+  costo: string;
   dificultad: DificultadDeProyecto;
+  proyectosCompletados: number;
 };
 
 export type EncabezadoProyectosDestacados = {

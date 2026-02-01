@@ -28,6 +28,11 @@
     color: $dangerButtonTextColor;
   }
 
+  &.p-tag-compost {
+    background-color: $compostButtonBg;
+    color: $aguaButtonTextColor;
+  }
+
   &.p-tag-agua {
     background-color: $aguaButtonBg;
     color: $aguaButtonTextColor;

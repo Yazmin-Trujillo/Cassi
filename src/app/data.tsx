@@ -221,7 +221,7 @@ export const MaterialesPopulares = [
       altImg: "wooden pallet on white background, clean product shot",
     },
     footer: {
-      precio: "$25",
+      costo: "$25",
     },
   },
   {
@@ -233,7 +233,7 @@ export const MaterialesPopulares = [
       altImg: "bag of organic soil and compost on white background",
     },
     footer: {
-      precio: "$18",
+      costo: "$18",
     },
   },
   {
@@ -245,7 +245,7 @@ export const MaterialesPopulares = [
       altImg: "seed starter kit with small pots on white background",
     },
     footer: {
-      precio: "$12",
+      costo: "$12",
     },
   },
   {
@@ -257,7 +257,7 @@ export const MaterialesPopulares = [
       altImg: "gardening tools set on white background, shovel and rake",
     },
     footer: {
-      precio: "$35",
+      costo: "$35",
     },
   },
   {
@@ -269,7 +269,7 @@ export const MaterialesPopulares = [
       altImg: "wooden pallet on white background, clean product shot",
     },
     footer: {
-      precio: "$25",
+      costo: "$25",
     },
   },
 ];
@@ -368,8 +368,9 @@ export const ProyectosDestacados: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 100,
   },
   {
     id: 6,
@@ -390,8 +391,9 @@ export const ProyectosDestacados: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 200,
   },
 
   {
@@ -412,8 +414,9 @@ export const ProyectosDestacados: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 10,
   },
 ];
 
@@ -435,8 +438,9 @@ export const TodosLosProyectos: ProyectosType[] = [
       nombre: "María López",
       avatar: "https://i.pravatar.cc/150?u=maria",
     },
-    precio: "$250.00 MXN",
+    costo: "$250.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
+    proyectosCompletados: 60,
   },
   {
     id: 2,
@@ -455,8 +459,9 @@ export const TodosLosProyectos: ProyectosType[] = [
       nombre: "Carlos Ruiz",
       avatar: "https://i.pravatar.cc/150?u=carlos",
     },
-    precio: "$1,200.00 MXN",
+    costo: "$1,200.00 MXN",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 1,
   },
   {
     id: 3,
@@ -472,8 +477,9 @@ export const TodosLosProyectos: ProyectosType[] = [
     likes: 567,
     comentarios: 62,
     autor: { nombre: "Ana Torres", avatar: "https://i.pravatar.cc/150?u=ana" },
-    precio: "$450.00 MXN",
+    costo: "$450.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
+    proyectosCompletados: 19,
   },
   {
     id: 4,
@@ -492,8 +498,9 @@ export const TodosLosProyectos: ProyectosType[] = [
       nombre: "José Méndez",
       avatar: "https://i.pravatar.cc/150?u=jose",
     },
-    precio: "$80.00 MXN",
+    costo: "$80.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
+    proyectosCompletados: 80,
   },
   {
     id: 5,
@@ -513,8 +520,9 @@ export const TodosLosProyectos: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 20,
   },
   {
     id: 6,
@@ -535,8 +543,9 @@ export const TodosLosProyectos: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 38,
   },
   {
     id: 7,
@@ -556,8 +565,30 @@ export const TodosLosProyectos: ProyectosType[] = [
       avatar:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
     },
-    precio: "0",
+    costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 14,
+  },
+  {
+    id: 7,
+    titulo: " Sistema de Compostaje Urbano Sostenible",
+    descripcion:
+      "Aprende a crear tu propio sistema de compostaje casero utilizando materiales reciclados. Reduce residuos orgánicos y crea fertilizante natural para tus plantas.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d093ba0402-9f2eedc3f6c5a73eecc0.png",
+      alt: "sustainable urban composting system with recycled materials, eco-friendly design, green plants around",
+    },
+    categoria: TiposDeProyectos.COMPOSTAJE,
+    tiempoDeConstruccion: "3-4 horas",
+    likes: 1247,
+    comentarios: 15,
+    autor: {
+      nombre: "Fernando Herrera",
+      avatar: "",
+    },
+    costo: "$25-40 USD",
+    dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 7,
   },
 ];
 

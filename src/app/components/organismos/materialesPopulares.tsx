@@ -41,7 +41,7 @@ export const SeccionMaterialesPopulares = (
               footer={
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-primary">
-                    {producto.footer.precio}
+                    {producto.footer.costo}
                   </span>
                   <Button icon="pi pi-plus" rounded aria-label="Plus" />
                 </div>

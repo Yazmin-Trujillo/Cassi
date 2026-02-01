@@ -4,7 +4,7 @@ import { Card } from "primereact/card";
 export const SeccionHero = (
   <section
     id="hero-section"
-    className="max-w-[1500px] flex w-full items-center h-dvh md:h-auto pb-10 md:pb-0 md:h-[720px] bg-gradient-to-br from-green-50 via-white to-emerald-50"
+    className="max-w-[1500px] flex w-full items-center h-dvh md:h-auto pb-10 md:pb-0 md:h-[720px] "
   >
     <div className="max-w-7xl mx-auto flex gap-16 items-center relative w-full h-full md:p-8 xl:p-16">
       <div className="md:w-1/2 md:relative absolute bottom-0 left-0 right-0 z-1">
