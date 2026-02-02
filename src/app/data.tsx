@@ -4,8 +4,10 @@ import {
   ComoFuncionaType,
   DificultadDeProyecto,
   ExperienciasCompartidasType,
+  MaterialType,
   ProyectosDeLaComunidadType,
-  ProyectosType,
+  ProyectosDestacadosType,
+  ProyectoType,
   TiposDeProyectos,
 } from "./types";
 import { Divider } from "primereact/divider";
@@ -211,66 +213,163 @@ export const ComoFunciona: ComoFuncionaType[] = [
   },
 ];
 
-export const MaterialesPopulares = [
+export const MaterialesPopulares: MaterialType[] = [
   {
-    title: "Pallet de Madera",
+    id: 1,
+    material: "Pallet de Madera",
     descripcion: "Reciclado certificado",
-    header: {
+    imagen: {
       srcImg:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
       altImg: "wooden pallet on white background, clean product shot",
     },
-    footer: {
-      costo: "$25",
-    },
+    costo: "$25",
   },
   {
-    title: "Tierra Orgánica",
+    id: 2,
+    material: "Tierra Orgánica",
     descripcion: "20 kg premium",
-    header: {
+    imagen: {
       srcImg:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/9333cbbe84-051939e814b32f123a90.png",
       altImg: "bag of organic soil and compost on white background",
     },
-    footer: {
-      costo: "$18",
-    },
+    costo: "$18",
   },
   {
-    title: "Kit de Semillas",
+    id: 3,
+    material: "Kit de Semillas",
     descripcion: "15 variedades",
-    header: {
+    imagen: {
       srcImg:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/b9d3070768-b02eb999347357dada92.png",
       altImg: "seed starter kit with small pots on white background",
     },
-    footer: {
-      costo: "$12",
-    },
+    costo: "$12",
   },
   {
-    title: "Kit Herramientas",
+    id: 4,
+    material: "Kit Herramientas",
     descripcion: "5 piezas básicas",
-    header: {
+    imagen: {
       srcImg:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/69a72c9293-ce54d7be3457afa04591.png",
       altImg: "gardening tools set on white background, shovel and rake",
     },
-    footer: {
-      costo: "$35",
-    },
+    costo: "$35",
   },
   {
-    title: "Pallet de Madera",
+    id: 5,
+    material: "Pallet de Madera",
     descripcion: "Reciclado certificado",
-    header: {
+    imagen: {
       srcImg:
         "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
       altImg: "wooden pallet on white background, clean product shot",
     },
-    footer: {
-      costo: "$25",
+    costo: "$25",
+  },
+];
+
+export const Materiales: MaterialType[] = [
+  {
+    id: 1,
+    material: "Pallet de Madera",
+    descripcion: "Reciclado certificado",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
+      altImg: "wooden pallet on white background, clean product shot",
     },
+    costo: "$25",
+  },
+  {
+    id: 2,
+    material: "Tierra Orgánica",
+    descripcion: "20 kg premium",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/9333cbbe84-051939e814b32f123a90.png",
+      altImg: "bag of organic soil and compost on white background",
+    },
+    costo: "$18",
+  },
+  {
+    id: 3,
+    material: "Kit de Semillas",
+    descripcion: "15 variedades",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/b9d3070768-b02eb999347357dada92.png",
+      altImg: "seed starter kit with small pots on white background",
+    },
+    costo: "$12",
+  },
+  {
+    id: 4,
+    material: "Kit Herramientas",
+    descripcion: "5 piezas básicas",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/69a72c9293-ce54d7be3457afa04591.png",
+      altImg: "gardening tools set on white background, shovel and rake",
+    },
+    costo: "$35",
+  },
+  {
+    id: 5,
+    material: "Pallet de Madera",
+    descripcion: "Reciclado certificado",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d55f6609c0-208c6ad9245214d490bf.png",
+      altImg: "wooden pallet on white background, clean product shot",
+    },
+    costo: "$25",
+  },
+  {
+    id: 6,
+    material: "Contenedor Principal",
+    descripcion: "Contenedor plástico de 20L con tapa hermética",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/6d474d02e6-3b4e950b7e3f7fc41f91.png",
+      altImg: "plastic storage container for composting without background",
+    },
+    costo: "$12.99",
+  },
+  {
+    id: 7,
+    material: "Kit de Herramientas",
+    descripcion: "Taladro, brocas y herramientas básicas",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/44b525cbb5-9282a67fc8032d96a206.png",
+      altImg: "gardening tools set drill bits without background",
+    },
+    costo: "$8.50",
+  },
+  {
+    id: 8,
+    material: "Malla Metálica",
+    descripcion: " Malla de acero inoxidable 30x30cm",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/05eb9fd31e-a29b38211c896f6d9ec4.png",
+      altImg: "metal mesh wire grid for composting without background",
+    },
+    costo: "$6.75",
+  },
+  {
+    id: 9,
+    material: "Iniciador de Compost",
+    descripcion: "Acelerador orgánico para compostaje",
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/a69962a424-992b63edfa364c4e74a5.png",
+      altImg: "organic compost starter powder package without background",
+    },
+    costo: "$4.99",
   },
 ];
 
@@ -349,7 +448,7 @@ export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
   },
 ];
 
-export const ProyectosDestacados: ProyectosType[] = [
+export const ProyectosDestacados: ProyectosDestacadosType[] = [
   {
     id: 5,
     titulo: "Compostera de Pallets DIY",
@@ -420,7 +519,7 @@ export const ProyectosDestacados: ProyectosType[] = [
   },
 ];
 
-export const TodosLosProyectos: ProyectosType[] = [
+export const TodosLosProyectos: ProyectoType[] = [
   {
     id: 1,
     titulo: "Compostera de Pallets DIY",
@@ -441,6 +540,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "$250.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 60,
+    materialesId: [2, 3],
   },
   {
     id: 2,
@@ -462,6 +562,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "$1,200.00 MXN",
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 1,
+    materialesId: [2, 3],
   },
   {
     id: 3,
@@ -480,6 +581,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "$450.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 19,
+    materialesId: [2, 3],
   },
   {
     id: 4,
@@ -501,6 +603,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "$80.00 MXN",
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 80,
+    materialesId: [2, 3],
   },
   {
     id: 5,
@@ -523,6 +626,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 20,
+    materialesId: [2, 3],
   },
   {
     id: 6,
@@ -546,6 +650,7 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 38,
+    materialesId: [2, 3],
   },
   {
     id: 7,
@@ -568,10 +673,11 @@ export const TodosLosProyectos: ProyectosType[] = [
     costo: "0",
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 14,
+    materialesId: [2, 3],
   },
   {
     id: 7,
-    titulo: " Sistema de Compostaje Urbano Sostenible",
+    titulo: "Sistema de Compostaje Urbano Sostenible",
     descripcion:
       "Aprende a crear tu propio sistema de compostaje casero utilizando materiales reciclados. Reduce residuos orgánicos y crea fertilizante natural para tus plantas.",
     imagen: {
@@ -584,11 +690,36 @@ export const TodosLosProyectos: ProyectosType[] = [
     comentarios: 15,
     autor: {
       nombre: "Fernando Herrera",
-      avatar: "",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg",
     },
     costo: "$25-40 USD",
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 7,
+    materialesId: [2, 5, 8],
+  },
+  {
+    id: 8,
+    titulo: "Sistema de Compostaje Urbano Sostenible",
+    descripcion:
+      "Aprende a crear tu propio sistema de compostaje casero utilizando materiales reciclados. Reduce residuos orgánicos y crea fertilizante natural para tus plantas.",
+    imagen: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d093ba0402-9f2eedc3f6c5a73eecc0.png",
+      alt: "sustainable urban composting system with recycled materials, eco-friendly design, green plants around",
+    },
+    categoria: TiposDeProyectos.COMPOSTAJE,
+    tiempoDeConstruccion: "3-4 horas",
+    likes: 47,
+    comentarios: 58,
+    autor: {
+      nombre: "Ana Torres",
+      avatar:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg",
+    },
+    costo: "$25-40 USD",
+    dificultad: DificultadDeProyecto.MEDIO,
+    proyectosCompletados: 31,
+    materialesId: [6, 7, 8, 9],
   },
 ];
 

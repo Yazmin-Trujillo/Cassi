@@ -40,7 +40,7 @@ export type FooterCategoriasDeProyectos = {
   tipoDeProyectoF: TiposDeProyectos;
 };
 
-export type ProyectosType = {
+export type ProyectosDestacadosType = {
   id: number;
   titulo: string;
   descripcion: string;
@@ -59,6 +59,28 @@ export type ProyectosType = {
   costo: string;
   dificultad: DificultadDeProyecto;
   proyectosCompletados: number;
+};
+
+export type ProyectoType = {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  imagen: {
+    src: string;
+    alt: string;
+  };
+  categoria: TiposDeProyectos;
+  tiempoDeConstruccion: string;
+  likes: number;
+  comentarios: number;
+  autor: {
+    nombre: string;
+    avatar: string;
+  };
+  costo: string;
+  dificultad: DificultadDeProyecto;
+  proyectosCompletados: number;
+  materialesId: number[];
 };
 
 export type EncabezadoProyectosDestacados = {
@@ -101,6 +123,17 @@ export type ContenidoProyectosDeLaComunidad = {
   autor: string;
   imgSrcAutor: string;
   imgAltAutor: string;
+};
+
+export type MaterialType = {
+  id: number;
+  material: string;
+  descripcion: string;
+  imagen: {
+    srcImg: string;
+    altImg: string;
+  };
+  costo: string;
 };
 
 export type ComoFuncionaType = {

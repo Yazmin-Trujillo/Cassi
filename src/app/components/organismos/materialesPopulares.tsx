@@ -21,27 +21,27 @@ export const SeccionMaterialesPopulares = (
         {MaterialesPopulares.map((producto, index) => {
           return (
             <Card
-              key={producto.title + index}
+              key={producto.id + index}
               className="card-materiales overflow-hidden group shadow-xl h-full flex flex-col justify-between"
               style={{
                 border: 0,
                 boxShadow: "none",
                 backgroundColor: "transparent",
               }}
-              title={producto.title}
+              title={producto.material}
               header={
                 <div className="h-32 bg-white rounded-xl overflow-hidden">
                   <img
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                    src={producto.header.srcImg}
-                    alt={producto.header.altImg}
+                    src={producto.imagen.srcImg}
+                    alt={producto.imagen.altImg}
                   />
                 </div>
               }
               footer={
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-primary">
-                    {producto.footer.costo}
+                    {producto.costo}
                   </span>
                   <Button icon="pi pi-plus" rounded aria-label="Plus" />
                 </div>

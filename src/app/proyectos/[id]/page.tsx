@@ -1,5 +1,6 @@
 import { HeroDelProyecto } from "@/app/components/moleculas/heroDelProyecto";
-import { TodosLosProyectos } from "@/app/data";
+import { TarjetaDelMaterial } from "@/app/components/moleculas/tarjetaDelMaterial";
+import { Materiales, TodosLosProyectos } from "@/app/data";
 
 type ProyectoType = {
   params: Promise<{
@@ -44,6 +45,10 @@ export default async function Proyecto({ params }: ProyectoType) {
     const proyectosCompletados = data.proyectosCompletados;
     const srcImg = data.imagen.src;
     const altImg = data.imagen.alt;
+    const materialesId = data.materialesId;
+    const materiales = Materiales.filter((material) =>
+      materialesId.includes(material.id),
+    );
 
     return (
       <main className="flex flex-col gap-16">
@@ -73,93 +78,22 @@ export default async function Proyecto({ params }: ProyectoType) {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-2">
                 <div className="flex flex-col items-center md:grid md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 rounded-lg p-6 max-w-[28rem] shadow-xl h-full flex flex-col justify-between">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold text-gray-900">
-                        Contenedor Principal
-                      </h3>
-                      <span className="text-primary font-medium">$12.99</span>
-                    </div>
-                    <div className="h-32 overflow-hidden rounded-lg mb-4">
-                      <img
-                        className="w-full h-full object-cover"
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6d474d02e6-3b4e950b7e3f7fc41f91.png"
-                        alt="plastic storage container for composting without background"
-                      />
-                    </div>
-                    <p className="text-sm text-gray-600 mb-3">
-                      Contenedor plástico de 20L con tapa hermética
-                    </p>
-                    <button className="w-full bg-secondary text-white py-2 rounded-lg hover:bg-eco-dark transition-colors">
-                      Agregar al carrito
-                    </button>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-lg p-6 max-w-[28rem] shadow-xl h-full flex flex-col justify-between">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold text-gray-900">
-                        Kit de Herramientas
-                      </h3>
-                      <span className="text-primary font-medium">$8.50</span>
-                    </div>
-                    <div className="h-32 overflow-hidden rounded-lg mb-4">
-                      <img
-                        className="w-full h-full object-cover"
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/44b525cbb5-9282a67fc8032d96a206.png"
-                        alt="gardening tools set drill bits without background"
-                      />
-                    </div>
-                    <p className="text-sm text-gray-600 mb-3">
-                      Taladro, brocas y herramientas básicas
-                    </p>
-                    <button className="w-full bg-secondary text-white py-2 rounded-lg hover:bg-eco-dark transition-colors">
-                      Agregar al carrito
-                    </button>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-lg p-6 max-w-[28rem] shadow-xl h-full flex flex-col justify-between">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold text-gray-900">
-                        Malla Metálica
-                      </h3>
-                      <span className="text-primary font-medium">$6.75</span>
-                    </div>
-                    <div className="h-32 overflow-hidden rounded-lg mb-4">
-                      <img
-                        className="w-full h-full object-cover"
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/05eb9fd31e-a29b38211c896f6d9ec4.png"
-                        alt="metal mesh wire grid for composting without background"
-                      />
-                    </div>
-                    <p className="text-sm text-gray-600 mb-3">
-                      Malla de acero inoxidable 30x30cm
-                    </p>
-                    <button className="w-full bg-secondary text-white py-2 rounded-lg hover:bg-eco-dark transition-colors">
-                      Agregar al carrito
-                    </button>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-lg p-6 max-w-[28rem] shadow-xl h-full flex flex-col justify-between">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold text-gray-900">
-                        Iniciador de Compost
-                      </h3>
-                      <span className="text-primary font-medium">$4.99</span>
-                    </div>
-                    <div className="h-32 overflow-hidden rounded-lg mb-4">
-                      <img
-                        className="w-full h-full object-cover"
-                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a69962a424-992b63edfa364c4e74a5.png"
-                        alt="organic compost starter powder package without background"
-                      />
-                    </div>
-                    <p className="text-sm text-gray-600 mb-3">
-                      Acelerador orgánico para compostaje
-                    </p>
-                    <button className="w-full bg-secondary text-white py-2 rounded-lg hover:bg-eco-dark transition-colors">
-                      Agregar al carrito
-                    </button>
-                  </div>
+                  {materiales.map((item) => {
+                    const srcImg = item.imagen.srcImg;
+                    const altImg = item.imagen.altImg;
+                    const id = item.id;
+                    const material = item.material;
+                    const costo = item.costo;
+                    const imagen = { srcImg, altImg };
+                    const descripcion = item.descripcion;
+                    return TarjetaDelMaterial({
+                      id,
+                      material,
+                      costo,
+                      imagen,
+                      descripcion,
+                    });
+                  })}
                 </div>
               </div>
 
