@@ -49,6 +49,7 @@ export default async function Proyecto({ params }: ProyectoType) {
     const materiales = Materiales.filter((material) =>
       materialesId.includes(material.id),
     );
+    const pasos = data.pasos;
 
     return (
       <main className="flex flex-col gap-16">
@@ -100,22 +101,17 @@ export default async function Proyecto({ params }: ProyectoType) {
               <div className="bg-[#dcfce7] rounded-xl p-6">
                 <h3 className="font-bold text-gray-900 mb-4">Kit Completo</h3>
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Contenedor Principal</span>
-                    <span className="text-primary">$12.99</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Kit de Herramientas</span>
-                    <span className="text-primary">$8.50</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Malla Metálica</span>
-                    <span className="text-primary">$6.75</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Iniciador de Compost</span>
-                    <span className="text-primary">$4.99</span>
-                  </div>
+                  {materiales.map((item) => {
+                    const id = item.id;
+                    const material = item.material;
+                    const costo = item.costo;
+                    return (
+                      <div key={id} className="flex justify-between">
+                        <span className="text-gray-600">{material}</span>
+                        <span className="text-primary">{costo}</span>
+                      </div>
+                    );
+                  })}
                   <div className="border-t border-primary pt-3 flex justify-between font-bold">
                     <span className="text-primary">Total</span>
                     <span className="text-primary">$33.23</span>
@@ -146,161 +142,43 @@ export default async function Proyecto({ params }: ProyectoType) {
             </div>
 
             <div className="space-y-12">
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="flex items-center mb-4">
-                    <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4">
-                      1
+              {pasos.map((paso, index) => (
+                <div
+                  key={index + paso.titulo}
+                  className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center"
+                >
+                  <div
+                    className={`${(index + 1) % 2 === 0 ? "md:order-2" : ""}`}
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {paso.titulo}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      Preparación del Contenedor
-                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {paso.descripcionLarga}
+                    </p>
+                    <ul className="space-y-2 text-gray-600">
+                      {paso.descripcionCorta.map((item, index) => (
+                        <li key={index + item} className="flex items-center">
+                          <i className="pi pi-check text-secondary mr-2"></i>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-gray-600 mb-4">
-                    Toma el contenedor plástico y realiza orificios de
-                    ventilación en los laterales y la base. Estos permitirán la
-                    circulación de aire necesaria para el proceso de compostaje.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Haz 15-20 orificios de 6mm
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Distribuye uniformemente
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Lija los bordes ásperos
-                    </li>
-                  </ul>
-                </div>
-                <div className="h-80 overflow-hidden rounded-xl">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png"
-                    alt="drilling holes in plastic container for composting, step by step tutorial"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center">
-                <div className="md:order-2">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4">
-                      2
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      Instalación de la Malla
-                    </h3>
+                  <div className="h-80 overflow-hidden rounded-xl">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={paso.imagen.src}
+                      alt={paso.imagen.alt}
+                    />
                   </div>
-                  <p className="text-gray-600 mb-4">
-                    Coloca la malla metálica en el fondo del contenedor. Esta
-                    servirá como base de drenaje y permitirá que el exceso de
-                    líquidos se drene adecuadamente.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Corta la malla al tamaño del fondo
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Asegura con clips plásticos
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Verifica que esté nivelada
-                    </li>
-                  </ul>
                 </div>
-                <div className="md:order-1 h-80 overflow-hidden rounded-xl">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png"
-                    alt="installing metal mesh in bottom of compost container, hands placing wire grid"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="flex items-center mb-4">
-                    <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4">
-                      3
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      Primera Capa de Material
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Agrega una capa base de material seco como hojas secas,
-                    papel triturado o cartón. Esta capa ayudará a absorber la
-                    humedad y proporcionará carbono al compost.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      5cm de material seco
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Distribuye uniformemente
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Rocía el iniciador de compost
-                    </li>
-                  </ul>
-                </div>
-                <div className="h-80 overflow-hidden rounded-xl">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png"
-                    alt="adding dry leaves and organic material to compost bin, layering process"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center">
-                <div className="md:order-2">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4">
-                      4
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      Mantenimiento y Cosecha
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Alterna capas de material verde (restos de comida) y marrón
-                    (material seco). Revuelve semanalmente y mantén la humedad
-                    adecuada para obtener compost en 3-6 meses.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Revolver cada 7 días
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Mantener humedad como esponja
-                    </li>
-                    <li className="flex items-center">
-                      <i className="pi pi-check text-secondary mr-2"></i>
-                      Cosechar cuando esté oscuro
-                    </li>
-                  </ul>
-                </div>
-                <div className="md:order-1 h-80 overflow-hidden rounded-xl">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png"
-                    alt="finished dark rich compost soil in hands, successful composting result"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

@@ -81,6 +81,12 @@ export type ProyectoType = {
   dificultad: DificultadDeProyecto;
   proyectosCompletados: number;
   materialesId: number[];
+  pasos: {
+    titulo: string;
+    descripcionLarga: string;
+    descripcionCorta: string[];
+    imagen: { src: string; alt: string };
+  }[];
 };
 
 export type EncabezadoProyectosDestacados = {
@@ -143,22 +149,21 @@ export type ComoFuncionaType = {
 };
 
 export type ExperienciasCompartidasType = {
+  id: number;
+  proyectoPadre: number;
+  rankingDeSatisfacción: number;
   descripcion: string;
-  header: {
-    autor: string;
-    imagenDelAutor: {
-      src: string;
-      alt: string;
-    };
-    tiempoDePublicacion: string;
+  autor: string;
+  avatar: {
+    src: string;
+    alt: string;
   };
-  footer: {
-    likes: number;
-    comentarios: number;
-    reenvios: number;
-    imagen: {
-      srcImg: string;
-      altImg: string;
-    };
+  tiempoDePublicacion: string;
+  likes: number;
+  comentarios: number;
+  reenvios: number;
+  imagen: {
+    srcImg: string;
+    altImg: string;
   };
 };

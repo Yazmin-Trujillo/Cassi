@@ -134,9 +134,9 @@ export const footerProyectosDestacados = ({
       </div>
       <Divider />
       <div className="flex items-center justify-between gap-4 w-full">
-        <Button className="w-1/2">
-          <Link href={`/proyectos/${id}`}> Ver Guía</Link>
-        </Button>
+        <Link href={`/proyectos/${id}`}>
+          <Button className="w-1/2">Ver Guía</Button>
+        </Link>
         <Button
           style={{ borderColor: "#8fbc3f", color: "#8fbc3f" }}
           outlined

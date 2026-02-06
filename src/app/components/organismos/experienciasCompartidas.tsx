@@ -21,22 +21,22 @@ export const SeccionExperienciasCompartidas = (
         {ExperienciasCompartidas.map((experiencia, index) => {
           return (
             <Card
-              key={experiencia.header.autor + index}
+              key={experiencia.autor + index}
               className="experiencias-compartidas overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
               header={
                 <div className="flex justify-between gap-3 items-center px-4">
                   <div className="flex flex-1 gap-4">
                     <img
                       className="w-12! h-12! rounded-full"
-                      src={experiencia.header.imagenDelAutor.src}
-                      alt={experiencia.header.imagenDelAutor.alt}
+                      src={experiencia.avatar.src}
+                      alt={experiencia.avatar.alt}
                     />
                     <div className="flex-1">
                       <h4 className="font-semibold text-gray-800">
-                        {experiencia.header.autor}
+                        {experiencia.autor}
                       </h4>
                       <p className="text-xs text-gray-500">
-                        {experiencia.header.tiempoDePublicacion}
+                        {experiencia.tiempoDePublicacion}
                       </p>
                     </div>
                   </div>
@@ -52,18 +52,18 @@ export const SeccionExperienciasCompartidas = (
                   <div className="h-56 rounded-2xl overflow-hidden mb-3">
                     <img
                       className="w-full h-full object-cover"
-                      src={experiencia.footer.imagen.srcImg}
-                      alt={experiencia.footer.imagen.altImg}
+                      src={experiencia.imagen.srcImg}
+                      alt={experiencia.imagen.altImg}
                     />
                   </div>
                   <div className="flex items-center justify-between text-gray-600 text-sm">
                     <button className="flex items-center gap-2">
                       <i className="pi pi-heart-fill text-red-500"></i>
-                      <span>{experiencia.footer.likes}</span>
+                      <span>{experiencia.likes}</span>
                     </button>
                     <button className="flex items-center gap-2">
                       <i className="pi pi-comment"></i>
-                      <span>{experiencia.footer.comentarios}</span>
+                      <span>{experiencia.comentarios}</span>
                     </button>
                     <button className="flex items-center gap-2">
                       <i data-fa-i2svg="">
@@ -85,7 +85,7 @@ export const SeccionExperienciasCompartidas = (
                           ></path>
                         </svg>
                       </i>
-                      <span>{experiencia.footer.reenvios}</span>
+                      <span>{experiencia.reenvios}</span>
                     </button>
                   </div>
                 </>

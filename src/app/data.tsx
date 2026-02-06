@@ -375,75 +375,136 @@ export const Materiales: MaterialType[] = [
 
 export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
   {
+    id: 1,
+    proyectoPadre: 3,
+    rankingDeSatisfacción: 4.8,
     descripcion:
       "¡Mi primer huerto vertical terminado! Gracias por la guía tan detallada. Ya tengo tomates cherry creciendo 🍅",
-    header: {
-      autor: "Ana Martínez",
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
-        alt: "Avatar",
-      },
-      tiempoDePublicacion: "Hace 2 días",
+    autor: "Ana Martínez",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+      alt: "Avatar",
     },
-
-    footer: {
-      likes: 203,
-      comentarios: 18,
-      reenvios: 8,
-      imagen: {
-        srcImg:
-          "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
-        altImg:
-          "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
-      },
+    tiempoDePublicacion: "Hace 2 días",
+    likes: 203,
+    comentarios: 18,
+    reenvios: 8,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
+      altImg:
+        "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
     },
   },
   {
+    id: 2,
+    proyectoPadre: 2,
+    rankingDeSatisfacción: 5,
     descripcion:
       "Mi sistema de captación de agua lluvia funcionando perfectamente. Ahorro 40% en agua para riego 💧",
-    header: {
-      autor: "Pedro Sánchez",
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg",
-        alt: "Avatar",
-      },
-      tiempoDePublicacion: "Hace 5 días",
+    autor: "Pedro Sánchez",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg",
+      alt: "Avatar",
     },
+    tiempoDePublicacion: "Hace 5 días",
 
-    footer: {
-      likes: 89,
-      comentarios: 12,
-      reenvios: 5,
-      imagen: {
-        srcImg:
-          "https://storage.googleapis.com/uxpilot-auth.appspot.com/7774e76c41-94ae04c5bc06b6adf5a2.png",
-        altImg:
-          "rainwater collection system with barrels and pipes, DIY setup in backyard",
-      },
+    likes: 89,
+    comentarios: 12,
+    reenvios: 5,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/7774e76c41-94ae04c5bc06b6adf5a2.png",
+      altImg:
+        "rainwater collection system with barrels and pipes, DIY setup in backyard",
     },
   },
   {
+    id: 3,
+    proyectoPadre: 7,
+    rankingDeSatisfacción: 5,
     descripcion:
       "¡Mi primer huerto vertical terminado! Gracias por la guía tan detallada. Ya tengo tomates cherry creciendo 🍅",
-    header: {
-      autor: "Ana Martínez",
-      imagenDelAutor: {
-        src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
-        alt: "Avatar",
-      },
-      tiempoDePublicacion: "Hace 2 días",
+    autor: "Ana Martínez",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+      alt: "Avatar",
     },
-
-    footer: {
-      likes: 203,
-      comentarios: 18,
-      reenvios: 8,
-      imagen: {
-        srcImg:
-          "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
-        altImg:
-          "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
-      },
+    tiempoDePublicacion: "Hace 2 días",
+    likes: 203,
+    comentarios: 18,
+    reenvios: 8,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
+      altImg:
+        "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
+    },
+  },
+  {
+    id: 4,
+    proyectoPadre: 8,
+    rankingDeSatisfacción: 5,
+    descripcion:
+      "Perfecto para mi balcón pequeño. En 4 meses ya tengo compost para mis plantas. Los pasos fueron muy claros y fáciles de seguir.",
+    autor: "María González",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg",
+      alt: "Maria",
+    },
+    tiempoDePublicacion: "Hace 2 semanas",
+    likes: 55,
+    comentarios: 12,
+    reenvios: 4,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/36bc5bc3c7-af991a2dad1a9fb5873d.png",
+      altImg:
+        "urban balcony composting setup by user, plants around compost bin",
+    },
+  },
+  {
+    id: 5,
+    proyectoPadre: 8,
+    rankingDeSatisfacción: 4.6,
+    descripcion:
+      "Hice 3 contenedores siguiendo la guía. Ahora mi familia recicla todos los residuos orgánicos. El kit de materiales llegó completo y en perfectas condiciones.",
+    autor: "Carlos Ruiz",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg",
+      alt: "Carlos",
+    },
+    tiempoDePublicacion: "Hace 1 mes",
+    likes: 20,
+    comentarios: 13,
+    reenvios: 8,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/75732e3dac-634f6d140d901fda81af.png",
+      altImg:
+        "backyard composting system with multiple containers, family garden project",
+    },
+  },
+  {
+    id: 6,
+    proyectoPadre: 8,
+    rankingDeSatisfacción: 5,
+    descripcion:
+      "Lo adapté para usar en la cocina. Sin olores y muy eficiente. Mis hierbas nunca habían crecido tan bien con este compost casero.",
+    autor: "Ana Martínez",
+    avatar: {
+      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg",
+      alt: "Ana",
+    },
+    tiempoDePublicacion: "Hace 3 días",
+    likes: 36,
+    comentarios: 48,
+    reenvios: 32,
+    imagen: {
+      srcImg:
+        "https://storage.googleapis.com/uxpilot-auth.appspot.com/89ae2a9314-6373d017f3efc30e19d1.png",
+      altImg:
+        "indoor composting setup in kitchen, compact design with herbs growing",
     },
   },
 ];
@@ -541,6 +602,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 60,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 2,
@@ -563,6 +638,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 1,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 3,
@@ -582,6 +671,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 19,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 4,
@@ -604,6 +707,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.FACIL,
     proyectosCompletados: 80,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 5,
@@ -627,6 +744,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 20,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 6,
@@ -651,6 +782,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 38,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 7,
@@ -674,6 +819,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 14,
     materialesId: [2, 3],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 7,
@@ -697,6 +856,20 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 7,
     materialesId: [2, 5, 8],
+    pasos: [
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+      {
+        titulo: "",
+        descripcionLarga: "",
+        descripcionCorta: [""],
+        imagen: { src: "", alt: "" },
+      },
+    ],
   },
   {
     id: 8,
@@ -720,6 +893,64 @@ export const TodosLosProyectos: ProyectoType[] = [
     dificultad: DificultadDeProyecto.MEDIO,
     proyectosCompletados: 31,
     materialesId: [6, 7, 8, 9],
+    pasos: [
+      {
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
+      },
+      {
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
+      },
+    ],
   },
 ];
 
