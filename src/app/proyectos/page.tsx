@@ -38,7 +38,7 @@ export default function Proyectos() {
       {/* Header / Hero */}
       <header className="bg-white border-b border-stone-200 pt-12 pb-8 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
             <div>
               <h1 className="text-4xl font-bold text-green-900 mb-2">
                 Proyectos
@@ -51,7 +51,7 @@ export default function Proyectos() {
             <Button
               icon="pi pi-plus-circle icon transition duration-500"
               label="Subir mi Proyecto"
-              className="text-start! hover-group"
+              className="text-start! hover-group md:mt-[0.5rem]!"
             />
           </div>
 
@@ -106,7 +106,10 @@ export default function Proyectos() {
           {filteredProjects.map((proyecto, index) => {
             const id = proyecto.id;
             const srcImg = proyecto.imagen.src;
-            const altImg = proyecto.imagen.alt;
+            const altImg =
+              proyecto.imagen.alt.trim().length === 0
+                ? proyecto.titulo
+                : proyecto.imagen.alt.trim();
             const tipoDeproyecto = proyecto.categoria;
             const horasDeConstruccion = proyecto.tiempoDeConstruccion;
             const likes = proyecto.likes;

@@ -11,6 +11,7 @@ import {
   TiposDeProyectos,
 } from "./types";
 import { Divider } from "primereact/divider";
+import Link from "next/link";
 
 export const encabezadoHero = (
   <div className="inline-flex items-center space-x-2 bg-[#8fbc3f10] px-4 py-2 rounded-full">
@@ -41,7 +42,9 @@ export const encabezadoHero = (
 export const footerHero = (
   <div className="flex flex-col gap-8">
     <div className="flex">
-      <Button label="Explorar proyectos" className="myBoxShadow" />
+      <Link href={"/proyectos"}>
+        <Button label="Explorar proyectos" className="myBoxShadow" />
+      </Link>
       <Button
         label="Ver tutorial"
         outlined
@@ -424,10 +427,10 @@ export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
     proyectoPadre: 7,
     rankingDeSatisfacción: 5,
     descripcion:
-      "¡Mi primer huerto vertical terminado! Gracias por la guía tan detallada. Ya tengo tomates cherry creciendo 🍅",
-    autor: "Ana Martínez",
+      "¡Así quedó mi huerto con botellas pet y pallet! Fué muy intuitivo y clara la guía. Todo está creciendo muy bien 🪴",
+    autor: "Marcos Mendez Huerta de paso",
     avatar: {
-      src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+      src: "https://img.freepik.com/vector-gratis/ilustracion-joven-sonriente_1308-174669.jpg?semt=ais_hybrid&w=740&q=80",
       alt: "Avatar",
     },
     tiempoDePublicacion: "Hace 2 días",
@@ -436,9 +439,8 @@ export const ExperienciasCompartidas: ExperienciasCompartidasType[] = [
     reenvios: 8,
     imagen: {
       srcImg:
-        "https://storage.googleapis.com/uxpilot-auth.appspot.com/d51d5ea80b-0bef822be07a6999ef4c.png",
-      altImg:
-        "completed vertical garden with tomatoes and herbs, proud owner, bright daylight",
+        "https://i.pinimg.com/474x/ba/60/c4/ba60c4f05e558f81c0d1d43d6eb7c64e.jpg",
+      altImg: "mi primer huerto vertical usando botellas pet",
     },
   },
   {
@@ -604,16 +606,54 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparar la madera",
+        descripcionLarga:
+          "Para poder usar la tarima/pallet primero hay que lijarla, luego barnizar y dejar secar por 1 hr. Si gustas puedes pintarla de tu color favorito",
+        descripcionCorta: ["lijar la madera", "barnizar", "dejar secar"],
+        imagen: {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoEzEHC2NdQ_BelxTfgg7Y0abGHIod8OhLrg&s",
+          alt: "",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Crear un cuadro con los pallets",
+        descripcionLarga:
+          "Usa un taladro y tornillas para madera para unir los pallet y formar un cubo. Primero coloca un pallet acostado en el piso y en uno de los lados coloca otro pallet formando una 'L', continua con el lado opuesto formando una 'U' y termina con los 2 lados faltantes cerrando el cuadro '[ ]'",
+        descripcionCorta: [
+          "Coloca un pallet en el piso",
+          "junta un segundo formando una 'L'",
+          "Con un tercero forma una 'U'",
+          "Con el 4to y 5to pallet cierra el cuadro",
+        ],
+        imagen: { src: "https://i.redd.it/6pprkjgcu9qe1.jpeg", alt: "" },
+      },
+      {
+        titulo: "Tapa de madera",
+        descripcionLarga:
+          "Con varias tablas construlle una tapa para tu composteador. Coloca dos tablas separadas paralelamente una de la otra a una distancia igual al ancho de tu caja contruida anteriormente. Luego sobre ella coloca otras tablas que unan y cubran el espacio entre ellas. Ya terminado el cuadro, justo en medio coloca un trozo extra de madera para que funcione como agarradera",
+        descripcionCorta: [
+          "Colocar 2 tablas base",
+          "cubrir la superficie vacia",
+          "agregar una agarradera",
+        ],
+        imagen: {
+          src: "https://i0.wp.com/autocompostajeleon.wordpress.com/wp-content/uploads/2017/10/foto-6.jpg?w=612&h=459&ssl=1",
+          alt: "",
+        },
+      },
+      {
+        titulo: "Agrega el material orgánico",
+        descripcionLarga:
+          "Ya listo!. Agrega materia organico seco y huemedo, en un porcentaje de 2 a 3 partes de material seco (marrón) por cada 1 parte de material húmedo (verde) en volumen. Esto asegura una mezcla rica en carbono y nitrógeno que permite una correcta aireación y descomposición sin generar malos olores. Termina agregando un poco de agua para facilitar la descomposicion",
+        descripcionCorta: [
+          "Agregar material seco",
+          "agregar material huemedo",
+          "humedece",
+        ],
+        imagen: {
+          src: "https://huertocasero.org/images/mvj5m3n0/production/58d416b89f568ff56e86e3f178153ce717459640-1216x832.webp?rect=7,0,1202,832&w=650&h=450&fm=webp",
+          alt: "",
+        },
       },
     ],
   },
@@ -673,10 +713,28 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparar la madera",
+        descripcionLarga:
+          "Para poder usar la tarima/pallet primero hay que lijarla, luego barnizar y dejar secar por 1 hr. Si gustas puedes pintarla de tu color favorito",
+        descripcionCorta: ["lijar la madera", "barnizar", "dejar secar"],
+        imagen: {
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoEzEHC2NdQ_BelxTfgg7Y0abGHIod8OhLrg&s",
+          alt: "",
+        },
+      },
+      {
+        titulo: "Cortar las botellas de pet",
+        descripcionLarga:
+          "Utiliza botellas de 2lt 0 3lt (preferentemente), si no las que tengas al alcanze. Partelas arriba de la mitad, a la altura donde la botella empiza a estrecharce hacia la punta. Luego lija la zona cortada para evitar cortarte con ellas. Despues hasles agujeros en la base (unos 6 como de medio centimetro cada uno)",
+        descripcionCorta: [
+          "cortar las botellas",
+          "lizar la boca de la botella",
+          "hacerles agujeros",
+        ],
+        imagen: {
+          src: "https://mejorconsalud.as.com/wp-content/uploads/2021/03/maceta-plastico.jpg",
+          alt: "",
+        },
       },
       {
         titulo: "",

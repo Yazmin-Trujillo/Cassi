@@ -1,8 +1,9 @@
 import { HeroDelProyecto } from "@/app/components/moleculas/heroDelProyecto";
 import { TarjetaDelMaterial } from "@/app/components/moleculas/tarjetaDelMaterial";
 import { Materiales, TodosLosProyectos } from "@/app/data";
+import { Button } from "primereact/button";
 
-type ProyectoType = {
+type Proyecto = {
   params: Promise<{
     id: string;
   }>;
@@ -27,7 +28,7 @@ async function getData(id: number) {
   //  return res.json();
 }
 
-export default async function Proyecto({ params }: ProyectoType) {
+export default async function Proyecto({ params }: Proyecto) {
   const { id } = await params;
 
   const data = await getData(Number(id));
@@ -165,7 +166,7 @@ export default async function Proyecto({ params }: ProyectoType) {
                       {paso.descripcionCorta.map((item, index) => (
                         <li key={index + item} className="flex items-center">
                           <i className="pi pi-check text-secondary mr-2"></i>
-                          {item}
+                          {item.charAt(0).toUpperCase().concat(item.slice(1))}
                         </li>
                       ))}
                     </ul>
@@ -174,7 +175,7 @@ export default async function Proyecto({ params }: ProyectoType) {
                     <img
                       className="w-full h-full object-cover"
                       src={paso.imagen.src}
-                      alt={paso.imagen.alt}
+                      alt={paso.imagen.alt ?? paso.titulo}
                     />
                   </div>
                 </div>
@@ -185,13 +186,20 @@ export default async function Proyecto({ params }: ProyectoType) {
 
         <section id="user-projects" className="bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Proyectos de la Comunidad
-              </h2>
-              <p className="text-lg text-gray-600">
-                Mira cómo otros usuarios han completado este proyecto
-              </p>
+            <div className="items-center text-center md:text-start md:items-start mb-12 flex flex-col md:flex-row justify-between gap-6 ">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Proyectos de la Comunidad
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Mira cómo otros usuarios han completado este proyecto
+                </p>
+              </div>
+              <Button
+                icon="pi pi-plus-circle icon transition duration-500"
+                label="Mi experiencia"
+                className="text-start! hover-group"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

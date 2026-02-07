@@ -85,7 +85,7 @@ export type ProyectoType = {
     titulo: string;
     descripcionLarga: string;
     descripcionCorta: string[];
-    imagen: { src: string; alt: string };
+    imagen: { src: string; alt: string | null | undefined };
   }[];
 };
 

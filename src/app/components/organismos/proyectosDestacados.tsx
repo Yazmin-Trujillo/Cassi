@@ -4,6 +4,7 @@ import {
   encabezadoProyectosDestacados,
   footerProyectosDestacados,
 } from "@/app/headersAndFootersCard";
+import Link from "next/link";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 
@@ -22,7 +23,9 @@ export const SeccionProyectosDestacados = (
             Aprende paso a paso con nuestras guías completas.
           </p>
         </div>
-        <Button className="whitespace-nowrap" label="Ver más" text />
+        <Link href={"/proyectos"}>
+          <Button className="whitespace-nowrap" label="Ver todos" text />
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ProyectosDestacados.map((proyecto) => {
