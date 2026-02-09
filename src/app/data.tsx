@@ -1012,4 +1012,43 @@ export const TodosLosProyectos: ProyectoType[] = [
   },
 ];
 
+export const comentariosEnProyecto = [
+  {
+    id: 1,
+    idProyecto: 8,
+    autor: "Pedro Silva",
+    avatar:
+      "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg",
+    tiempoDeLaPublicacion: "Hace 2 horas",
+    contenido:
+      " ¿Alguien ha probado esto en clima muy húmedo? Me preocupa que se forme demasiada humedad dentro del contenedor.",
+    like: 12,
+    respuestas: [1],
+  },
+  {
+    id: 2,
+    idProyecto: 8,
+    autor: "Laura Hernández",
+    avatar:
+      "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg",
+    tiempoDeLaPublicacion: "Hace 1 día",
+    contenido: "Excelente",
+    like: 5,
+    respuestas: [],
+  },
+];
+
+export const respuestaAComentariosEnProyecto = [
+  {
+    id: 1,
+    idComentarioPadre: 1,
+    autor: " María González",
+    avatar: "",
+    likes: 0,
+    tiempoDeLaPublicacion: "Hace 1 hora",
+    contenido:
+      "Yo vivo en zona muy húmeda y funciona perfecto. Solo agrega más material seco y revuelve más frecuentemente. También puedes hacer más orificios de ventilación.",
+  },
+];
+
 //   src: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800",

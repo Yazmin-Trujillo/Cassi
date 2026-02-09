@@ -167,3 +167,12 @@ export type ExperienciasCompartidasType = {
     altImg: string;
   };
 };
+
+export type ComentarioType = {
+  avatar: string;
+  autor: string;
+  tiempoDeLaPublicacion: string;
+  contenido: string;
+  likes: number;
+  esRespuesta?: boolean;
+};

@@ -5,8 +5,12 @@ import { SeccionComoFunciona } from "./components/organismos/comoFunciona";
 import { SeccionMaterialesPopulares } from "./components/organismos/materialesPopulares";
 import { SeccionExperienciasCompartidas } from "./components/organismos/experienciasCompartidas";
 import { BannerSingIn } from "./components/organismos/bannerSingIn";
+import { ExperienciasCompartidas } from "./data";
 
 export default function Home() {
+  const titulo = "Experiencias Compartidas";
+  const datosDeLasExperiencias = ExperienciasCompartidas.slice(0, 3);
+
   return (
     <main className="flex overflow-hidden min-h-screen w-full flex-col font-sans items-center justify-between ">
       {SeccionHero}
@@ -14,7 +18,7 @@ export default function Home() {
       {SeccionProyectosDestacados}
       {SeccionComoFunciona}
       {SeccionMaterialesPopulares}
-      {SeccionExperienciasCompartidas}
+      {SeccionExperienciasCompartidas({ titulo, datosDeLasExperiencias })}
       {BannerSingIn}
 
       {/*{SeccionProyectosDeLaComunidad}*/}
