@@ -32,7 +32,21 @@ export const HeroDelProyecto = ({
   className,
 }: Props) => {
   return (
-    <section id="hero-project" className={twMerge("bg-green-100!", className)}>
+    <section
+      id="hero-project"
+      className={twMerge(
+        "bg-gradient-to-br ",
+        categoria === TiposDeProyectos.COMPOSTAJE
+          ? "from-green-50 to-emerald-50 hover:border-accent"
+          : categoria === TiposDeProyectos.AGUA
+            ? "from-blue-50 to-cyan-50 hover:border-blue-400"
+            : categoria === TiposDeProyectos.ENERGIAS
+              ? "from-amber-50 to-yellow-50 hover:border-amber-400"
+              : "from-rose-50 to-pink-50 hover:border-rose-400",
+
+        className,
+      )}
+    >
       <div className="max-w-7xl mx-auto p-6">
         <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center md:max-h-[400px]">
           <Card

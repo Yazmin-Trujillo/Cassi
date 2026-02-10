@@ -1,12 +1,11 @@
+import { Comentario } from "@/app/components/moleculas/comentario";
 import { HeroDelProyecto } from "@/app/components/moleculas/heroDelProyecto";
 import { TarjetaDelMaterial } from "@/app/components/moleculas/tarjetaDelMaterial";
-import { ComentariosYRespuestas } from "@/app/components/organismos/comentariosYResouestas";
 import { SeccionExperienciasCompartidas } from "@/app/components/organismos/experienciasCompartidas";
 import {
   comentariosEnProyecto,
   ExperienciasCompartidas,
   Materiales,
-  respuestaAComentariosEnProyecto,
   TodosLosProyectos,
 } from "@/app/data";
 import { Button } from "primereact/button";
@@ -242,20 +241,11 @@ export default async function Proyecto({ params }: Proyecto) {
                 </div>
               </div>
             </div>
-            {comentariosEnProyecto.map((comentario) => {
-              const res = respuestaAComentariosEnProyecto.filter(
-                (res) => res.idComentarioPadre === comentario.id,
-              );
-              return ComentariosYRespuestas({
-                id: comentario.id,
-                avatar: comentario.avatar,
-                autor: comentario.autor,
-                tiempoDeLaPublicacion: comentario.tiempoDeLaPublicacion,
-                contenido: comentario.contenido,
-                likes: comentario.like,
-                respuestas: res,
-              });
-            })}
+            {comentariosEnProyecto
+              ?.filter((com) => com?.idProyecto === Number(id))
+              ?.map((item) => (
+                <Comentario key={item.id} comentario={item} />
+              ))}
           </div>
         </section>
       </main>

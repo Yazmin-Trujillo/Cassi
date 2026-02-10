@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 export const SeccionComoFunciona = (
   <section
     id="como-funciona"
-    className="flex py-10 px-0 w-full md:my-10 md:bg-gradient-to-br from-primary to-secondary text-white"
+    className="flex py-10 px-0 w-full md:bg-gradient-to-br from-primary to-secondary text-white"
   >
     <div className="max-w-7xl mx-auto px-12">
       <div className="text-center mb-8 md:mb-16">
@@ -30,11 +30,11 @@ export const SeccionComoFunciona = (
                     index === 1
                       ? "bg-primary border-2 border-accent"
                       : index === 2
-                      ? "bg-secondary"
-                      : index === 3
-                      ? "bg-secondary border-2 border-primary "
-                      : "bg-primary",
-                    "md:bg-white/20 md:backdrop-blur md:mb-6 md:w-20 md:h-20 md:border-transparent"
+                        ? "bg-secondary"
+                        : index === 3
+                          ? "bg-secondary border-2 border-primary "
+                          : "bg-primary",
+                    "md:bg-white/20 md:backdrop-blur md:mb-6 md:w-20 md:h-20 md:border-transparent",
                   )}
                 >
                   <span className="text-4xl font-bold">{index + 1}</span>

@@ -439,11 +439,11 @@ $speedDialActionTextHoverColor: #fff;
 
 /// Background of a compostaje button
 /// @group button
-$compostButtonBg: #22c55e;
+$compostButtonBg: var(--secondary);
 
 /// Background of a agua button
 /// @group button
-$aguaButtonBg: #60a5fa;
+$aguaButtonBg: var(--captación-de-agua);
 
 /// Text color of a agua button
 /// @group button
@@ -451,7 +451,7 @@ $aguaButtonTextColor: #ffffff;
 
 /// Background of a energia button
 /// @group button
-$energiaButtonBg: #fbbf24;
+$energiaButtonBg: var(--energía-solar);
 
 /// Text color of a energia button
 /// @group button
@@ -459,7 +459,7 @@ $energiaButtonTextColor: #ffffff;
 
 /// Background of a huerto button
 /// @group button
-$huertoButtonBg: #fb7185;
+$huertoButtonBg: var(--huertos-urbanos);
 
 /// Text color of a huerto button
 /// @group button

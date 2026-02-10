@@ -5,6 +5,8 @@ export enum TiposDeProyectos {
   HUERTOS = "Huertos",
 }
 
+//"Sostenibilidad", "Agroecología","Ambiental"
+
 export enum DificultadDeProyecto {
   FACIL = "Fácil",
   MEDIO = "Medio",
@@ -13,6 +15,7 @@ export enum DificultadDeProyecto {
 }
 
 export type CategoriasDeProyectosType = {
+  id: number;
   tituloMB: string;
   titulo: string;
   descripcion: string;
@@ -169,10 +172,13 @@ export type ExperienciasCompartidasType = {
 };
 
 export type ComentarioType = {
+  id: number;
+  idProyecto?: number;
+  idComentarioPadre?: 1;
   avatar: string;
   autor: string;
   tiempoDeLaPublicacion: string;
   contenido: string;
   likes: number;
-  esRespuesta?: boolean;
+  respuestas?: ComentarioType[];
 };

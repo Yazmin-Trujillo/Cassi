@@ -20,9 +20,9 @@ export const SeccionExperienciasCompartidas = ({
   return (
     <section
       id="community-section"
-      className="py-10 px-8 w-screen max-w-[1500px] bg-white"
+      className="w-screen max-w-[1500px] bg-white"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="items-center text-center md:text-start md:items-start mb-12 flex flex-col md:flex-row justify-between gap-6 ">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">{titulo}</h2>
@@ -50,7 +50,7 @@ export const SeccionExperienciasCompartidas = ({
             const reenvios = experiencia.reenvios;
             return (
               <Card
-                key={experiencia.autor + index}
+                key={experiencia.id + index}
                 className="experiencias-compartidas overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
                 header={EncabezadoExperienciasCompartidas({
                   avatarSrc,

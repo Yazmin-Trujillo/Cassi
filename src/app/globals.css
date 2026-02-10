@@ -5,9 +5,9 @@
   --secondary: #22c55e;
   --accent: #8fbc3f;
   --foreground: #ffffff;
-  --captación-de-agua: #60a5fa;
+  --captación-de-agua: #155dfc;
   --energía-solar: #fbbf24;
-  --huertos-urbanos: #fb7185;
+  --huertos-urbanos: #ec003f;
 }
 
 @theme {
@@ -102,6 +102,12 @@ body {
     display: none;
     @media screen and (min-width: 768px) {
       display: flex;
+    }
+  }
+
+  .myCardTitle .p-card-header {
+    @media screen and (min-width: 768px) {
+      padding-bottom: 1.5rem;
     }
   }
 

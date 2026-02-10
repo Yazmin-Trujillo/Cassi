@@ -12,7 +12,7 @@ export default function Home() {
   const datosDeLasExperiencias = ExperienciasCompartidas.slice(0, 3);
 
   return (
-    <main className="flex overflow-hidden min-h-screen w-full flex-col font-sans items-center justify-between ">
+    <main className="flex overflow-hidden min-h-screen w-full flex-col font-sans gap-16 items-center justify-between ">
       {SeccionHero}
       {SeccionCategoriasDeProyectos}
       {SeccionProyectosDestacados}

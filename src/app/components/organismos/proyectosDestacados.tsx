@@ -9,10 +9,7 @@ import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 
 export const SeccionProyectosDestacados = (
-  <section
-    id="proyectos-destacados"
-    className="py-10 px-8 w-full max-w-[1500px]"
-  >
+  <section id="proyectos-destacados" className="px-8 w-full max-w-[1500px]">
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-12">
         <div>

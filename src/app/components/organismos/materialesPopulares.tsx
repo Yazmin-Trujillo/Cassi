@@ -3,10 +3,7 @@ import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 
 export const SeccionMaterialesPopulares = (
-  <section
-    id="materiales-populares"
-    className="py-10 px-8 w-screen max-w-[1500px]"
-  >
+  <section id="materiales-populares" className="px-8 w-screen max-w-[1500px]">
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-8 md:mb-12">
         <div>
@@ -22,7 +19,7 @@ export const SeccionMaterialesPopulares = (
           return (
             <Card
               key={producto.id + index}
-              className="card-materiales overflow-hidden group shadow-xl h-full flex flex-col justify-between"
+              className="card-materiales overflow-hidden group shadow-lg! hover:shadow-2xl! h-full flex flex-col justify-between"
               style={{
                 border: 0,
                 boxShadow: "none",
@@ -30,7 +27,7 @@ export const SeccionMaterialesPopulares = (
               }}
               title={producto.material}
               header={
-                <div className="h-32 bg-white rounded-xl overflow-hidden">
+                <div className="h-64 bg-white rounded-xl overflow-hidden">
                   <img
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                     src={producto.imagen.srcImg}
