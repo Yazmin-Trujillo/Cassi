@@ -909,12 +909,6 @@ export const TodosLosProyectos: ProyectoType[] = [
           alt: "",
         },
       },
-      {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
-      },
     ],
   },
   {
@@ -940,16 +934,60 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
       },
     ],
   },
@@ -977,16 +1015,60 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
       },
     ],
   },
@@ -1015,16 +1097,60 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
       },
     ],
   },
@@ -1052,16 +1178,60 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 3],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
       },
     ],
   },
@@ -1089,16 +1259,60 @@ export const TodosLosProyectos: ProyectoType[] = [
     materialesId: [2, 5, 8],
     pasos: [
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Preparación del Contenedor",
+        descripcionLarga:
+          "Toma el contenedor plástico y realiza orificios de ventilación en los laterales y la base. Estos permitirán la circulación de aire necesaria para el proceso de compostaje.",
+        descripcionCorta: [
+          "Haz 15-20 orificios de 6mm",
+          "Distribuye uniformemente",
+          "Lija los bordes ásperos",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/9756e7054f-5dbb5bd45838158bba9e.png",
+          alt: "drilling holes in plastic container for composting, step by step tutorial",
+        },
       },
       {
-        titulo: "",
-        descripcionLarga: "",
-        descripcionCorta: [""],
-        imagen: { src: "", alt: "" },
+        titulo: "Instalación de la Malla",
+        descripcionLarga:
+          "Coloca la malla metálica en el fondo del contenedor. Esta servirá como base de drenaje y permitirá que el exceso de líquidos se drene adecuadamente.",
+        descripcionCorta: [
+          "Corta la malla al tamaño del fondo",
+          "Asegura con clips plásticos",
+          "Verifica que esté nivelada",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a0301ba896-28cbcc8e80170bbdb4c8.png",
+          alt: "installing metal mesh in bottom of compost container, hands placing wire grid",
+        },
+      },
+      {
+        titulo: "Primera Capa de Material",
+        descripcionLarga:
+          "Agrega una capa base de material seco como hojas secas, papel triturado o cartón. Esta capa ayudará a absorber la humedad y proporcionará carbono al compost.",
+        descripcionCorta: [
+          "5cm de material seco",
+          "Distribuye uniformemente",
+          "Rocía el iniciador de compost",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/81538b067a-23dddfb03607e9a8de2a.png",
+          alt: "adding dry leaves and organic material to compost bin, layering process",
+        },
+      },
+      {
+        titulo: "Mantenimiento y Cosecha",
+        descripcionLarga:
+          "Alterna capas de material verde (restos de comida) y marrón (material seco). Revuelve semanalmente y mantén la humedad adecuada para obtener compost en 3-6 meses.",
+        descripcionCorta: [
+          "Revolver cada 7 días",
+          "Mantener humedad como esponja",
+          "Cosechar cuando esté oscuro",
+        ],
+        imagen: {
+          src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87a86e0ed7-68acab35a88c1ff1c57c.png",
+          alt: "finished dark rich compost soil in hands, successful composting result",
+        },
       },
     ],
   },

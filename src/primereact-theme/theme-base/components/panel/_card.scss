@@ -3,9 +3,15 @@
   color: $panelContentTextColor;
   box-shadow: $cardShadow;
   border-radius: $borderRadius;
+  display: flex;
+  flex-direction: column;
 
   .p-card-body {
     padding: $cardBodyPaddingMb;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
     @media screen and (min-width: 768px) {
       padding: $cardBodyPadding;
     }
@@ -35,6 +41,7 @@
 
   .p-card-content {
     padding: $cardContentPaddingMb;
+    flex: 1;
     @media screen and (min-width: 768px) {
       padding: $cardContentPadding;
     }
