@@ -5,9 +5,12 @@
   --secondary: #22c55e;
   --accent: #8fbc3f;
   --foreground: #ffffff;
-  --captación-de-agua: #155dfc;
-  --energía-solar: #fbbf24;
-  --huertos-urbanos: #ec003f;
+  --captación-de-agua: #2a9d8f;
+  --energía-solar: #ffc300;
+  --huertos-urbanos: #588157;
+  --construir: #b07d62;
+  --recuperar: #8d99ae;
+  --brand: #14532d;
 }
 
 @theme {
@@ -21,6 +24,7 @@
   --color-agua: var(--captación-de-agua);
   --color-energia: var(--energía-solar);
   --color-huerto: var(--huertos-urbanos);
+  --color-brand: var(--brand);
   --breakpoint-ls: 60rem;
 }
 

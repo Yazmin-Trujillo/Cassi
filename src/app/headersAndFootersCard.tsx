@@ -18,7 +18,7 @@ export const encabezadoCategoriasDeProyectos = ({
 }: EncabezadoCategoriasDeProyectos) => (
   <div
     className={`size-[4rem] rounded-xl flex items-center justify-center group-hover:scale-110 transition ${
-      tipoDeproyecto === TiposDeProyectos.COMPOSTAJE
+      tipoDeproyecto === TiposDeProyectos.RESIDUOS
         ? "bg-primary"
         : tipoDeproyecto === TiposDeProyectos.AGUA
           ? "bg-blue-600 "
@@ -41,7 +41,7 @@ export const footerCategoriasDeProyectos = ({
 }: FooterCategoriasDeProyectos) => (
   <div
     className={`hidden md:flex items-center text-sm font-semibold ${
-      tipoDeProyectoF === TiposDeProyectos.COMPOSTAJE
+      tipoDeProyectoF === TiposDeProyectos.RESIDUOS
         ? "text-accent"
         : tipoDeProyectoF === TiposDeProyectos.AGUA
           ? "text-blue-600 "

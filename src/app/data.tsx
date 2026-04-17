@@ -58,7 +58,7 @@ export const footerHero = (
         <div className="text-2xl font-bold text-primary">1,240+</div>
         <div>Proyectos Compartidos</div>
       </div>
-      <Divider layout="vertical" />
+      <Divider layout="vertical" color="red" />
       <div>
         <div className="text-2xl font-bold text-primary">8,500+</div>
         <div>Miembros Activos</div>
@@ -75,71 +75,51 @@ export const footerHero = (
 export const CategoriasDeProyectos: CategoriasDeProyectosType[] = [
   {
     id: 1,
-    tituloMB: "Compost",
+    tituloMB: "Residuo",
     titulo: "Compostaje",
     descripcion: "Transforma residuos orgánicos en abono natural.",
-    header: {
-      imagen: {
-        src: "/recycle.svg",
-        alt: "recycle",
-      },
-      tipoDeProyecto: TiposDeProyectos.COMPOSTAJE,
+    imagen: {
+      src: "/recycle.svg",
+      alt: "recycle",
     },
-    footer: {
-      numeroDeProyectos: 124,
-      tipoDeProyecto: TiposDeProyectos.COMPOSTAJE,
-    },
+    tipoDeProyecto: TiposDeProyectos.RESIDUOS,
+    numeroDeProyectos: 124,
   },
   {
     id: 2,
     tituloMB: "Agua",
     titulo: "Captación de Agua",
     descripcion: "Sistemas para recolectar y reutilizar agua de lluvia.",
-    header: {
-      imagen: {
-        src: "/droplet.svg",
-        alt: "droplet",
-      },
-      tipoDeProyecto: TiposDeProyectos.AGUA,
+    imagen: {
+      src: "/droplet.svg",
+      alt: "droplet",
     },
-    footer: {
-      numeroDeProyectos: 87,
-      tipoDeProyecto: TiposDeProyectos.AGUA,
-    },
+    tipoDeProyecto: TiposDeProyectos.AGUA,
+    numeroDeProyectos: 87,
   },
   {
     id: 3,
     tituloMB: "Energía",
     titulo: "Energía Solar",
     descripcion: "Aprovecha la energía del sol para tu hogar.",
-    header: {
-      imagen: {
-        src: "/solarPanel.svg",
-        alt: "solarPanel",
-      },
-      tipoDeProyecto: TiposDeProyectos.ENERGIAS,
+    imagen: {
+      src: "/solarPanel.svg",
+      alt: "solarPanel",
     },
-    footer: {
-      numeroDeProyectos: 156,
-      tipoDeProyecto: TiposDeProyectos.ENERGIAS,
-    },
+    tipoDeProyecto: TiposDeProyectos.ENERGIAS,
+    numeroDeProyectos: 156,
   },
   {
     id: 4,
     tituloMB: "Huertos",
     titulo: "Huertos Urbanos",
     descripcion: "Cultiva tus propios alimentos en espacios pequeños.",
-    header: {
-      imagen: {
-        src: "/carrot.svg",
-        alt: "carrot",
-      },
-      tipoDeProyecto: TiposDeProyectos.HUERTOS,
+    imagen: {
+      src: "/carrot.svg",
+      alt: "carrot",
     },
-    footer: {
-      numeroDeProyectos: 203,
-      tipoDeProyecto: TiposDeProyectos.HUERTOS,
-    },
+    tipoDeProyecto: TiposDeProyectos.HUERTOS,
+    numeroDeProyectos: 203,
   },
 ];
 

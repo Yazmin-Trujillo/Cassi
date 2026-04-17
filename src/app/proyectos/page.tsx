@@ -77,7 +77,7 @@ export default function Proyectos() {
                             ? "bg-pink-50! text-rose-600! border-rose-400!"
                             : activeCategory === cat &&
                                 activeCategory === "Todos"
-                              ? "bg-green-100! text-green-800! border-green-800!"
+                              ? "bg-stone-100! text-stone-800! border-stone-800!"
                               : "bg-stone-100! text-stone-500! hover:bg-stone-200! border-2 border-transparent!"
                   }`}
                 >
@@ -244,7 +244,7 @@ export default function Proyectos() {
                 ></path>
               </svg>
             </i>
-            <span>EcoDIY Agro</span>
+            <span>EcoCreadores</span>
           </div>
           <p className="text-stone-500 text-sm">
             © 2026 Plataforma de Sustentabilidad. Construyamos un futuro más

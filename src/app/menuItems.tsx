@@ -20,6 +20,10 @@ export const menuItems = [
     icon: "pi pi-shop",
   },
   {
+    label: "Nuestra Misión",
+    icon: "pi-crown",
+  },
+  {
     label: "Blog",
     items: [
       {

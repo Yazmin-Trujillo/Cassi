@@ -282,8 +282,10 @@ $cardFooterPadding: 1rem 0 0 0;
 
 /// Box shadow of a card
 /// @group panel
-$cardShadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$cardShadow:
+  0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
 /// Margin of divider in horizontal layout
 /// @group panel
@@ -307,7 +309,7 @@ $dividerSize: 1px;
 
 /// Color of the divider border
 /// @group panel
-$dividerColor: #dee2e6;
+$dividerColor: #0f2c48;
 
 /// Background of the splitter gutter
 /// @group panel

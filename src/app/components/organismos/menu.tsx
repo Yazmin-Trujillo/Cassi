@@ -24,10 +24,20 @@ export default function Menu() {
     {
       label: "Comunidad",
       icon: "pi pi-users",
+      command: () => {
+        router.push("/comunidad");
+      },
     },
     {
       label: "Materiales",
       icon: "pi pi-shop",
+    },
+    {
+      label: "Nuestra Misión",
+      icon: "pi pi-crown",
+      command: () => {
+        router.push("/mision");
+      },
     },
     {
       label: "Blog",

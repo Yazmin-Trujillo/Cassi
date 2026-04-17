@@ -1,3 +1,5 @@
+import { Button } from "primereact/button";
+
 type Props = {
   imagenSrc: string;
   imagenAlt: string | null | undefined;
@@ -14,12 +16,17 @@ export const FooterExperienciasCompartidas = ({
 }: Props) => {
   return (
     <>
-      <div className="h-56 rounded-2xl overflow-hidden mb-3">
+      <div className="group h-56 rounded-2xl overflow-hidden mb-3 cursor-pointer relative">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
           src={imagenSrc}
           alt={imagenAlt ?? "imagen"}
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+          <Button className="bg-white! text-primary! w-full">
+            Ver Detalles
+          </Button>
+        </div>
       </div>
       <div className="flex items-center justify-between text-gray-600 text-sm">
         {/* <div className="flex items-center space-x-4">

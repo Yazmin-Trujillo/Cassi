@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { TiposDeProyectos } from "./types";
+import { Icon, TiposDeProyectos } from "./types";
 import { Tag } from "primereact/tag";
 
 export const EtiquetaDeCategorias = (
@@ -23,3 +23,8 @@ export const EtiquetaDeCategorias = (
     value={tipoDeProyecto}
   ></Tag>
 );
+
+export function changeIcon(nuevoId: Icon) {
+  const uso = document.querySelector("#mi-icono-contenedor use");
+  uso?.setAttribute("xlink:href", "#" + nuevoId);
+}

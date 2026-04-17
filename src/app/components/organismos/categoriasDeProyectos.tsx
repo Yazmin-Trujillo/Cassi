@@ -20,17 +20,17 @@ export const SeccionCategoriasDeProyectos = (
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
         {CategoriasDeProyectos.map((categoria, index) => {
-          const tipoDeproyecto = categoria.header.tipoDeProyecto;
-          const srcImg = categoria.header.imagen.src;
-          const altImg = categoria.header.imagen.alt;
-          const numeroDeProyectos = categoria.footer.numeroDeProyectos;
-          const tipoDeProyectoF = categoria.footer.tipoDeProyecto;
+          const tipoDeproyecto = categoria.tipoDeProyecto;
+          const srcImg = categoria.imagen.src;
+          const altImg = categoria.imagen.alt;
+          const numeroDeProyectos = categoria.numeroDeProyectos;
+          const tipoDeProyectoF = categoria.tipoDeProyecto;
           return (
             <Card
               key={categoria.id + index}
               className={`group my-header max-w-xs bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
-                            tipoDeproyecto === TiposDeProyectos.COMPOSTAJE
+                            tipoDeproyecto === TiposDeProyectos.RESIDUOS
                               ? "from-green-50! to-emerald-50! hover:border-accent"
                               : tipoDeproyecto === TiposDeProyectos.AGUA
                                 ? "from-blue-50! to-cyan-50! hover:border-blue-400"

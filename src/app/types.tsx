@@ -1,9 +1,23 @@
 export enum TiposDeProyectos {
-  COMPOSTAJE = "Compostaje",
   AGUA = "Agua",
+  BIODIVERSIDAD = "Biodiversidad",
   ENERGIAS = "Energías",
   HUERTOS = "Huertos",
+  RESIDUOS = "Residuos",
 }
+
+export type Icon =
+  | "ArrowRight"
+  | "Carrot"
+  | "CartShopping"
+  | "Droplet"
+  | "Plus"
+  | "Recycle"
+  | "SolarPanel"
+  | "Globe"
+  | "Leaf";
+
+export type ButtonType = "Primary" | "Secondary" | "Text" | "OnlyIcon";
 
 //"Sostenibilidad", "Agroecología","Ambiental"
 
@@ -19,17 +33,12 @@ export type CategoriasDeProyectosType = {
   tituloMB: string;
   titulo: string;
   descripcion: string;
-  header: {
-    imagen: {
-      src: string;
-      alt: string;
-    };
-    tipoDeProyecto: TiposDeProyectos;
+  imagen: {
+    src: string;
+    alt: string;
   };
-  footer: {
-    numeroDeProyectos: number;
-    tipoDeProyecto: TiposDeProyectos;
-  };
+  tipoDeProyecto: TiposDeProyectos;
+  numeroDeProyectos: number;
 };
 
 export type EncabezadoCategoriasDeProyectos = {
