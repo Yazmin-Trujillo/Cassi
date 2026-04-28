@@ -31,7 +31,7 @@ export const BannerSingIn = (
       <p className="text-white/90! mb-6">
         Más de 5,000 personas construyendo un futuro sustentable
       </p>
-      <Button severity="Secondary" classNameButton="w-full border-white">
+      <Button kind="Outlined" classNameButton="w-full border-white">
         Comenzar Ahora
       </Button>
     </div>

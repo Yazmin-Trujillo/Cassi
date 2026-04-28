@@ -28,7 +28,7 @@ export const TarjetaDelMaterial = ({
         />
       </div>
       <p className="text-sm text-gray-600 mb-3">{descripcion}</p>
-      <Button severity="Tertiary" classNameButton="w-full">
+      <Button kind="Secondary" classNameButton="w-full">
         Agregar al carrito
       </Button>
     </div>

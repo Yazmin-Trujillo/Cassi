@@ -68,10 +68,10 @@ export default function Mision() {
           </ul>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button iconLeft iconTransition icon="Plus" severity="Primary">
+            <Button iconLeft iconTransition icon="Plus" kind="Primary">
               Comenzar un Proyecto
             </Button>
-            <Button severity="Secondary">Ver tutorial</Button>
+            <Button kind="Outlined">Ver tutorial</Button>
           </div>
         </div>
       </section>
@@ -199,8 +199,8 @@ export default function Mision() {
             proyectos prácticos y sostenibles.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button severity="Tertiary">Crear Cuenta Gratis</Button>
-            <Button severity="Secondary">Explorar Proyectos</Button>
+            <Button kind="Secondary">Crear Cuenta Gratis</Button>
+            <Button kind="Outlined">Explorar Proyectos</Button>
           </div>
         </div>
       </section>
@@ -437,7 +437,7 @@ export default function Mision() {
                   placeholder="Tu correo electrónico"
                   className="bg-slate-800 border border-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:border-brand-500 text-sm"
                 />
-                <Button type="submit" severity="Tertiary">
+                <Button type="submit" kind="Secondary">
                   Suscribirse
                 </Button>
               </form>

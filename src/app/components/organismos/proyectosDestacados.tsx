@@ -7,23 +7,19 @@ import {
 import Link from "next/link";
 import { Card } from "primereact/card";
 import { Button } from "../atomos/button";
+import { Header } from "../moleculas/header";
 
 export const SeccionProyectosDestacados = (
   <section id="proyectos-destacados" className="px-8 w-full max-w-[1500px]">
     <div className="max-w-7xl mx-auto">
-      <div className="flex items-center justify-between mb-12">
-        <div>
-          <h2 className="text-4xl font-display font-bold text-primary md:mb-3">
-            Proyectos Destacados
-          </h2>
-          <p className="hidden md:flex">
-            Aprende paso a paso con nuestras guías completas.
-          </p>
-        </div>
-        <Link href={"/proyectos"}>
-          <Button severity="Text">Ver todos</Button>
-        </Link>
-      </div>
+      <Header
+        title="Proyectos Destacados"
+        content=" Aprende paso a paso con nuestras guías completas."
+        button
+        buttonContent="Ver todos"
+        link="/proyectos"
+      />
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ProyectosDestacados.map((proyecto) => {
           const id = proyecto.id;

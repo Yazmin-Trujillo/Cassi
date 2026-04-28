@@ -135,12 +135,12 @@ export const footerProyectosDestacados = ({
       <Divider />
       <div className="flex items-center justify-between gap-4 w-full">
         <Link href={`/proyectos/${id}`} className="w-1/2">
-          <Button severity="Primary" classNameButton="w-full">
+          <Button kind="Primary" classNameButton="w-full">
             Ver Guía
           </Button>
         </Link>
         <Button
-          severity="Secondary"
+          kind="Outlined"
           classNameButton="w-1/2"
           iconLeft
           icon="CartShopping"
@@ -166,10 +166,7 @@ export const encabezadoProyectosDeLaComunidad = ({
       alt={altImg}
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-      <Button
-        severity="Secondary"
-        classNameButton="bg-white text-primary w-full"
-      >
+      <Button kind="Outlined" classNameButton="bg-white text-primary w-full">
         Ver Detalles
       </Button>
     </div>

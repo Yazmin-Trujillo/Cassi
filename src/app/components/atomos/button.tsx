@@ -2,19 +2,21 @@ import { ButtonType, Icon } from "@/app/types";
 import { twMerge } from "tailwind-merge";
 type Props = {
   children?: string;
-  severity: ButtonType;
+  kind: ButtonType;
   icon?: Icon;
   iconLeft?: boolean;
   iconRight?: boolean;
   iconTransition?: boolean;
   classNameButton?: string;
   classNameContent?: string;
-  onClick?: () => void;
   type?: "button" | "reset" | "submit" | undefined;
+  onClick?: () => void;
+  //loading?: boolean;
 };
+
 export const Button = ({
   children,
-  severity,
+  kind,
   icon,
   iconLeft,
   iconRight,
@@ -26,15 +28,15 @@ export const Button = ({
 }: Props) => {
   // To Do: manejar 3 medidas de iconos
   const classNameType = (() => {
-    switch (severity) {
+    switch (kind) {
       case "Primary":
         return "bg-primary text-white hover:bg-secondary shadow-lg shadow-primary/50";
-      case "Secondary":
+      case "Outlined":
         return "bg-white hover:border-secondary hover:text-secondary";
-      case "Tertiary":
+      case "Secondary":
         return "bg-secondary border-secondary text-white hover:bg-primary hover:border-primary transition-colors";
-      case "OnlyIcon":
-        return "p-4 rounded-full";
+      case "Icon":
+        return "p-4 rounded-full hover:text-secondary";
       case "Text":
         return "border-transparent hover:border-transparent hover:text-secondary";
       default:
@@ -61,7 +63,7 @@ export const Button = ({
       ) : null}
 
       {/*<span className="">iconLeft</span>*/}
-      {severity === "OnlyIcon" ? (
+      {kind === "Icon" ? (
         <svg
           className={`w-5 h-5 ${iconTransition ? "group-hover:scale-125 transition duration-300" : ""}`}
         >

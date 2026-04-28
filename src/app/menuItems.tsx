@@ -89,7 +89,7 @@ export const menuStart = (
 
 export const menuEnd = (
   <div className="hidden ls:flex gap-2">
-    <Button severity="Text">Iniciar Sesión</Button>
-    <Button severity="Primary">Compartir proyecto</Button>
+    <Button kind="Text">Iniciar Sesión</Button>
+    <Button kind="Primary">Compartir proyecto</Button>
   </div>
 );

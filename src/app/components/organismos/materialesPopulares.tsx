@@ -1,21 +1,18 @@
 import { MaterialesPopulares } from "@/app/data";
 import { Card } from "primereact/card";
 import { Button } from "../atomos/button";
+import { Header } from "../moleculas/header";
 
 export const SeccionMaterialesPopulares = (
   <section id="materiales-populares" className="px-8 w-screen max-w-[1500px]">
     <div className="max-w-7xl mx-auto">
-      <div className="flex items-center justify-between mb-8 md:mb-12">
-        <div>
-          <h2 className="md:mb-3">Materiales Populares</h2>
-          <p className="hidden md:flex text-lg text-gray-600">
-            Conoce todos los productos disponibles en nuestra tienda.
-          </p>
-        </div>
-        <Button classNameContent="whitespace-nowrap" severity="Text">
-          Ver tienda
-        </Button>
-      </div>
+      <Header
+        title="Materiales Populares"
+        content="Conoce todos los productos disponibles en nuestra tienda."
+        button
+        buttonContent="Ver tienda"
+      />
+
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 place-items-center">
         {MaterialesPopulares.map((producto, index) => {
           return (
@@ -42,7 +39,7 @@ export const SeccionMaterialesPopulares = (
                   <span className="text-2xl font-bold text-primary">
                     {producto.costo}
                   </span>
-                  <Button icon="pi pi-plus" rounded aria-label="Plus" />
+                  <Button kind="Icon" icon="Plus" classNameButton="p-2" />
                 </div>
               }
             >

@@ -44,11 +44,11 @@ export const footerHero = (
   <div className="flex flex-col gap-8">
     <div className="flex gap-4">
       <Link href={"/proyectos"}>
-        <Button severity="Primary">Explorar proyectos</Button>
+        <Button kind="Primary">Explorar proyectos</Button>
       </Link>
 
       <Button
-        severity="Secondary"
+        kind="Outlined"
         classNameButton="backdrop-blur-sm md:backdrop-blur-none bg-white/30 text-white border-white md:border-primary md:text-primary"
       >
         Ver tutorial

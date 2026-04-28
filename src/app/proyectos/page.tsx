@@ -52,7 +52,7 @@ export default function Proyectos() {
               iconLeft
               icon="Plus"
               iconTransition
-              severity="Tertiary"
+              kind="Secondary"
               classNameContent="hover-group"
             >
               Subir mi Proyecto
@@ -65,7 +65,7 @@ export default function Proyectos() {
               {categories.map((cat, index) => (
                 <Button
                   key={cat + index}
-                  severity="Secondary"
+                  kind="Outlined"
                   onClick={() => setActiveCategory(cat)}
                   classNameButton={
                     activeCategory === cat &&
@@ -162,12 +162,12 @@ export default function Proyectos() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 icon="ArrowRight"
-                severity="Tertiary"
+                kind="Secondary"
                 classNameContent="group w-[20rem]"
               >
                 Publicar mi Experiencia
               </Button>
-              <Button severity="Secondary" classNameContent="w-[20rem]">
+              <Button kind="Outlined" classNameContent="w-[20rem]">
                 Ver Galería Comunitaria
               </Button>
             </div>

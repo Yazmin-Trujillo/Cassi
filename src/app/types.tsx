@@ -17,12 +17,7 @@ export type Icon =
   | "Globe"
   | "Leaf";
 
-export type ButtonType =
-  | "Primary"
-  | "Secondary"
-  | "Tertiary"
-  | "Text"
-  | "OnlyIcon";
+export type ButtonType = "Primary" | "Secondary" | "Outlined" | "Text" | "Icon";
 
 //"Sostenibilidad", "Agroecología","Ambiental"
 

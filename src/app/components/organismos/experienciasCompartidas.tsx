@@ -43,7 +43,7 @@ export const SeccionExperienciasCompartidas = ({
               </p>
             ) : null}
           </div>
-          <Button severity="Primary" icon="Plus" iconLeft iconTransition>
+          <Button kind="Primary" icon="Plus" iconLeft iconTransition>
             {etiquetaDelBoton ?? "Compartir"}
           </Button>
         </div>
