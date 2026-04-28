@@ -1,6 +1,6 @@
 import { MaterialesPopulares } from "@/app/data";
-import { Button } from "primereact/button";
 import { Card } from "primereact/card";
+import { Button } from "../atomos/button";
 
 export const SeccionMaterialesPopulares = (
   <section id="materiales-populares" className="px-8 w-screen max-w-[1500px]">
@@ -12,7 +12,9 @@ export const SeccionMaterialesPopulares = (
             Conoce todos los productos disponibles en nuestra tienda.
           </p>
         </div>
-        <Button className="whitespace-nowrap" label="Ver tienda" text />
+        <Button classNameContent="whitespace-nowrap" severity="Text">
+          Ver tienda
+        </Button>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 place-items-center">
         {MaterialesPopulares.map((producto, index) => {

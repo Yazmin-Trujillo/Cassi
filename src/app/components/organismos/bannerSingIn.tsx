@@ -1,4 +1,4 @@
-import { Button } from "primereact/button";
+import { Button } from "../atomos/button";
 
 export const BannerSingIn = (
   <section
@@ -31,7 +31,9 @@ export const BannerSingIn = (
       <p className="text-white/90! mb-6">
         Más de 5,000 personas construyendo un futuro sustentable
       </p>
-      <Button className="bg-white! text-primary! w-full">Comenzar Ahora</Button>
+      <Button severity="Secondary" classNameButton="w-full border-white">
+        Comenzar Ahora
+      </Button>
     </div>
   </section>
 );

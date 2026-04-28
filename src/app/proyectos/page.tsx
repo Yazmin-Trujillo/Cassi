@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { Button } from "primereact/button";
 import { TiposDeProyectos } from "../types";
 import { Card } from "primereact/card";
 import {
@@ -8,6 +7,7 @@ import {
   footerProyectosDestacados,
 } from "../headersAndFootersCard";
 import { TodosLosProyectos } from "../data";
+import { Button } from "../components/atomos/button";
 
 export default function Proyectos() {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -15,7 +15,7 @@ export default function Proyectos() {
 
   const categories = [
     "Todos",
-    "Compostaje",
+    "Residuos",
     "Agua",
     "Huertos",
     "Energías",
@@ -49,10 +49,14 @@ export default function Proyectos() {
               </p>
             </div>
             <Button
-              icon="pi pi-plus-circle icon transition duration-500"
-              label="Subir mi Proyecto"
-              className="text-start! hover-group md:mt-[0.5rem]!"
-            />
+              iconLeft
+              icon="Plus"
+              iconTransition
+              severity="Tertiary"
+              classNameContent="hover-group"
+            >
+              Subir mi Proyecto
+            </Button>
           </div>
 
           {/* Filtros y Búsqueda */}
@@ -61,25 +65,26 @@ export default function Proyectos() {
               {categories.map((cat, index) => (
                 <Button
                   key={cat + index}
+                  severity="Secondary"
                   onClick={() => setActiveCategory(cat)}
-                  className={`whitespace-nowrap! text-white w-auto! border-2! ${
+                  classNameButton={
                     activeCategory === cat &&
-                    activeCategory === TiposDeProyectos.COMPOSTAJE
-                      ? "bg-emerald-50! text-accent! border-accent!"
+                    activeCategory === TiposDeProyectos.RESIDUOS
+                      ? "bg-emerald-50 text-accent border-accent hover:border-accent hover:text-accent"
                       : activeCategory === cat &&
                           activeCategory === TiposDeProyectos.AGUA
-                        ? "bg-cyan-50! text-blue-600! border-blue-400!"
+                        ? "bg-cyan-50 text-blue-600 border-blue-400 hover:text-blue-600 hover:border-blue-400"
                         : activeCategory === cat &&
                             activeCategory === TiposDeProyectos.ENERGIAS
-                          ? "bg-yellow-50! text-amber-600! border-amber-400!"
+                          ? "bg-yellow-50 text-amber-600 border-amber-400 hover:text-amber-600 hover:border-amber-400"
                           : activeCategory === cat &&
                               activeCategory === TiposDeProyectos.HUERTOS
-                            ? "bg-pink-50! text-rose-600! border-rose-400!"
+                            ? "bg-pink-50 text-rose-600 border-rose-400 hover:text-rose-600 hover:border-rose-400"
                             : activeCategory === cat &&
                                 activeCategory === "Todos"
-                              ? "bg-stone-100! text-stone-800! border-stone-800!"
-                              : "bg-stone-100! text-stone-500! hover:bg-stone-200! border-2 border-transparent!"
-                  }`}
+                              ? "bg-stone-100 text-stone-800 border-stone-800 hover:text-stone-800 hover:border-stone-800"
+                              : "bg-stone-100 text-stone-500 hover:text-stone-500 hover:bg-stone-200 border-2 border-transparent!"
+                  }
                 >
                   {cat}
                 </Button>
@@ -156,39 +161,15 @@ export default function Proyectos() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
-                rounded
-                severity="secondary"
-                className="group w-[20rem] py-4! border border-green-700 transition-colors"
+                icon="ArrowRight"
+                severity="Tertiary"
+                classNameContent="group w-[20rem]"
               >
                 Publicar mi Experiencia
-                <i
-                  className="ml-2 group-hover:translate-x-1 transition"
-                  data-fa-i2svg=""
-                >
-                  <svg
-                    className="svg-inline--fa fa-arrow-right"
-                    width="0.9rem"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-right"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-                    ></path>
-                  </svg>
-                </i>
               </Button>
-              <Button
-                label="Ver Galería Comunitaria"
-                rounded
-                className="w-[20rem] py-4! bg-green-800! border border-green-700 hover:bg-green-700! transition-colors"
-              />
+              <Button severity="Secondary" classNameContent="w-[20rem]">
+                Ver Galería Comunitaria
+              </Button>
             </div>
           </div>
           {/* Decoración visual */}

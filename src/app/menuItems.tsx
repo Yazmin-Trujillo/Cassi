@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "primereact/button";
 import Link from "next/link";
+import { Button } from "./components/atomos/button";
 
 export const menuItems = [
   {
@@ -89,7 +89,7 @@ export const menuStart = (
 
 export const menuEnd = (
   <div className="hidden ls:flex gap-2">
-    <Button label="Iniciar Sesión" text />
-    <Button label="Compartir proyecto" />
+    <Button severity="Text">Iniciar Sesión</Button>
+    <Button severity="Primary">Compartir proyecto</Button>
   </div>
 );

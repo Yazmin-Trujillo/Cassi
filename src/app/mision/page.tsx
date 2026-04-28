@@ -1,7 +1,7 @@
-import { Button } from "primereact/button";
 import { Divider } from "primereact/divider";
 import { SeccionProyectosDeLaComunidad } from "../components/organismos/proyectosDeLaComunidad";
 import { SeccionExperienciasCompartidas } from "../components/organismos/experienciasCompartidas";
+import { Button } from "../components/atomos/button";
 
 export default function Mision() {
   return (
@@ -68,16 +68,10 @@ export default function Mision() {
           </ul>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              icon="pi pi-plus-circle icon transition duration-500"
-              label="Comenzar un Proyecto"
-              className="myBoxShadow"
-            />
-            <Button
-              label="Ver tutorial"
-              outlined
-              style={{ marginLeft: "0.5em" }}
-            />
+            <Button iconLeft iconTransition icon="Plus" severity="Primary">
+              Comenzar un Proyecto
+            </Button>
+            <Button severity="Secondary">Ver tutorial</Button>
           </div>
         </div>
       </section>
@@ -205,15 +199,8 @@ export default function Mision() {
             proyectos prácticos y sostenibles.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              label="Crear Cuenta Gratis"
-              className="myBoxShadow bg-secondary! text-white!"
-            />
-            <Button
-              label="Explorar Proyectos"
-              outlined
-              style={{ marginLeft: "0.5em", color: "white" }}
-            />
+            <Button severity="Tertiary">Crear Cuenta Gratis</Button>
+            <Button severity="Secondary">Explorar Proyectos</Button>
           </div>
         </div>
       </section>
@@ -450,11 +437,9 @@ export default function Mision() {
                   placeholder="Tu correo electrónico"
                   className="bg-slate-800 border border-slate-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:border-brand-500 text-sm"
                 />
-                <Button
-                  type="submit"
-                  label="Suscribirse"
-                  className="myBoxShadow bg-secondary! text-white! text-sm!"
-                />
+                <Button type="submit" severity="Tertiary">
+                  Suscribirse
+                </Button>
               </form>
             </div>
           </div>

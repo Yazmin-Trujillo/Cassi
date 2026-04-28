@@ -1,9 +1,9 @@
-import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 import { EncabezadoExperienciasCompartidas } from "../moleculas/encabezadoExperienciasCompartidas";
 import { FooterExperienciasCompartidas } from "../moleculas/footerExperienciasCompartidas";
 import { ExperienciasCompartidasType } from "@/app/types";
 import { ExperienciasCompartidas } from "@/app/data";
+import { Button } from "../atomos/button";
 
 type Props = {
   titulo?: string;
@@ -43,12 +43,9 @@ export const SeccionExperienciasCompartidas = ({
               </p>
             ) : null}
           </div>
-          <Button
-            icon="pi pi-plus-circle icon transition duration-500"
-            aria-label="Plus"
-            label={etiquetaDelBoton ?? "Compartir"}
-            className="text-start! hover-group"
-          />
+          <Button severity="Primary" icon="Plus" iconLeft iconTransition>
+            {etiquetaDelBoton ?? "Compartir"}
+          </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiencias.map((experiencia, index) => {

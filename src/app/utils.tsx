@@ -9,7 +9,7 @@ export const EtiquetaDeCategorias = (
   <Tag
     rounded
     className={twMerge(
-      tipoDeProyecto === TiposDeProyectos.COMPOSTAJE
+      tipoDeProyecto === TiposDeProyectos.RESIDUOS
         ? "p-tag-compost"
         : tipoDeProyecto === TiposDeProyectos.AGUA
           ? "p-tag-agua"

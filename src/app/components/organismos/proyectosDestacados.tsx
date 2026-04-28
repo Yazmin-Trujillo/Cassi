@@ -5,8 +5,8 @@ import {
   footerProyectosDestacados,
 } from "@/app/headersAndFootersCard";
 import Link from "next/link";
-import { Button } from "primereact/button";
 import { Card } from "primereact/card";
+import { Button } from "../atomos/button";
 
 export const SeccionProyectosDestacados = (
   <section id="proyectos-destacados" className="px-8 w-full max-w-[1500px]">
@@ -21,7 +21,7 @@ export const SeccionProyectosDestacados = (
           </p>
         </div>
         <Link href={"/proyectos"}>
-          <Button className="whitespace-nowrap" label="Ver todos" text />
+          <Button severity="Text">Ver todos</Button>
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,4 +1,4 @@
-import { Button } from "primereact/button";
+import { Button } from "../atomos/button";
 
 type Props = {
   imagenSrc: string;
@@ -23,7 +23,7 @@ export const FooterExperienciasCompartidas = ({
           alt={imagenAlt ?? "imagen"}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-          <Button className="bg-white! text-primary! w-full">
+          <Button severity="Secondary" classNameButton="w-full">
             Ver Detalles
           </Button>
         </div>

@@ -1,35 +1,38 @@
 import { ButtonType, Icon } from "@/app/types";
-import { changeIcon } from "@/app/utils";
 import { twMerge } from "tailwind-merge";
 type Props = {
   children?: string;
-  type: ButtonType;
-  content?: string;
+  severity: ButtonType;
   icon?: Icon;
-  onlyIcon?: boolean;
   iconLeft?: boolean;
   iconRight?: boolean;
   iconTransition?: boolean;
   classNameButton?: string;
   classNameContent?: string;
+  onClick?: () => void;
+  type?: "button" | "reset" | "submit" | undefined;
 };
 export const Button = ({
   children,
-  type,
+  severity,
   icon,
-  onlyIcon,
   iconLeft,
   iconRight,
   iconTransition,
   classNameButton,
   classNameContent,
+  type,
+  onClick,
 }: Props) => {
+  // To Do: manejar 3 medidas de iconos
   const classNameType = (() => {
-    switch (type) {
+    switch (severity) {
       case "Primary":
         return "bg-primary text-white hover:bg-secondary shadow-lg shadow-primary/50";
       case "Secondary":
         return "bg-white hover:border-secondary hover:text-secondary";
+      case "Tertiary":
+        return "bg-secondary border-secondary text-white hover:bg-primary hover:border-primary transition-colors";
       case "OnlyIcon":
         return "p-4 rounded-full";
       case "Text":
@@ -39,11 +42,12 @@ export const Button = ({
     }
   })();
 
-  console.log("solo icono", type, iconLeft);
   return (
     <button
+      type={type ?? "button"}
+      onClick={onClick}
       className={twMerge(
-        "group cursor-pointer py-2 px-4 text-base text-primary rounded-xl font-semibold flex items-center gap-2 border-2 border-primary hover:border-secondary",
+        "group cursor-pointer py-2 px-4 text-base text-primary rounded-xl font-semibold flex items-center justify-center gap-2 border-2 border-primary hover:border-secondary",
         classNameType,
         classNameButton,
       )}
@@ -57,7 +61,7 @@ export const Button = ({
       ) : null}
 
       {/*<span className="">iconLeft</span>*/}
-      {type === "OnlyIcon" ? (
+      {severity === "OnlyIcon" ? (
         <svg
           className={`w-5 h-5 ${iconTransition ? "group-hover:scale-125 transition duration-300" : ""}`}
         >

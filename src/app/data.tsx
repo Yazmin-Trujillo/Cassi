@@ -1,4 +1,4 @@
-import { Button } from "primereact/button";
+import { Button } from "./components/atomos/button";
 import {
   CategoriasDeProyectosType,
   ComentarioType,
@@ -42,16 +42,17 @@ export const encabezadoHero = (
 );
 export const footerHero = (
   <div className="flex flex-col gap-8">
-    <div className="flex">
+    <div className="flex gap-4">
       <Link href={"/proyectos"}>
-        <Button label="Explorar proyectos" className="myBoxShadow" />
+        <Button severity="Primary">Explorar proyectos</Button>
       </Link>
+
       <Button
-        label="Ver tutorial"
-        outlined
-        style={{ marginLeft: "0.5em" }}
-        className="bg-white/20! backdrop-blur-sm md:backdrop-blur-none text-white! md:text-primary! md:bg-transparent!"
-      />
+        severity="Secondary"
+        classNameButton="backdrop-blur-sm md:backdrop-blur-none bg-white/30 text-white border-white md:border-primary md:text-primary"
+      >
+        Ver tutorial
+      </Button>
     </div>
     <div className="hidden md:flex">
       <div>
@@ -674,7 +675,7 @@ export const ProyectosDestacados: ProyectosDestacadosType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
       alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "2-3 horas",
     likes: 568,
     comentarios: 28,
@@ -739,7 +740,7 @@ export const TodosLosProyectos: ProyectoType[] = [
   {
     id: 1,
     titulo: "Compostera de Pallets DIY",
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "2-3 horas",
     descripcion:
       "Construye tu propia compostera usando materiales reciclados. Guía completa con 8 pasos detallados.",
@@ -980,7 +981,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/57ea6b925f-dd83dba6dda5a70ba903.png",
       alt: "DIY composting bin made from wooden pallets in backyard garden, step by step construction, organic waste, natural decomposition, eco-friendly, detailed tutorial style",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "2-3 horas",
     likes: 568,
     comentarios: 28,
@@ -1224,7 +1225,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d093ba0402-9f2eedc3f6c5a73eecc0.png",
       alt: "sustainable urban composting system with recycled materials, eco-friendly design, green plants around",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "3-4 horas",
     likes: 1247,
     comentarios: 15,
@@ -1305,7 +1306,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "https://storage.googleapis.com/uxpilot-auth.appspot.com/d093ba0402-9f2eedc3f6c5a73eecc0.png",
       alt: "sustainable urban composting system with recycled materials, eco-friendly design, green plants around",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "3-4 horas",
     likes: 47,
     comentarios: 58,
@@ -1386,7 +1387,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "data:image/jpeg;base64,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",
       alt: "Compostero de madera",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "4 horas",
     likes: 120,
     comentarios: 15,
@@ -1637,7 +1638,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrSLdQKk0VW6LYopQqqE6VOx-R6JWAPUlwTw&s",
       alt: "Lombrices en tierra",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "40 min",
     likes: 270,
     comentarios: 14,
@@ -2103,7 +2104,7 @@ export const TodosLosProyectos: ProyectoType[] = [
       src: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b",
       alt: "Estante de cartón",
     },
-    categoria: TiposDeProyectos.COMPOSTAJE,
+    categoria: TiposDeProyectos.RESIDUOS,
     tiempoDeConstruccion: "4 horas",
     likes: 255,
     comentarios: 18,

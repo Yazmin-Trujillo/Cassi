@@ -1,6 +1,6 @@
 import { MaterialType } from "@/app/types";
-import { Button } from "primereact/button";
 import { twMerge } from "tailwind-merge";
+import { Button } from "../atomos/button";
 
 export const TarjetaDelMaterial = ({
   id,
@@ -28,7 +28,7 @@ export const TarjetaDelMaterial = ({
         />
       </div>
       <p className="text-sm text-gray-600 mb-3">{descripcion}</p>
-      <Button className="w-full bg-secondary! border-secondary! text-white py-2 rounded-lg hover:bg-eco-dark transition-colors">
+      <Button severity="Tertiary" classNameButton="w-full">
         Agregar al carrito
       </Button>
     </div>
