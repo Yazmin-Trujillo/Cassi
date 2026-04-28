@@ -31,10 +31,10 @@ export const Button = ({
     switch (kind) {
       case "Primary":
         return "bg-primary text-white hover:bg-secondary shadow-lg shadow-primary/50";
-      case "Outlined":
-        return "bg-white hover:border-secondary hover:text-secondary";
       case "Secondary":
         return "bg-secondary border-secondary text-white hover:bg-primary hover:border-primary transition-colors";
+      case "Outlined":
+        return "bg-white hover:border-secondary hover:text-secondary";
       case "Icon":
         return "p-4 rounded-full hover:text-secondary";
       case "Text":
