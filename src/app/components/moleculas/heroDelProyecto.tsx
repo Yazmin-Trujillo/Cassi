@@ -1,5 +1,5 @@
 import { ProjectDifficulty, Category } from "@/app/types";
-import { EtiquetaDeCategorias } from "@/app/utils";
+import { EtiquetaCategorias } from "@/app/utils";
 import { Card } from "primereact/card";
 import { Divider } from "primereact/divider";
 import { twMerge } from "tailwind-merge";
@@ -52,7 +52,7 @@ export const HeroDelProyecto = ({
           <Card
             header={
               <div className="flex items-center space-x-2 px-4 md:px-0">
-                {EtiquetaDeCategorias(categoria)}
+                {EtiquetaCategorias(categoria, true)}
                 <span className="text-gray-500">•</span>
                 <span className="text-gray-600">
                   Nivel:{" "}
