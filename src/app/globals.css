@@ -5,12 +5,14 @@
   --secondary: #139743;
   --accent: #8fbc3f;
   --foreground: #ffffff;
-  --captación-de-agua: #2a9d8f;
-  --energía-solar: #ffc300;
-  --huertos-urbanos: #588157;
+  --energías: #ffc300;
+  --agua: #2a9d8f;
+  --bioconstruccion: #b07d62;
+  --biodiversidad: #588157;
   --construir: #b07d62;
   --recuperar: #8d99ae;
   --brand: #14532d;
+  --textt: #495057;
 }
 
 @theme {
@@ -21,9 +23,10 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --color-agua: var(--captación-de-agua);
-  --color-energia: var(--energía-solar);
-  --color-huerto: var(--huertos-urbanos);
+  --color-energia: var(--energías);
+  --color-agua: var(--agua);
+  --color-bioconstruccion: var(--bioconstruccion);
+  --color-biodiversidad: var(--biodiversidad);
   --color-brand: var(--brand);
   --breakpoint-ls: 60rem;
 }

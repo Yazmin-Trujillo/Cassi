@@ -43,9 +43,14 @@
     color: $energiaButtonTextColor;
   }
 
-  &.p-tag-huerto {
-    background-color: $huertoButtonBg;
-    color: $huertoButtonTextColor;
+  &.p-tag-p-tag-bioconstruccion {
+    background-color: $bioconstruccionButtonBg;
+    color: $bioconstruccionButtonTextColor;
+  }
+
+  &.p-tag-biodiversidad {
+    background-color: $biodiversidadButtonBg;
+    color: $biodiversidadButtonTextColor;
   }
 
   .p-tag-icon {

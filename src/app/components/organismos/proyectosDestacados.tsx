@@ -23,37 +23,39 @@ export const SeccionProyectosDestacados = (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ProyectosDestacados.map((proyecto) => {
           const id = proyecto.id;
-          const srcImg = proyecto.imagen.src;
-          const altImg = proyecto.imagen.alt;
-          const tipoDeproyecto = proyecto.categoria;
-          const horasDeConstruccion = proyecto.tiempoDeConstruccion;
+          const srcImg = proyecto.image.src;
+          const altImg = proyecto.image.alt;
+          const category = proyecto.category;
+          const subCategorys = proyecto.subCategorys;
+          const constructionTime = proyecto.constructionTime;
           const likes = proyecto.likes;
-          const comentarios = proyecto.comentarios;
-          const autor = proyecto.autor.nombre;
-          const imgSrcAutor = proyecto.autor.avatar;
-          const imgAltAutor = proyecto.autor.nombre;
+          const comments = proyecto.comments;
+          const author = proyecto.author.name;
+          const imgSrcAutor = proyecto.author.avatar;
+          const imgAltAutor = proyecto.author.name;
 
           return (
             <Card
               key={proyecto.id}
               className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
-              title={proyecto.titulo}
+              title={proyecto.title}
               header={encabezadoProyectosDestacados({
                 srcImg,
                 altImg,
-                tipoDeproyecto,
-                horasDeConstruccion,
+                category,
+                subCategorys,
+                constructionTime,
               })}
               footer={footerProyectosDestacados({
                 id,
                 likes,
-                comentarios,
-                autor,
+                comments,
+                author,
                 imgSrcAutor,
                 imgAltAutor,
               })}
             >
-              <p className="text-xl line-clamp-3">{proyecto.descripcion}</p>
+              <p className="text-xl line-clamp-3">{proyecto.description}</p>
             </Card>
           );
         })}

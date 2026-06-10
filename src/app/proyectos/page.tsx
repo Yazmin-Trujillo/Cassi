@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { TiposDeProyectos } from "../types";
+import { Category } from "../types";
 import { Card } from "primereact/card";
 import {
   encabezadoProyectosDestacados,
@@ -15,18 +15,18 @@ export default function Proyectos() {
 
   const categories = [
     "Todos",
-    "Residuos",
-    "Agua",
-    "Huertos",
     "Energías",
-    // "Bioconstrucción",
+    "Agua",
+    "Residuos",
+    "Bioconstrucción",
+    "Biodiversidad",
   ];
 
   const filteredProjects = useMemo(() => {
     return TodosLosProyectos.filter((project) => {
       const matchesCat =
-        activeCategory === "Todos" || project.categoria === activeCategory;
-      const matchesSearch = project.titulo
+        activeCategory === "Todos" || project.category === activeCategory;
+      const matchesSearch = project.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
       return matchesCat && matchesSearch;
@@ -62,33 +62,39 @@ export default function Proyectos() {
           {/* Filtros y Búsqueda */}
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-2 overflow-x-auto pb-2 w-full lg:w-auto no-scrollbar">
-              {categories.map((cat, index) => (
-                <Button
-                  key={cat + index}
-                  kind="Outlined"
-                  onClick={() => setActiveCategory(cat)}
-                  classNameButton={
-                    activeCategory === cat &&
-                    activeCategory === TiposDeProyectos.RESIDUOS
-                      ? "bg-emerald-50 text-accent border-accent hover:border-accent hover:text-accent"
-                      : activeCategory === cat &&
-                          activeCategory === TiposDeProyectos.AGUA
-                        ? "bg-cyan-50 text-blue-600 border-blue-400 hover:text-blue-600 hover:border-blue-400"
+              {categories.map((cat, index) => {
+                console.log("activecategory", activeCategory);
+                return (
+                  <Button
+                    key={cat + index}
+                    kind="Outlined"
+                    onClick={() => setActiveCategory(cat)}
+                    classNameButton={
+                      activeCategory === cat &&
+                      activeCategory === Category.RESIDUOS
+                        ? "bg-emerald-50 text-primary border-primary hover:border-primary hover:text-primary"
                         : activeCategory === cat &&
-                            activeCategory === TiposDeProyectos.ENERGIAS
-                          ? "bg-yellow-50 text-amber-600 border-amber-400 hover:text-amber-600 hover:border-amber-400"
+                            activeCategory === Category.AGUA
+                          ? "bg-cyan-50 text-blue-600 border-blue-400 hover:text-blue-600 hover:border-blue-400"
                           : activeCategory === cat &&
-                              activeCategory === TiposDeProyectos.HUERTOS
-                            ? "bg-pink-50 text-rose-600 border-rose-400 hover:text-rose-600 hover:border-rose-400"
+                              activeCategory === Category.ENERGIAS
+                            ? "bg-yellow-50 text-amber-600 border-amber-400 hover:text-amber-600 hover:border-amber-400"
                             : activeCategory === cat &&
-                                activeCategory === "Todos"
-                              ? "bg-stone-100 text-stone-800 border-stone-800 hover:text-stone-800 hover:border-stone-800"
-                              : "bg-stone-100 text-stone-500 hover:text-stone-500 hover:bg-stone-200 border-2 border-transparent!"
-                  }
-                >
-                  {cat}
-                </Button>
-              ))}
+                                activeCategory === Category.BIOCONSTRUCCION
+                              ? "bg-olive-300 text-bioconstruccion border-bioconstruccion hover:text-bioconstruccion hover:border-bioconstruccion"
+                              : activeCategory === cat &&
+                                  activeCategory === Category.BIODIVERSIDAD
+                                ? "bg-green-100 text-secondary border-secondary hover:text-secondary hover:border-secondary"
+                                : activeCategory === cat &&
+                                    activeCategory === "Todos"
+                                  ? "bg-stone-100 text-stone-800 border-stone-800 hover:text-stone-800 hover:border-stone-800"
+                                  : "bg-stone-100 text-stone-500 hover:text-stone-500 hover:bg-stone-200 border-2 border-transparent!"
+                    }
+                  >
+                    {cat}
+                  </Button>
+                );
+              })}
             </div>
             <div className="relative w-full lg:w-80">
               {/* <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400" size={18} />*/}
@@ -110,35 +116,37 @@ export default function Proyectos() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((proyecto, index) => {
             const id = proyecto.id;
-            const srcImg = proyecto.imagen.src;
+            const srcImg = proyecto.image.src;
             const altImg =
-              proyecto.imagen.alt.trim().length === 0
-                ? proyecto.titulo
-                : proyecto.imagen.alt.trim();
-            const tipoDeproyecto = proyecto.categoria;
-            const horasDeConstruccion = proyecto.tiempoDeConstruccion;
+              proyecto.image.alt.trim().length === 0
+                ? proyecto.title
+                : proyecto.image.alt.trim();
+            const category = proyecto.category;
+            const subCategorys = proyecto.subCategorys;
+            const constructionTime = proyecto.constructionTime;
             const likes = proyecto.likes;
-            const comentarios = proyecto.comentarios;
-            const autor = proyecto.autor.nombre;
-            const imgSrcAutor = proyecto.autor.avatar;
-            const imgAltAutor = proyecto.autor.nombre;
+            const comments = proyecto.comments;
+            const author = proyecto.author.name;
+            const imgSrcAutor = proyecto.author.avatar;
+            const imgAltAutor = proyecto.author.name;
 
             return (
               <Card
                 key={proyecto.id + index}
                 className="overflow-hidden shadow-lg! hover:shadow-2xl! min-w-2xs group"
-                title={proyecto.titulo}
+                title={proyecto.title}
                 header={encabezadoProyectosDestacados({
                   srcImg,
                   altImg,
-                  tipoDeproyecto,
-                  horasDeConstruccion,
+                  category,
+                  subCategorys,
+                  constructionTime,
                 })}
                 footer={footerProyectosDestacados({
                   id,
                   likes,
-                  comentarios,
-                  autor,
+                  comments,
+                  author,
                   imgSrcAutor,
                   imgAltAutor,
                 })}

@@ -443,7 +443,7 @@ $compostButtonBg: var(--secondary);
 
 /// Background of a agua button
 /// @group button
-$aguaButtonBg: var(--captación-de-agua);
+$aguaButtonBg: var(--agua);
 
 /// Text color of a agua button
 /// @group button
@@ -451,16 +451,24 @@ $aguaButtonTextColor: #ffffff;
 
 /// Background of a energia button
 /// @group button
-$energiaButtonBg: var(--energía-solar);
+$energiaButtonBg: var(--energías);
 
 /// Text color of a energia button
 /// @group button
 $energiaButtonTextColor: #ffffff;
 
-/// Background of a huerto button
+/// Background of a bioconstruccion button
 /// @group button
-$huertoButtonBg: var(--huertos-urbanos);
+$bioconstruccionButtonBg: var(--bioconstruccion);
 
-/// Text color of a huerto button
+/// Text color of a bioconstruccion button
 /// @group button
-$huertoButtonTextColor: #ffffff;
+$bioconstruccionButtonTextColor: #ffffff;
+
+/// Background of a biodiversidad button
+/// @group button
+$biodiversidadButtonBg: var(--biodiversidad);
+
+/// Text color of a biodiversidad button
+/// @group button
+$biodiversidadButtonTextColor: #ffffff;

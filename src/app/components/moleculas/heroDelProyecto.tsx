@@ -1,12 +1,12 @@
-import { DificultadDeProyecto, TiposDeProyectos } from "@/app/types";
+import { ProjectDifficulty, Category } from "@/app/types";
 import { EtiquetaDeCategorias } from "@/app/utils";
 import { Card } from "primereact/card";
 import { Divider } from "primereact/divider";
 import { twMerge } from "tailwind-merge";
 
 type Props = {
-  categoria: TiposDeProyectos;
-  dificultad: DificultadDeProyecto;
+  categoria: Category;
+  dificultad: ProjectDifficulty;
   titulo: string;
   autor: string;
   descripcion: string;
@@ -36,11 +36,11 @@ export const HeroDelProyecto = ({
       id="hero-project"
       className={twMerge(
         "bg-gradient-to-br ",
-        categoria === TiposDeProyectos.COMPOSTAJE
+        categoria === Category.RESIDUOS
           ? "from-green-50 to-emerald-50 hover:border-accent"
-          : categoria === TiposDeProyectos.AGUA
+          : categoria === Category.AGUA
             ? "from-blue-50 to-cyan-50 hover:border-blue-400"
-            : categoria === TiposDeProyectos.ENERGIAS
+            : categoria === Category.ENERGIAS
               ? "from-amber-50 to-yellow-50 hover:border-amber-400"
               : "from-rose-50 to-pink-50 hover:border-rose-400",
 

@@ -43,21 +43,21 @@ export default async function Proyecto({ params }: Proyecto) {
   if (!data) {
     return <div>El producto no existe</div>;
   } else {
-    const categoria = data.categoria;
-    const dificultad = data.dificultad;
-    const tituloDelProyecto = data.titulo;
-    const autor = data.autor.nombre;
+    const categoria = data.category;
+    const dificultad = data.difficulty;
+    const tituloDelProyecto = data.title;
+    const autor = data.author.name;
     const descripcion = data.descripcion;
-    const tiempoDeConstruccion = data.tiempoDeConstruccion;
-    const costo = data.costo;
-    const proyectosCompletados = data.proyectosCompletados;
-    const srcImg = data.imagen.src;
-    const altImg = data.imagen.alt;
-    const materialesId = data.materialesId;
+    const tiempoDeConstruccion = data.constructionTime;
+    const costo = data.cost;
+    const proyectosCompletados = data.completedProjects;
+    const srcImg = data.image.src;
+    const altImg = data.image.alt;
+    const materialesId = data.materialsId;
     const materiales = Materiales.filter((material) =>
       materialesId.includes(material.id),
     );
-    const pasos = data.pasos;
+    const pasos = data.steps;
     const tituloSeccionExperienciasCompartidas = " Proyectos de la Comunidad";
     const descripcionSeccionExperienciasCompartidas =
       " Mira cómo otros usuarios han completado este proyecto";
@@ -158,7 +158,7 @@ export default async function Proyecto({ params }: Proyecto) {
             <div className="space-y-12">
               {pasos.map((paso, index) => (
                 <div
-                  key={index + paso.titulo}
+                  key={index + paso.title}
                   className="flex flex-col md:grid md:grid-cols-2 gap-8 items-center"
                 >
                   <div
@@ -169,14 +169,12 @@ export default async function Proyecto({ params }: Proyecto) {
                         {index + 1}
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">
-                        {paso.titulo}
+                        {paso.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 mb-4">
-                      {paso.descripcionLarga}
-                    </p>
+                    <p className="text-gray-600 mb-4">{paso.longDescription}</p>
                     <ul className="space-y-2 text-gray-600">
-                      {paso.descripcionCorta.map((item, index) => (
+                      {paso.shortDescription.map((item, index) => (
                         <li key={index + item} className="flex items-center">
                           <i className="pi pi-check text-secondary mr-2"></i>
                           {item.charAt(0).toUpperCase().concat(item.slice(1))}
@@ -187,8 +185,8 @@ export default async function Proyecto({ params }: Proyecto) {
                   <div className="h-80 overflow-hidden rounded-xl">
                     <img
                       className="w-full h-full object-cover"
-                      src={paso.imagen.src}
-                      alt={paso.imagen.alt ?? paso.titulo}
+                      src={paso.image.src}
+                      alt={paso.image.alt ?? paso.title}
                     />
                   </div>
                 </div>

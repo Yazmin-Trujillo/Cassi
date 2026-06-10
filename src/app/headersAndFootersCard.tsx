@@ -6,23 +6,23 @@ import {
   EncabezadoProyectosDestacados,
   FooterCategoriasDeProyectos,
   FooterProyectosDestacados,
-  TiposDeProyectos,
+  Category,
 } from "./types";
-import { EtiquetaDeCategorias } from "./utils";
+import { EtiquetaCategorias } from "./utils";
 import { Divider } from "primereact/divider";
 
 export const encabezadoCategoriasDeProyectos = ({
-  tipoDeproyecto,
+  category,
   srcImg,
   altImg,
 }: EncabezadoCategoriasDeProyectos) => (
   <div
     className={`size-[4rem] rounded-xl flex items-center justify-center group-hover:scale-110 transition ${
-      tipoDeproyecto === TiposDeProyectos.RESIDUOS
+      category === Category.RESIDUOS
         ? "bg-primary"
-        : tipoDeproyecto === TiposDeProyectos.AGUA
+        : category === Category.AGUA
           ? "bg-blue-600 "
-          : tipoDeproyecto === TiposDeProyectos.ENERGIAS
+          : category === Category.ENERGIAS
             ? "bg-amber-600 "
             : "bg-rose-600"
     }`}
@@ -36,21 +36,21 @@ export const encabezadoCategoriasDeProyectos = ({
 );
 
 export const footerCategoriasDeProyectos = ({
-  numeroDeProyectos,
-  tipoDeProyectoF,
+  projectNumbers,
+  category,
 }: FooterCategoriasDeProyectos) => (
   <div
     className={`hidden md:flex items-center text-sm font-semibold ${
-      tipoDeProyectoF === TiposDeProyectos.RESIDUOS
+      category === Category.RESIDUOS
         ? "text-accent"
-        : tipoDeProyectoF === TiposDeProyectos.AGUA
+        : category === Category.AGUA
           ? "text-blue-600 "
-          : tipoDeProyectoF === TiposDeProyectos.ENERGIAS
+          : category === Category.ENERGIAS
             ? "text-amber-600 "
             : "text-rose-600"
     }`}
   >
-    <span>{numeroDeProyectos} proyectos</span>
+    <span>{projectNumbers} proyectos</span>
     <i className="ml-2 group-hover:translate-x-1 transition" data-fa-i2svg="">
       <svg
         className="svg-inline--fa fa-arrow-right"
@@ -76,8 +76,9 @@ export const footerCategoriasDeProyectos = ({
 export const encabezadoProyectosDestacados = ({
   srcImg,
   altImg,
-  tipoDeproyecto,
-  horasDeConstruccion,
+  category,
+  subCategorys,
+  constructionTime,
 }: EncabezadoProyectosDestacados) => (
   <div className="h-64 overflow-hidden relative">
     {srcImg ? (
@@ -93,11 +94,18 @@ export const encabezadoProyectosDestacados = ({
         alt="Fondo determinado"
       />
     )}
+    <div className="absolute top-4 left-4 max-w-full overflow-hidden">
+      <div className="flex items-center gap-4 flex-wrap">
+        {EtiquetaCategorias(category, true)}
+        {subCategorys.length > 0
+          ? subCategorys.map((item) => EtiquetaCategorias(item, false))
+          : null}
+      </div>
+    </div>
 
-    {EtiquetaDeCategorias(tipoDeproyecto, "absolute top-4 left-4")}
-    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
+    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-primary flex items-center space-x-1">
       <i className="pi pi-clock"></i>
-      <span>{horasDeConstruccion}</span>
+      <span>{constructionTime}</span>
     </div>
   </div>
 );
@@ -105,8 +113,8 @@ export const encabezadoProyectosDestacados = ({
 export const footerProyectosDestacados = ({
   id,
   likes,
-  comentarios,
-  autor,
+  comments,
+  author,
   imgSrcAutor,
   imgAltAutor,
 }: FooterProyectosDestacados) => {
@@ -120,7 +128,7 @@ export const footerProyectosDestacados = ({
           </div>
           <div className="flex items-center space-x-1">
             <i className="pi pi-comment"></i>
-            <span>{comentarios}</span>
+            <span>{comments}</span>
           </div>
         </div>
         <div className="flex items-center space-x-2">
@@ -129,7 +137,7 @@ export const footerProyectosDestacados = ({
             alt={imgAltAutor}
             className="w-8 h-8 rounded-full"
           />
-          <span className="text-sm font-medium text-gray-700">{autor}</span>
+          <span className="text-sm font-medium text-gray-700">{author}</span>
         </div>
       </div>
       <Divider />

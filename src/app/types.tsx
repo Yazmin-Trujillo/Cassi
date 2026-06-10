@@ -1,9 +1,33 @@
-export enum TiposDeProyectos {
-  AGUA = "Agua",
-  BIODIVERSIDAD = "Biodiversidad",
+export enum Category {
   ENERGIAS = "Energías",
-  HUERTOS = "Huertos",
+  AGUA = "Agua",
   RESIDUOS = "Residuos",
+  BIOCONSTRUCCION = "Bioconstrucción",
+  BIODIVERSIDAD = "Biodiversidad",
+}
+enum Category2 {
+  GENERAR = 1,
+  CAPTAR = 2,
+  RECUPERAR = 3,
+  CONSTRUIR = 4,
+  CULTIVAR = 5,
+}
+export enum SubCategory {
+  GENERACION_DE_ENERGIAS = 1.1,
+  AHORRO_ENERGETICO = 1.2,
+  BIOCUMBUSTIBLES = 1.3,
+  CAPTACION_PLUVIAL = 2.1,
+  TRATAMIENTO_DE_AGUAS_GRISES = 2.2,
+  RIEGO_INTELIGENTE = 2.3,
+  RECICLAJE_CREATIVO = 3.1,
+  COMPOSTAJE = 3.2,
+  PLASTICOS_PRECIOSOS = 3.3,
+  MATERIALES_ECOLOGICOS = 4.1,
+  MOBILIARIO_SOSTENIBLE = 4.2,
+  LIMPIEZA_COSMETICA_ZERO_WASTE = 4.3,
+  HUERTOS_URBANOS = 5.1,
+  BIODIVERSIDAD = 5.2,
+  CONSERVACION_DE_SEMILLAS = 5.3,
 }
 
 export type Icon =
@@ -21,98 +45,105 @@ export type ButtonType = "Primary" | "Secondary" | "Outlined" | "Text" | "Icon";
 
 //"Sostenibilidad", "Agroecología","Ambiental"
 
-export enum DificultadDeProyecto {
+export type CardProps = {};
+
+export enum ProjectDifficulty {
   FACIL = "Fácil",
   MEDIO = "Medio",
   DIFICIL = "Difícil",
   EXPERTO = "Experto",
 }
 
-export type CategoriasDeProyectosType = {
+export type ProjectCategoryType = {
   id: number;
-  tituloMB: string;
-  titulo: string;
-  descripcion: string;
-  imagen: {
+  titleMB: string;
+  title: string;
+  subtitle: { id: number; name: string; description: string }[];
+  description: string;
+  image: {
     src: string;
     alt: string;
   };
-  tipoDeProyecto: TiposDeProyectos;
-  numeroDeProyectos: number;
+  category: Category;
+  projectNumbers: number;
 };
 
 export type EncabezadoCategoriasDeProyectos = {
-  tipoDeproyecto: TiposDeProyectos;
+  category: Category;
+
   srcImg: string;
   altImg: string;
 };
 
 export type FooterCategoriasDeProyectos = {
-  numeroDeProyectos: number;
-  tipoDeProyectoF: TiposDeProyectos;
+  projectNumbers: number;
+  category: Category;
 };
 
 export type ProyectosDestacadosType = {
   id: number;
-  titulo: string;
-  descripcion: string;
-  imagen: {
+  title: string;
+  description: string;
+  image: {
     src: string;
     alt: string;
   };
-  categoria: TiposDeProyectos;
-  tiempoDeConstruccion: string;
+  category: Category;
+  subCategorys: Category[];
+  constructionTime: string;
   likes: number;
-  comentarios: number;
-  autor: {
-    nombre: string;
+  comments: number;
+  author: {
+    name: string;
     avatar: string;
   };
-  costo: string;
-  dificultad: DificultadDeProyecto;
-  proyectosCompletados: number;
+  cost: string;
+  difficulty: ProjectDifficulty;
+  completedProjects: number;
 };
 
 export type ProyectoType = {
   id: number;
-  titulo: string;
+  title: string;
   descripcion: string;
-  imagen: {
+  image: {
     src: string;
     alt: string;
   };
-  categoria: TiposDeProyectos;
-  tiempoDeConstruccion: string;
+  category: Category;
+  subCategorys: Category[] | [];
+  constructionTime: string;
   likes: number;
-  comentarios: number;
-  autor: {
-    nombre: string;
+  comments: number;
+  author: {
+    name: string;
     avatar: string;
   };
-  costo: string;
-  dificultad: DificultadDeProyecto;
-  proyectosCompletados: number;
-  materialesId: number[];
-  pasos: {
-    titulo: string;
-    descripcionLarga: string;
-    descripcionCorta: string[];
-    imagen: { src: string; alt: string | null | undefined };
+  cost: string;
+  difficulty: ProjectDifficulty;
+  completedProjects: number;
+  materialsId: number[];
+  steps: {
+    title: string;
+    longDescription: string;
+    shortDescription: string[];
+    image: { src: string; alt: string | null | undefined };
   }[];
 };
 
 export type EncabezadoProyectosDestacados = {
   srcImg: string;
   altImg: string;
-  tipoDeproyecto: TiposDeProyectos;
-  horasDeConstruccion: string;
+  category: Category;
+  subCategorys: Category[] | [];
+  constructionTime: string;
 };
 
 export type FooterProyectosDestacados = {
   id: number;
   likes: number;
-  comentarios: number;
-  autor: string;
+  comments: number;
+  author: string;
   imgSrcAutor: string;
   imgAltAutor: string;
 };

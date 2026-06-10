@@ -4,7 +4,7 @@ import {
   encabezadoCategoriasDeProyectos,
   footerCategoriasDeProyectos,
 } from "@/app/headersAndFootersCard";
-import { TiposDeProyectos } from "@/app/types";
+import { Category } from "@/app/types";
 import { Card } from "primereact/card";
 
 export const SeccionCategoriasDeProyectos = (
@@ -20,21 +20,20 @@ export const SeccionCategoriasDeProyectos = (
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
         {CategoriasDeProyectos.map((categoria, index) => {
-          const tipoDeproyecto = categoria.tipoDeProyecto;
-          const srcImg = categoria.imagen.src;
-          const altImg = categoria.imagen.alt;
-          const numeroDeProyectos = categoria.numeroDeProyectos;
-          const tipoDeProyectoF = categoria.tipoDeProyecto;
+          const category = categoria.category;
+          const srcImg = categoria.image.src;
+          const altImg = categoria.image.alt;
+          const projectNumbers = categoria.projectNumbers;
           return (
             <Card
               key={categoria.id + index}
               className={`group my-header max-w-xs bg-gradient-to-br! hover:shadow-xl transition cursor-pointer border-2 border-transparent
                           ${
-                            tipoDeproyecto === TiposDeProyectos.RESIDUOS
+                            category === Category.RESIDUOS
                               ? "from-green-50! to-emerald-50! hover:border-accent"
-                              : tipoDeproyecto === TiposDeProyectos.AGUA
+                              : category === Category.AGUA
                                 ? "from-blue-50! to-cyan-50! hover:border-blue-400"
-                                : tipoDeproyecto === TiposDeProyectos.ENERGIAS
+                                : category === Category.ENERGIAS
                                   ? "from-amber-50! to-yellow-50! hover:border-amber-400"
                                   : "from-rose-50 to-pink-50 hover:border-rose-400"
                           }
@@ -42,22 +41,22 @@ export const SeccionCategoriasDeProyectos = (
               title={
                 <>
                   <div className="md:hidden text-center">
-                    {categoria.tituloMB}
+                    {categoria.titleMB}
                   </div>
-                  <div className="hidden md:flex">{categoria.titulo}</div>
+                  <div className="hidden md:flex">{categoria.title}</div>
                 </>
               }
               header={encabezadoCategoriasDeProyectos({
-                tipoDeproyecto,
+                category,
                 srcImg,
                 altImg,
               })}
               footer={footerCategoriasDeProyectos({
-                numeroDeProyectos,
-                tipoDeProyectoF,
+                projectNumbers,
+                category,
               })}
             >
-              <p className="m-0 text-xl">{categoria.descripcion}</p>
+              <p className="m-0 text-xl">{categoria.description}</p>
             </Card>
           );
         })}
