@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "../components/atomos/button";
 import { Card } from "../components/moleculas/card";
-import { EtiquetaDeCategorias } from "../utils";
 
 export default function Comunidad() {
   return (
